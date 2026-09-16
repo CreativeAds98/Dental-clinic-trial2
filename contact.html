@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dr.GR Dental & Aesthetics - Coimbatore</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a5f',
+                        'navy-light': '#2d5a8a',
+                        orange: '#f26b2a',
+                        'orange-hover': '#e05a1a',
+                        'light-blue': '#e8f4fd',
+                        cream: '#fdf8f0',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .faq-answer.open {
+            max-height: 500px; /* arbitrary max-height larger than content */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+        
+        <!-- Subtle Background Glow & Waves Overlay -->
+        <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+        <!-- Background Wave Lines -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+            <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+        </svg>
+
+        <!-- Tooth Watermark (Left) -->
+        <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+                <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+            </svg>
+        </div>
+
+        <!-- Tooth Watermark (Center-Right) -->
+        <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+                <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+            </svg>
+        </div>
+
+        <!-- Tooth Watermark (Far-Right) -->
+        <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+                <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+            </svg>
+        </div>
+
+        <!-- Content Row -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+            
+            <!-- Left: Location & Phone with circular orange badges -->
+            <div class="flex items-center gap-3 lg:gap-4">
+                <!-- Location -->
+                <span class="flex items-center gap-2 font-medium">
+                    <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <span>Coimbatore</span>
+                </span>
+
+                <span class="text-white/20 font-light">|</span>
+
+                <!-- Phone -->
+                <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+                    <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <span>72009 20929</span>
+                    <span class="text-orange-300 text-xs ml-0.5">✦</span>
+                </a>
+            </div>
+
+            <!-- Right: Tagline, Sparkles & Open Today Badge -->
+            <div class="flex items-center gap-4">
+                <!-- Cursive Slogan -->
+                <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+                    Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+                </span>
+
+                <span class="text-white/20 font-light">|</span>
+
+                <!-- Open Today Pill Badge with pulsing green light -->
+                <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                    <span>Open Today</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+            <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+                <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+                <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+                        <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+                    <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+                    <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+                    <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+                    <a href="contact.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-8 border-b pb-4">
+                <span class="font-heading font-bold text-navy text-xl">Menu</span>
+                <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+                <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+                <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+                <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+                <a href="contact.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Contact</a>
+            </nav>
+            <div class="mt-auto pt-8">
+                <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BREADCRUMB -->
+    <div class="bg-cream py-3 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 text-sm text-gray-500">
+            <a href="index.html" class="hover:text-orange transition-colors">Home</a> / <span class="text-navy font-medium">Contact</span>
+        </div>
+    </div>
+
+    <!-- 4. HERO SECTION -->
+    <section class="relative bg-gradient-to-r from-light-blue to-white py-16 md:py-24 overflow-hidden" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Left content -->
+            <div class="space-y-6">
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl text-navy leading-tight">
+                    We're Here for <br/>
+                    <span class="text-orange">Your Smile and Skin.</span>
+                </h1>
+                <p class="text-gray-600 text-lg md:text-xl max-w-lg">
+                    Connect with our team to plan your personalised dental or aesthetic consultation.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact-form" class="bg-orange hover:bg-orange-hover text-white px-8 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        Book Appointment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://wa.me/918940044644" target="_blank" class="bg-white text-navy border border-gray-200 hover:border-orange hover:text-orange px-8 py-3 rounded-full font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-green-500"></i> Chat on WhatsApp <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right image -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="relative w-full max-w-xl aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
+                    <img src="assets/images/contact-hero.png" alt="Dr.GR Dental & Aesthetics Clinic" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent"></div>
+                </div>
+                
+                <!-- Floating badge -->
+                <div class="absolute -bottom-5 -left-4 md:-left-6 bg-white py-2.5 px-4 rounded-2xl shadow-xl flex items-center gap-3 border-2 border-orange/20">
+                    <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-heading font-bold text-sm shadow">GR</div>
+                    <div>
+                        <span class="font-heading font-bold text-xs text-navy block">State-of-the-Art Clinic</span>
+                        <span class="font-cursive text-orange text-sm font-semibold">Smile · Transform · Repeat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative bg circle -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+    </section>
+
+    <!-- 5. CONTACT INFO CARDS -->
+    <section class="py-16 bg-white -mt-10 relative z-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow hover:-translate-y-1 duration-300">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center text-orange mb-4">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-2">Call Us</h3>
+                    <a href="tel:7200920929" class="text-orange font-semibold text-lg hover:underline mb-2 block">72009 20929</a>
+                    <p class="text-gray-600 text-sm">Speak with our friendly team for appointments and enquiries.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow hover:-translate-y-1 duration-300">
+                    <div class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center text-green-600 mb-4">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-2">WhatsApp</h3>
+                    <a href="https://wa.me/918940044644" target="_blank" class="text-green-600 font-semibold text-lg hover:underline mb-2 block">89400 44644</a>
+                    <p class="text-gray-600 text-sm">Chat with us on WhatsApp for quick assistance.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow hover:-translate-y-1 duration-300">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center text-orange mb-4">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-2">Email Us</h3>
+                    <a href="mailto:drgrdentalaesthetic@gmail.com" class="text-orange font-semibold text-sm break-all hover:underline mb-2 block">drgrdentalaesthetic@gmail.com</a>
+                    <p class="text-gray-600 text-sm">Drop us an email and we'll get back to you soon.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow hover:-translate-y-1 duration-300">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center text-orange mb-4">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-2">Our Location</h3>
+                    <span class="text-orange font-semibold text-base mb-2 block">Ramanathapuram, Coimbatore</span>
+                    <p class="text-gray-600 text-sm">Visit our clinic for personalised care and expert consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SEND US A MESSAGE & FIND US HERE -->
+    <section class="py-16 bg-cream" id="contact-form">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left Column: Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="font-heading text-3xl font-bold text-navy mb-3">Send Us a Message</h2>
+                    <p class="text-gray-600 mb-8">We'd love to hear from you. Fill in the details below and our team will get back to you soon.</p>
+                    
+                    <form onsubmit="return validateContactForm(event)" class="space-y-5">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange focus:border-orange transition-shadow outline-none" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange focus:border-orange transition-shadow outline-none" placeholder="Your phone number">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange focus:border-orange transition-shadow outline-none" placeholder="Your email address">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="treatment" class="block text-sm font-medium text-gray-700 mb-1">Treatment Interest <span class="text-red-500">*</span></label>
+                            <select id="treatment" name="treatment" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange focus:border-orange transition-shadow outline-none bg-white">
+                                <option value="" disabled selected>Select a treatment area</option>
+                                <option value="Dental Care">Dental Care</option>
+                                <option value="Aesthetic Treatments">Aesthetic Treatments</option>
+                                <option value="Hair Treatments">Hair Treatments</option>
+                                <option value="Consultations">Consultations</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange focus:border-orange transition-shadow outline-none resize-none" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="consent" name="consent" required class="mt-1 w-4 h-4 text-orange focus:ring-orange border-gray-300 rounded">
+                            <label for="consent" class="text-sm text-gray-600">I agree to be contacted by Dr.GR Dental & Aesthetics for appointment confirmation and other communications.</label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange hover:bg-orange-hover text-white py-3.5 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-lg">
+                            Send Message <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Map -->
+                <div>
+                    <h2 class="font-heading text-3xl font-bold text-navy mb-3">Find Us Here</h2>
+                    <p class="text-gray-600 mb-8">Visit our clinic for a comfortable and personalised experience.</p>
+                    
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden h-full max-h-[600px] flex flex-col">
+                        <!-- Map Placeholder / Embed -->
+                        <div class="relative w-full h-64 md:h-80 bg-gray-200 flex-grow">
+                            <!-- In a real site, replace this img/div with actual Google Maps iframe -->
+                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ramanathapuram,Coimbatore&zoom=15&size=800x600&maptype=roadmap&markers=color:red%7CRamanathapuram,Coimbatore&key=YOUR_API_KEY_HERE" alt="Map Location" class="w-full h-full object-cover hidden" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="absolute inset-0 bg-light-blue flex flex-col items-center justify-center p-6 text-center">
+                                <i data-lucide="map" class="w-12 h-12 text-navy/30 mb-2"></i>
+                                <span class="text-navy font-medium">Interactive Map View</span>
+                                <span class="text-sm text-gray-500 mt-1">Ramanathapuram, Coimbatore</span>
+                            </div>
+                            
+                            <!-- Custom Pin -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                <div class="bg-navy text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg mb-1 whitespace-nowrap">Dr.GR Dental & Aesthetics</div>
+                                <i data-lucide="map-pin" class="w-8 h-8 text-orange drop-shadow-md"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6 md:p-8 bg-white">
+                            <div class="flex items-start gap-4 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-light-blue flex-shrink-0 flex items-center justify-center text-orange mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-navy text-lg mb-1">Clinic Address</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        No.86/3/1 (1st Floor), Trichy Road,<br>
+                                        Ramanathapuram,<br>
+                                        Coimbatore
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <a href="https://maps.google.com/?q=Ramanathapuram,Coimbatore" target="_blank" class="block w-full text-center border-2 border-orange text-orange hover:bg-orange hover:text-white py-3 rounded-lg font-medium transition-colors">
+                                Get Directions &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WORKING HOURS -->
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center text-orange mx-auto mb-4">
+                    <i data-lucide="clock" class="w-6 h-6"></i>
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Working Hours</h2>
+                <p class="text-gray-600 text-lg">We are here to serve you, by appointment only.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-center justify-center">
+                <!-- Hours Table -->
+                <div class="w-full md:w-1/2 max-w-md bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8">
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Monday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Tuesday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Wednesday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Thursday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Friday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="font-medium text-gray-700">Saturday</span>
+                            <span class="text-navy font-semibold">10 AM – 8 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-2">
+                            <span class="font-medium text-orange">Sunday</span>
+                            <span class="text-orange font-bold">10 AM – 2 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- All Days Badge Card -->
+                <div class="w-full md:w-1/3">
+                    <div class="bg-navy rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+                        <!-- Decorative bg -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-orange/20 rounded-full translate-y-1/2 -translate-x-1/4"></div>
+                        
+                        <div class="relative z-10 flex flex-col items-start">
+                            <div class="bg-white/20 p-3 rounded-xl mb-6 backdrop-blur-sm">
+                                <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="font-heading text-3xl font-bold mb-4">All Days</h3>
+                            <p class="text-blue-100 text-lg leading-relaxed font-light">
+                                We are open all days to make quality care more accessible. Consultations are by appointment only.
+                            </p>
+                            
+                            <a href="tel:7200920929" class="mt-8 bg-orange hover:bg-orange-hover text-white px-6 py-3 rounded-full font-medium transition-colors inline-flex items-center gap-2">
+                                <i data-lucide="phone-call" class="w-4 h-4"></i> Call to Book
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PLAN YOUR VISIT -->
+    <section class="py-16 bg-gradient-to-br from-cream to-light-blue">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Plan Your Visit</h2>
+                <p class="text-gray-600 text-lg">Getting started is simple. Here's how you can plan your visit to Dr.GR Dental & Aesthetics.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-white relative text-center group hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center text-orange font-heading text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">1</div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Choose a Treatment</h3>
+                    <p class="text-gray-600">Explore our dental and aesthetic treatments and find what's right for you.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-white relative text-center group hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center text-orange font-heading text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">2</div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Book a Convenient Time</h3>
+                    <p class="text-gray-600">Call, WhatsApp or fill out the form to schedule your appointment.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-white relative text-center group hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center text-orange font-heading text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">3</div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Meet Our Care Team</h3>
+                    <p class="text-gray-600">Visit our clinic and experience personalised, expert care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FREQUENTLY ASKED QUESTIONS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 text-lg">Quick answers to common questions. Can't find what you're looking for? Contact us anytime.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="w-full text-left px-6 py-4 bg-gray-50 hover:bg-light-blue transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-navy text-lg">Do I need an appointment?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white text-gray-600 border-t border-gray-100">
+                        <div class="py-4">Yes, we recommend booking an appointment in advance to ensure minimal waiting time and focused care for your consultation.</div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="w-full text-left px-6 py-4 bg-gray-50 hover:bg-light-blue transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-navy text-lg">What should I bring for my first visit?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white text-gray-600 border-t border-gray-100">
+                        <div class="py-4">Please bring any previous dental or medical records, X-rays if available, a list of current medications, and a valid photo ID.</div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="w-full text-left px-6 py-4 bg-gray-50 hover:bg-light-blue transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-navy text-lg">Can I book through WhatsApp?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white text-gray-600 border-t border-gray-100">
+                        <div class="py-4">Absolutely! You can reach us on WhatsApp at 89400 44644 to book or reschedule your appointment conveniently.</div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="w-full text-left px-6 py-4 bg-gray-50 hover:bg-light-blue transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-navy text-lg">Are Sunday consultations available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white text-gray-600 border-t border-gray-100">
+                        <div class="py-4">Yes, our clinic is open on Sundays from 10:00 AM to 2:00 PM by appointment only.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CTA SECTION -->
+    <section class="py-16 bg-navy relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="2" fill="#ffffff"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotPattern)"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Ready to Begin Your Care Journey?</h2>
+            <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">Book your consultation today and take the first step towards a healthier smile and glowing skin.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact-form" class="bg-orange hover:bg-orange-hover text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg flex items-center gap-2">
+                    Book Appointment <i data-lucide="calendar" class="w-4 h-4"></i>
+                </a>
+                <a href="https://wa.me/918940044644" target="_blank" class="bg-white text-navy hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-all shadow-lg flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-green-500"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- 12. SCROLL TO TOP BUTTON -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-orange text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-hover hover:-translate-y-1 focus:outline-none z-50" aria-label="Scroll to top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // FAQ Toggle logic (inline fallback just in case js/main.js is missing it)
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-icon');
+            
+            allAnswers.forEach((item, index) => {
+                if (item !== answer && item.classList.contains('open')) {
+                    item.classList.remove('open');
+                    item.style.maxHeight = null;
+                    item.style.paddingTop = '0';
+                    item.style.paddingBottom = '0';
+                    allIcons[index].style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('open');
+            if (answer.classList.contains('open')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Contact Form Validation fallback
+        function validateContactForm(event) {
+            event.preventDefault();
+            // Optional: add actual validation logic here, but for static site mockups, usually an alert is fine
+            alert('Thank you for reaching out! Your message has been sent successfully.');
+            event.target.reset();
+            return false;
+        }
+    </script>
+</body>
+</html>

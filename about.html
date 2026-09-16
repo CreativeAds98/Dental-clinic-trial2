@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dr.GR Dental & Aesthetics - Coimbatore</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a5f',
+                        'navy-light': '#2d5a8a',
+                        orange: '#f26b2a',
+                        'orange-hover': '#e05a1a',
+                        'light-blue': '#e8f4fd',
+                        cream: '#fdf8f0',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero gradient background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #fdf8f0 0%, #e8f4fd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%23e8f4fd" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>');
+            background-size: contain;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .blue-gradient-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 100%);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #f26b2a, #e05a1a);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+      
+      <!-- Subtle Background Glow & Waves Overlay -->
+      <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+      <!-- Background Wave Lines -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+        <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+      </svg>
+
+      <!-- Tooth Watermark (Left) -->
+      <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Tooth Watermark (Center-Right) -->
+      <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Tooth Watermark (Far-Right) -->
+      <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Content Row -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+        
+        <!-- Left: Location & Phone with circular orange badges -->
+        <div class="flex items-center gap-3 lg:gap-4">
+          <!-- Location -->
+          <span class="flex items-center gap-2 font-medium">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>Coimbatore</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <!-- Phone -->
+          <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>72009 20929</span>
+            <span class="text-orange-300 text-xs ml-0.5">✦</span>
+          </a>
+        </div>
+
+        <!-- Right: Tagline, Sparkles & Open Today Badge -->
+        <div class="flex items-center gap-4">
+          <!-- Cursive Slogan -->
+          <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+            Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <!-- Open Today Pill Badge with pulsing green light -->
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+            <span>Open Today</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+        <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+          <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+          <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+                        <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">About</a>
+                    <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+                    <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+                    <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-8 border-b pb-4">
+                <span class="font-heading font-bold text-navy text-xl">Menu</span>
+                <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+                <a href="about.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">About</a>
+                <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+                <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+                <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+                <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+            </nav>
+            <div class="mt-auto pt-8">
+                <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BREADCRUMB -->
+    <div class="bg-light-blue/50 py-3 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center text-sm text-gray-500">
+                <a href="index.html" class="hover:text-navy transition-colors">Home</a>
+                <i data-lucide="chevron-right" class="w-4 h-4 mx-2"></i>
+                <span class="text-navy font-medium">About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. HERO SECTION -->
+    <section class="hero-gradient py-16 md:py-24 relative z-10" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="fade-in-up">
+                    <span class="inline-block py-1 px-3 rounded-full bg-orange/10 text-orange font-semibold text-sm mb-6 border border-orange/20">About Us</span>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl text-navy leading-tight mb-6">
+                        Expert Care for Your <br>
+                        <span class="text-gradient">Smile and Skin</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-light leading-relaxed">
+                        Personalised, doctor-led dental and aesthetic care in Coimbatore.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <span class="text-orange font-bold">✓</span> Trusted Care
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <span class="text-orange font-bold">✓</span> Beautiful Results
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <span class="text-orange font-bold">✓</span> Healthy Smiles
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <span class="text-orange font-bold">✓</span> Confident You
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="relative fade-in-up" style="transition-delay: 200ms;">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="assets/images/hero-smile.jpg" alt="Smiling Patient" class="w-full h-auto object-cover aspect-[4/3] bg-gray-200" onerror="this.src='https://via.placeholder.com/800x600/fdf8f0/1e3a5f?text=Beautiful+Smile'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-8 -left-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-12 h-12 bg-navy text-white flex items-center justify-center rounded-xl font-heading font-bold text-xl">GR</div>
+                        <div>
+                            <p class="font-cursive text-xl text-orange mb-1">Smile Transform Repeat</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-orange/10 rounded-full blur-2xl z-[-1]"></div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-light-blue rounded-full blur-3xl z-[-1]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WELCOME SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up order-2 lg:order-1">
+                    <div class="relative">
+                        <img src="assets/images/clinic-interior.jpg" alt="Clinic Interior" class="rounded-[2rem] shadow-xl w-full h-auto object-cover aspect-square md:aspect-[4/3] bg-gray-200" onerror="this.src='https://via.placeholder.com/800x800/e8f4fd/1e3a5f?text=Clinic+Interior'">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-orange rounded-tl-3xl z-[-1]"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-navy rounded-br-3xl z-[-1]"></div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-up order-1 lg:order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-px w-8 bg-orange"></div>
+                        <span class="text-orange font-bold uppercase tracking-wider text-sm">Welcome</span>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl text-navy mb-6 leading-tight">Welcome to <br>Dr.GR Dental & Aesthetics</h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p>Dr.GR Dental & Aesthetics is a multi-speciality dental and aesthetic clinic in Coimbatore, dedicated to advanced treatments, patient comfort, safety and natural-looking results.</p>
+                        <p>We bring together a skilled team, modern technology and a compassionate approach to help you achieve a healthier smile and a more confident you.</p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <img src="assets/images/dr-gowseka.jpg" alt="Dr. Gowseka Ragunathan" class="h-16 w-16 rounded-full object-cover shadow-md inline-block mr-4 bg-gray-200" onerror="this.style.display='none'">
+                        <span class="font-cursive text-2xl text-navy">Care beyond the chair</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ONE CLINIC MULTIPLE SPECIALITIES -->
+    <section class="py-20 blue-gradient-section text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="font-heading text-3xl md:text-4xl mb-4 text-white">One Clinic. Multiple Specialities. Comprehensive Care.</h2>
+                <p class="text-light-blue text-lg">Different needs. A connected approach. All under one roof.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 text-center transform transition-transform hover:-translate-y-2 hover:shadow-xl fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-4 text-navy">
+                        <i data-lucide="smile" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Dental Care</h3>
+                    <p class="text-gray-600 text-sm">Advanced general & cosmetic dentistry.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 text-center transform transition-transform hover:-translate-y-2 hover:shadow-xl fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-4 text-navy">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Facial Aesthetics</h3>
+                    <p class="text-gray-600 text-sm">Non-surgical skin and facial enhancements.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 text-center transform transition-transform hover:-translate-y-2 hover:shadow-xl fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-4 text-navy">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Specialist Consultations</h3>
+                    <p class="text-gray-600 text-sm">Expert opinions from various medical fields.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-6 text-center transform transition-transform hover:-translate-y-2 hover:shadow-xl fade-in-up" style="transition-delay: 400ms;">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-4 text-navy">
+                        <i data-lucide="apple" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Nutrition Counselling</h3>
+                    <p class="text-gray-600 text-sm">Dietary guidance for holistic wellness.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-6 text-center transform transition-transform hover:-translate-y-2 hover:shadow-xl fade-in-up" style="transition-delay: 500ms;">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-4 text-navy">
+                        <i data-lucide="microscope" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Laboratory Support</h3>
+                    <p class="text-gray-600 text-sm">In-house diagnostic capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHAT MAKES US DIFFERENT -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="font-heading text-3xl md:text-4xl text-navy mb-4">What Makes Us Different</h2>
+                <p class="text-gray-600 text-lg">Thoughtful care. Modern solutions. A better you.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">Comprehensive Dental Care</h3>
+                    <p class="text-gray-600">From routine check-ups to complex restorative procedures.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="network" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">9+ Specialty Collaborations</h3>
+                    <p class="text-gray-600">Access to a wide network of specialized medical professionals.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="gem" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">Dental + Aesthetic Care</h3>
+                    <p class="text-gray-600">Integrated approach addressing both functional and cosmetic needs.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">Advanced Treatment Options</h3>
+                    <p class="text-gray-600">Utilizing state-of-the-art equipment and modern techniques.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up" style="transition-delay: 400ms;">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">Personalised Planning</h3>
+                    <p class="text-gray-600">Tailored treatment plans designed specifically for your unique goals.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up" style="transition-delay: 500ms;">
+                    <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange mb-6">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-xl mb-3">Comfort-focused Approach</h3>
+                    <p class="text-gray-600">Prioritizing a relaxing and pain-free experience for every patient.</p>
+                </div>
+                
+                <!-- Card 7 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 fade-in-up xl:col-span-2" style="transition-delay: 600ms;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-orange/10 rounded-full flex items-center justify-center text-orange flex-shrink-0">
+                            <i data-lucide="badge-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy text-xl mb-3">Professionally Established Compliant Facility</h3>
+                            <p class="text-gray-600">Adhering strictly to national and international standards of clinical safety and hygiene protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. OUR CARE PHILOSOPHY -->
+    <section class="py-20 bg-light-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="font-heading text-3xl md:text-4xl text-navy mb-4">Our Care Philosophy</h2>
+                <p class="text-gray-600 text-lg">Rooted in expertise. Guided by compassion. Focused on you.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Decorative dashed line connecting circles -->
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 border-t-2 border-dashed border-navy/20 z-0"></div>
+
+                <!-- Card 1 -->
+                <div class="relative z-10 text-center fade-in-up">
+                    <div class="w-24 h-24 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white transition-transform hover:scale-110 duration-300">
+                        <i data-lucide="target" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl text-navy mb-3 font-bold">Precision</h3>
+                    <p class="text-gray-600 px-4">Evidence-based treatments with modern technology for accurate, effective results.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="relative z-10 text-center fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-24 h-24 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white transition-transform hover:scale-110 duration-300">
+                        <i data-lucide="sofa" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl text-navy mb-3 font-bold">Comfort</h3>
+                    <p class="text-gray-600 px-4">A gentle, supportive experience designed around you.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="relative z-10 text-center fade-in-up" style="transition-delay: 400ms;">
+                    <div class="w-24 h-24 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white transition-transform hover:scale-110 duration-300">
+                        <i data-lucide="flower-2" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl text-navy mb-3 font-bold">Natural Results</h3>
+                    <p class="text-gray-600 px-4">Enhancing your natural beauty for a healthier, more confident you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DESIGNED AROUND YOUR COMFORT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="font-heading text-3xl md:text-4xl text-navy mb-4">Designed Around Your Comfort</h2>
+                <p class="text-gray-600 text-lg">Modern spaces. Advanced technology. A welcoming experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Facility 1 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Consultation Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Consultation'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Consultation Room</h3>
+                        <p class="text-gray-500 text-sm">Private spaces for detailed discussions.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 2 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50" style="transition-delay: 100ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Dental Treatment Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Dental+Room'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Dental Treatment Room</h3>
+                        <p class="text-gray-500 text-sm">Equipped with modern dental chairs.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 3 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50" style="transition-delay: 200ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Aesthetic Treatment Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Aesthetic+Room'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Aesthetic Treatment Room</h3>
+                        <p class="text-gray-500 text-sm">Dedicated spaces for skin procedures.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 4 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50" style="transition-delay: 300ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Laser Treatment Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Laser+Area'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Laser Treatment Area</h3>
+                        <p class="text-gray-500 text-sm">Specialized zone for laser therapies.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 5 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50" style="transition-delay: 400ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Sterilization Zone" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Sterilization'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Sterilization Zone</h3>
+                        <p class="text-gray-500 text-sm">Ensuring the highest hygiene standards.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 6 -->
+                <div class="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in-up bg-gray-50" style="transition-delay: 500ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/clinic-interior.jpg" alt="Calm Waiting Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-gray-200" onerror="this.src='https://via.placeholder.com/600x400/e8f4fd/1e3a5f?text=Waiting+Area'">
+                        <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-5 border-t-4 border-orange">
+                        <h3 class="font-bold text-navy text-lg mb-1">Calm Waiting Area</h3>
+                        <p class="text-gray-500 text-sm">A relaxing space before your appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. OUR VALUES AND ASSURANCE -->
+    <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-3xl md:text-4xl text-navy mb-12 text-center fade-in-up">Our Values and Assurance</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="flex flex-col items-center text-center fade-in-up p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-orange transition-colors">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 mb-4">
+                        <i data-lucide="shield" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Safety First</h3>
+                    <p class="text-gray-600 text-sm">Strict hygiene, safety and infection control.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="flex flex-col items-center text-center fade-in-up p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-orange transition-colors" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="user-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Doctor-Led Care</h3>
+                    <p class="text-gray-600 text-sm">Experienced professionals who act with well-being first.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="flex flex-col items-center text-center fade-in-up p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-orange transition-colors" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i data-lucide="git-merge" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Coordinated Specialities</h3>
+                    <p class="text-gray-600 text-sm">A collaborative approach for complete care.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="flex flex-col items-center text-center fade-in-up p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-orange transition-colors" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center text-orange mb-4">
+                        <i data-lucide="clipboard-signature" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Individual Treatment Plans</h3>
+                    <p class="text-gray-600 text-sm">Personalised solutions for your unique needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CTA SECTION -->
+    <section class="py-16 blue-gradient-section text-white relative overflow-hidden">
+        <!-- Background decorations -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mt-20 -mr-20"></div>
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full -mb-10 -ml-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 fade-in-up">
+            <h2 class="font-heading text-3xl md:text-5xl mb-6 leading-tight">Your Healthier Smile and More Confident You Starts Here</h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+                <a href="contact.html" class="bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
+                    Book Appointment <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="https://wa.me/917200920929" target="_blank" class="bg-white text-navy hover:bg-light-blue px-8 py-3.5 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-green-500"></i> Chat on WhatsApp
+                </a>
+            </div>
+            
+            <div class="mt-8">
+                <span class="font-cursive text-2xl text-light-blue">Let's create something beautiful together ✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- 13. SCROLL TO TOP BUTTON -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-orange hover:bg-orange-hover text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all translate-y-20 opacity-0 z-50">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Main JavaScript functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll to Top Button
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+            if (scrollBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        scrollBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        scrollBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
+
+                scrollBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

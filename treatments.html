@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatments | Dr.GR Dental & Aesthetics - Coimbatore</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1e3a5f',
+            'navy-light': '#2d5a8a',
+            orange: '#f26b2a',
+            'orange-hover': '#e05a1a',
+            'light-blue': '#e8f4fd',
+            cream: '#fdf8f0',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+            cursive: ['Dancing Script', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="font-body text-gray-800 antialiased bg-white">
+
+  <!-- 1. TOP BAR -->
+  <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+    
+    <!-- Subtle Background Glow & Waves Overlay -->
+    <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+    <!-- Background Wave Lines -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+      <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+    </svg>
+
+    <!-- Tooth Watermark (Left) -->
+    <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Tooth Watermark (Center-Right) -->
+    <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Tooth Watermark (Far-Right) -->
+    <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Content Row -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+      
+      <!-- Left: Location & Phone with circular orange badges -->
+      <div class="flex items-center gap-3 lg:gap-4">
+        <!-- Location -->
+        <span class="flex items-center gap-2 font-medium">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          </span>
+          <span>Coimbatore</span>
+        </span>
+
+        <span class="text-white/20 font-light">|</span>
+
+        <!-- Phone -->
+        <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          </span>
+          <span>72009 20929</span>
+          <span class="text-orange-300 text-xs ml-0.5">✦</span>
+        </a>
+      </div>
+
+      <!-- Right: Tagline, Sparkles & Open Today Badge -->
+      <div class="flex items-center gap-4">
+        <!-- Cursive Slogan -->
+        <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+          Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+        </span>
+
+        <span class="text-white/20 font-light">|</span>
+
+        <!-- Open Today Pill Badge with pulsing green light -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          <span>Open Today</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+      <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+        <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+        <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+          <div class="flex flex-col">
+            <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+            <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+          <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+          <a href="treatments.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Treatments</a>
+          <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+          <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+          <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden lg:flex items-center">
+          <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+            Book Appointment
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+    <div class="p-6 flex flex-col h-full">
+      <div class="flex justify-between items-center mb-8 border-b pb-4">
+        <span class="font-heading font-bold text-navy text-xl">Menu</span>
+        <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4">
+        <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+        <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+        <a href="treatments.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Treatments</a>
+        <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+        <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+        <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+      </nav>
+      <div class="mt-auto pt-8">
+        <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. BREADCRUMB -->
+  <div class="bg-slate-50 border-b border-slate-100 py-3 px-4">
+    <div class="max-w-7xl mx-auto flex items-center text-sm text-gray-500">
+      <a href="index.html" class="hover:text-orange">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-navy font-medium">Treatments</span>
+    </div>
+  </div>
+
+  <!-- 4. HERO SECTION -->
+  <section class="bg-light-blue py-16 md:py-24 relative overflow-hidden" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6">
+          Complete Care for Your <span class="text-orange">Smile, Skin & Confidence</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-8 max-w-lg">
+          Advanced dental and aesthetic treatments, personalised around you.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <span class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i> Expert Team</span>
+          <span class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i> Advanced Technology</span>
+          <span class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i> Personalised Care</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 bg-orange/10 rounded-full blur-3xl transform -translate-x-10 translate-y-10"></div>
+        <img src="assets/images/hero-smile.jpg" alt="Patient Smiling" class="rounded-2xl shadow-xl relative z-10 w-full object-cover aspect-[4/3]" onerror="this.src='https://via.placeholder.com/600x450/e8f4fd/1e3a5f?text=Hero+Image'">
+        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20 flex items-center gap-3">
+          <div class="w-10 h-10 bg-orange/10 rounded-full flex items-center justify-center text-orange"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+          <div class="font-cursive text-xl text-navy">Transforming Lives</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TREATMENT TABS NAVIGATION -->
+  <section class="py-12 bg-white sticky top-[72px] z-40 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="switchTab('dental')" id="btn-dental" data-tab="dental" class="tab-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-navy text-white shadow-md cursor-pointer">
+          Dental Treatments
+        </button>
+        <button onclick="switchTab('aesthetic')" id="btn-aesthetic" data-tab="aesthetic" class="tab-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer">
+          Aesthetic Treatments
+        </button>
+        <button onclick="switchTab('hair')" id="btn-hair" data-tab="hair" class="tab-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer">
+          Hair & PMU Treatments
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. DENTAL TREATMENTS GRID -->
+  <section id="tab-dental" class="tab-content active py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Dental Treatments</h2>
+        <p class="text-slate-600 text-lg">Comprehensive dental care for healthy, confident smiles.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Invisalign" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Invisalign'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Invisalign</h3>
+            <p class="text-slate-600 text-sm">Clear, removable aligners to straighten teeth discreetly.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Teeth Cleaning & Whitening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Teeth+Cleaning'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Teeth Cleaning & Whitening</h3>
+            <p class="text-slate-600 text-sm">Professional cleaning and brightening for a radiant smile.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Cavity Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Cavity+Treatment'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Cavity Treatment & Restorations</h3>
+            <p class="text-slate-600 text-sm">Tooth-colored fillings and restorations to repair decay.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Root Canal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Root+Canal'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Root Canal Treatment</h3>
+            <p class="text-slate-600 text-sm">Painless treatment to save infected or severely decayed teeth.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Braces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Braces'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Braces & Invisible Aligners</h3>
+            <p class="text-slate-600 text-sm">Orthodontic solutions for perfectly aligned teeth.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Cosmetic Dentistry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Smile+Designing'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Cosmetic Dentistry & Smile Designing</h3>
+            <p class="text-slate-600 text-sm">Customized treatments for a flawless, beautiful smile.</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Full Mouth Rehab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Full+Mouth+Rehab'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Full Mouth Rehabilitation</h3>
+            <p class="text-slate-600 text-sm">Comprehensive restoration of the entire mouth.</p>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Dental Implants" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Dental+Implants'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Dental Implants</h3>
+            <p class="text-slate-600 text-sm">Permanent, natural-looking replacements for missing teeth.</p>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Tooth Gems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Tooth+Gems'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Tooth Gems</h3>
+            <p class="text-slate-600 text-sm">Safe, stylish crystal embellishments for your smile.</p>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="General Dentistry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=General+Dentistry'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">General & Pediatric Dentistry</h3>
+            <p class="text-slate-600 text-sm">Routine care and gentle treatments for all ages.</p>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Oral Surgery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Oral+Surgery'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Oral Surgery</h3>
+            <p class="text-slate-600 text-sm">Expert surgical procedures including wisdom tooth removal.</p>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Laser Dentistry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Laser+Dentistry'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Laser Dentistry</h3>
+            <p class="text-slate-600 text-sm">Advanced laser technology for minimally invasive care.</p>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Dentures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Dentures'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Complete Denture / FPD / RPD</h3>
+            <p class="text-slate-600 text-sm">Custom prosthetic solutions for restoring function and aesthetics.</p>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100">
+          <div class="h-48 overflow-hidden bg-light-blue relative">
+            <img src="assets/images/treatment-dental.jpg" alt="Permanent Fillings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x300/e8f4fd/1e3a5f?text=Permanent+Fillings'">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold text-navy mb-2 group-hover:text-orange transition-colors">Permanent Tooth Fillings</h3>
+            <p class="text-slate-600 text-sm">Durable, tooth-colored restorations for lasting protection.</p>
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="bg-navy rounded-xl shadow-md p-8 flex flex-col justify-center items-center text-center text-white md:col-span-2 lg:col-span-1">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="help-circle" class="w-8 h-8 text-orange"></i>
+          </div>
+          <h3 class="font-heading text-2xl font-bold mb-4">Not sure which treatment is right for you?</h3>
+          <p class="text-slate-300 mb-8">Meet our specialists. Get expert guidance and a personalised treatment plan.</p>
+          <a href="contact.html" class="bg-orange hover:bg-orange-hover text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center gap-2">
+            Book a Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. AESTHETIC TREATMENTS GRID -->
+  <section id="tab-aesthetic" class="tab-content py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Aesthetic Treatments</h2>
+        <p class="text-slate-600 text-lg">Advanced aesthetic care for a more confident you.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="sparkles" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Chemical Peels & Medical Grade Facials</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="droplets" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Hydrafacial & Medi-Facials</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="sun" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Skin Brightening & Tan Removal</h3>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="scissors" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Laser Hair Reduction</h3>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="zap" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Picolaser for Pigmentation, Acne Scars & Tattoo Removal</h3>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="activity" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">MNRF for Acne Scars & Stretch Marks</h3>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="aperture" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Advanced Skin & Hair Laser Treatments</h3>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-4 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+            <i data-lucide="syringe" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-navy mb-2 group-hover:text-orange transition-colors">Botox / Fillers / Threads / HIFU</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. HAIR & PMU TREATMENTS GRID -->
+  <section id="tab-hair" class="tab-content py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Hair and PMU Treatments</h2>
+        <p class="text-slate-600 text-lg">Specialised solutions for hair restoration and cosmetic enhancement.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> PRP / GFC & Exosomes
+          </h3>
+          <p class="text-slate-600 text-sm">Advanced regenerative therapies to stimulate natural hair growth and improve hair density.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> Red Light Therapy
+          </h3>
+          <p class="text-slate-600 text-sm">Non-invasive laser therapy to reduce hair fall and promote stronger follicles.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> Microblading / Ombre Brows
+          </h3>
+          <p class="text-slate-600 text-sm">Semi-permanent makeup for perfectly shaped, natural-looking fuller eyebrows.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> Scalp Micropigmentation
+          </h3>
+          <p class="text-slate-600 text-sm">Cosmetic tattoo technique to create the illusion of fuller hair and conceal thinning areas.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> Lip Neutralization
+          </h3>
+          <p class="text-slate-600 text-sm">Specialized treatment to balance uneven lip tones and enhance natural lip color.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group border border-slate-100 p-8">
+          <h3 class="font-heading text-xl font-bold text-navy mb-3 group-hover:text-orange transition-colors flex items-center gap-2">
+            <i data-lucide="check" class="w-5 h-5 text-orange"></i> Lash Extensions
+          </h3>
+          <p class="text-slate-600 text-sm">Professional application for longer, fuller, and beautiful eyelashes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. YOUR TREATMENT JOURNEY -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Your Treatment Journey</h2>
+        <p class="text-slate-600 text-lg">A simple, supportive process from consultation to confidence.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <!-- Connecting Line (Desktop) -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-0 -translate-y-1/2"></div>
+        
+        <!-- Step 1 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-orange mb-4 border-4 border-cream">1</div>
+          <h3 class="font-heading text-xl font-bold text-navy mb-2">Consultation</h3>
+          <p class="text-slate-600 text-sm">Understand your needs and goals.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-orange mb-4 border-4 border-cream">2</div>
+          <h3 class="font-heading text-xl font-bold text-navy mb-2">Assessment</h3>
+          <p class="text-slate-600 text-sm">Detailed evaluation using advanced technology.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-orange mb-4 border-4 border-cream">3</div>
+          <h3 class="font-heading text-xl font-bold text-navy mb-2">Personalised Plan</h3>
+          <p class="text-slate-600 text-sm">Tailored treatment plan just for you.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-orange mb-4 border-4 border-cream">4</div>
+          <h3 class="font-heading text-xl font-bold text-navy mb-2">Treatment & Follow-up</h3>
+          <p class="text-slate-600 text-sm">Safe, precise treatment and ongoing care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA SECTION -->
+  <section class="py-16 bg-navy relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Smile, Skin or Hair?</h2>
+      <p class="text-light-blue mb-8 text-lg">Take the first step towards a more confident you. Schedule your consultation today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="contact.html" class="bg-orange hover:bg-orange-hover text-white px-8 py-3 rounded-md font-medium transition-colors text-lg flex items-center justify-center gap-2">
+          Book Appointment
+        </a>
+        <a href="https://wa.me/917200920929" target="_blank" class="bg-white hover:bg-gray-100 text-navy px-8 py-3 rounded-md font-medium transition-colors text-lg flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-5 h-5 text-green-500"></i> WhatsApp Us
+        </a>
+      </div>
+      <div class="mt-8 font-cursive text-2xl text-light-blue opacity-80">Healthy Smiles · Brighter Tomorrows</div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 12. SCROLL TO TOP -->
+  <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-orange text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-navy z-50 focus:outline-none">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Tab Switching Logic
+    function switchTab(tabId) {
+      if (!tabId) return;
+
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+        tab.classList.remove('hidden');
+        tab.style.display = 'none';
+      });
+
+      // Reset all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-navy', 'text-white', 'shadow-md');
+        btn.classList.add('bg-slate-100', 'text-slate-600', 'hover:bg-slate-200');
+      });
+
+      // Show selected tab
+      const targetTab = document.getElementById('tab-' + tabId);
+      if (targetTab) {
+        targetTab.classList.add('active');
+        targetTab.classList.remove('hidden');
+        targetTab.style.display = 'block';
+      }
+      
+      // Highlight selected button
+      const activeBtn = document.getElementById('btn-' + tabId) || document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-600', 'hover:bg-slate-200');
+        activeBtn.classList.add('active', 'bg-navy', 'text-white', 'shadow-md');
+      }
+
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    }
+
+    // Support URL Hash navigation (e.g. treatments.html#aesthetic or treatments.html#hair)
+    function handleHashTab() {
+      const hash = window.location.hash.replace('#', '');
+      if (['dental', 'aesthetic', 'hair'].includes(hash)) {
+        switchTab(hash);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', handleHashTab);
+    window.addEventListener('hashchange', handleHashTab);
+
+    // Scroll to Top Logic
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollToTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollToTopBtn.classList.remove('opacity-100', 'visible');
+        scrollToTopBtn.classList.add('opacity-0', 'invisible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology | Dr.GR Dental & Aesthetics - Coimbatore</title>
+  <meta name="description" content="Explore advanced dental and aesthetic technology at Dr.GR Dental & Aesthetics Coimbatore - iTero 3D Scanner, RVG Imaging, Diode Laser, Sterilization & more.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1e3a5f',
+            'navy-light': '#2d5a8a',
+            orange: '#f26b2a',
+            'orange-hover': '#e05a1a',
+            'light-blue': '#e8f4fd',
+            cream: '#fdf8f0',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+            cursive: ['Dancing Script', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-slate-800 font-body antialiased selection:bg-orange selection:text-white">
+
+  <!-- 1. TOP BAR -->
+  <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+    
+    <!-- Subtle Background Glow & Waves Overlay -->
+    <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+    <!-- Background Wave Lines -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+      <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+    </svg>
+
+    <!-- Tooth Watermark (Left) -->
+    <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Tooth Watermark (Center-Right) -->
+    <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Tooth Watermark (Far-Right) -->
+    <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+        <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      </svg>
+    </div>
+
+    <!-- Content Row -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+      
+      <!-- Left: Location & Phone with circular orange badges -->
+      <div class="flex items-center gap-3 lg:gap-4">
+        <!-- Location -->
+        <span class="flex items-center gap-2 font-medium">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          </span>
+          <span>Coimbatore</span>
+        </span>
+
+        <span class="text-white/20 font-light">|</span>
+
+        <!-- Phone -->
+        <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          </span>
+          <span>72009 20929</span>
+          <span class="text-orange-300 text-xs ml-0.5">✦</span>
+        </a>
+      </div>
+
+      <!-- Right: Tagline, Sparkles & Open Today Badge -->
+      <div class="flex items-center gap-4">
+        <!-- Cursive Slogan -->
+        <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+          Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+        </span>
+
+        <span class="text-white/20 font-light">|</span>
+
+        <!-- Open Today Pill Badge with pulsing green light -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          <span>Open Today</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+      <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+        <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+        <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+          <div class="flex flex-col">
+            <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+            <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+          <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+          <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+          <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+          <a href="technology.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Technology</a>
+          <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden lg:flex items-center">
+          <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+            Book Appointment
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+    <div class="p-6 flex flex-col h-full">
+      <div class="flex justify-between items-center mb-8 border-b pb-4">
+        <span class="font-heading font-bold text-navy text-xl">Menu</span>
+        <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4">
+        <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+        <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+        <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+        <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+        <a href="technology.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Technology</a>
+        <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+      </nav>
+      <div class="mt-auto pt-8">
+        <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BREADCRUMB ================= -->
+  <div class="bg-slate-50 border-b border-slate-100 py-3 px-4">
+    <div class="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-500">
+      <a href="index.html" class="hover:text-orange">Home</a>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
+      <span class="text-navy font-semibold">Technology</span>
+    </div>
+  </div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-gradient py-16 lg:py-24 relative overflow-hidden leaf-bg-left leaf-bg-right" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <span class="section-label">ADVANCED CLINICAL TECHNOLOGY</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight font-heading">
+            Modern Technology for <span class="gradient-text">Precise & Gentle Care.</span>
+          </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            At Dr.GR Dental & Aesthetics, we invest in world-class diagnostic imaging, digital scanning, piezolaser systems, and international-standard sterilization to make your clinical procedures safe, painless, and highly accurate.
+          </p>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> 100% Digital Precision
+            </span>
+            <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-orange"></i> Class B Sterilization
+            </span>
+            <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-orange"></i> Pain-Free Laser Dentistry
+            </span>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+              Book Tech Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="tel:7200920929" class="btn-outline">
+              <i data-lucide="phone" class="w-4 h-4"></i> Speak with Specialist
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <img src="assets/images/clinic-interior.jpg" alt="Modern Dental Equipment" class="rounded-2xl shadow-2xl border-4 border-white object-cover w-full h-[380px]">
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 max-w-xs">
+              <div class="w-12 h-12 rounded-full bg-light-blue text-navy flex items-center justify-center shrink-0 font-bold">
+                <i data-lucide="cpu" class="w-6 h-6 text-orange"></i>
+              </div>
+              <div>
+                <span class="block font-bold text-navy text-sm">State-of-the-Art</span>
+                <span class="block text-xs text-slate-500">Intraoral 3D & Laser Equipment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR TECHNOLOGY GRID ================= -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="section-label">EQUIPMENT & DIAGNOSTICS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy font-heading">Our Cutting-Edge Clinical Technology</h2>
+        <div class="gradient-divider mx-auto my-4"></div>
+        <p class="text-slate-600">Explore the advanced systems we use daily to deliver painless, precise, and highly reliable treatment outcomes.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Tech 1 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 text-orange flex items-center justify-center mb-6">
+            <i data-lucide="scan" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">iTero Digital 3D Scanner</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Replaces messy traditional impression trays with fast, accurate 3D intraoral digital scans for Invisalign clear aligners, crowns, and smile designing.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: No Gagging · High Precision · Instant 3D Preview</span>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-navy/10 text-navy flex items-center justify-center mb-6">
+            <i data-lucide="aperture" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">RVG Digital Radiography</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            High-resolution digital X-rays providing instant diagnostic views with up to 90% reduced radiation exposure compared to traditional film X-rays.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: Ultra-Low Radiation · Immediate Results</span>
+        </div>
+
+        <!-- Tech 3 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 text-orange flex items-center justify-center mb-6">
+            <i data-lucide="zap" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">Diode & Piezolaser Surgery</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Painless laser technology for soft-tissue procedures, gum contouring, root canal disinfection, and ultra-precise ultrasonic bone surgery.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: Minimal Bleeding · Faster Healing</span>
+        </div>
+
+        <!-- Tech 4 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-navy/10 text-navy flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">Class-B Autoclave Sterilization</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Strict multi-tier sterilization protocols using vacuum Class-B autoclaves, pouch sealing, and regular biological indicator testing for complete safety.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: 100% Sterile · Zero Cross-Contamination</span>
+        </div>
+
+        <!-- Tech 5 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 text-orange flex items-center justify-center mb-6">
+            <i data-lucide="sparkle" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">Pico & MNRF Aesthetic Lasers</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Advanced medical-grade laser systems for picosecond pigment removal, acne scar restructuring (Micro-Needling RF), and skin tightening.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: Non-Invasive · Visible Glow</span>
+        </div>
+
+        <!-- Tech 6 -->
+        <div class="treatment-card p-6 card-hover bg-slate-50/50">
+          <div class="w-14 h-14 rounded-xl bg-navy/10 text-navy flex items-center justify-center mb-6">
+            <i data-lucide="eye" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy font-heading mb-3">Operating Microscope</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            High-magnification optical systems for endodontics (root canal treatment) and delicate microsurgical aesthetic procedures.
+          </p>
+          <span class="text-xs font-semibold text-orange uppercase tracking-wider">Benefits: Extreme Accuracy · Tooth Preservation</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY TECH MATTERS ================= -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="section-label">PATIENT-FIRST ADVANTAGE</span>
+          <h2 class="text-3xl font-bold text-navy font-heading mb-4">How Advanced Technology Elevates Your Visit</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+            Modern dental and aesthetic technology is not just about equipment—it directly improves your comfort, reduces treatment duration, and delivers natural, predictable clinical outcomes.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <div>
+                <strong class="text-navy font-semibold block text-sm">Painless Procedures</strong>
+                <span class="text-xs text-slate-500">Laser-assisted soft tissue care minimizes pain, swelling, and recovery time.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <div>
+                <strong class="text-navy font-semibold block text-sm">Clear Pre-Treatment Preview</strong>
+                <span class="text-xs text-slate-500">See your projected smile transformation in 3D before starting treatment.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <div>
+                <strong class="text-navy font-semibold block text-sm">Unmatched Safety & Hygiene</strong>
+                <span class="text-xs text-slate-500">Rigorous sterilization protects you and your family at every step.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center lg:text-right">
+          <div class="inline-block p-6 bg-light-blue rounded-2xl border border-blue-100 text-left max-w-md">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="assets/images/logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border border-orange">
+              <div>
+                <h4 class="font-heading font-bold text-navy">Dr.GR Promise</h4>
+                <p class="text-xs text-slate-500">Doctor-Led Technology Integration</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 italic">
+              "Technology is a tool; clinical expertise makes it effective. We use modern systems to enhance accuracy while keeping compassion at the heart of your care."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA SECTION ================= -->
+  <section class="cta-gradient py-16 lg:py-20 relative overflow-hidden leaf-bg-left leaf-bg-right">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy font-heading mb-4">Experience Technology-Driven Care Today</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto mb-8 text-sm sm:text-base">
+        Book your consultation at Dr.GR Dental & Aesthetics, Coimbatore and experience gentle, state-of-the-art treatment tailored for you.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+          <i data-lucide="calendar" class="w-5 h-5"></i> Book Appointment
+        </button>
+        <a href="https://wa.me/918940044644" target="_blank" rel="noopener" class="btn-white">
+          <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="mt-8 font-cursive text-2xl text-navy">
+        Your Smile Story Starts Here ✨
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Lucide icons script & main JS -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

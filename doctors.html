@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | Dr.GR Dental & Aesthetics - Coimbatore</title>
+    <meta name="description" content="Meet the expert doctors and specialists at Dr.GR Dental & Aesthetics in Coimbatore. Providing personalized dental and facial aesthetics care.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a5f',
+                        'navy-light': '#2d5a8a',
+                        orange: '#f26b2a',
+                        'orange-hover': '#e05a1a',
+                        'light-blue': '#e8f4fd',
+                        cream: '#fdf8f0',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-gray-800 antialiased bg-white">
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+      
+      <!-- Subtle Background Glow & Waves Overlay -->
+      <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+      <!-- Background Wave Lines -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+        <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+      </svg>
+
+      <!-- Tooth Watermark (Left) -->
+      <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Tooth Watermark (Center-Right) -->
+      <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Tooth Watermark (Far-Right) -->
+      <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Content Row -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+        
+        <!-- Left: Location & Phone with circular orange badges -->
+        <div class="flex items-center gap-3 lg:gap-4">
+          <!-- Location -->
+          <span class="flex items-center gap-2 font-medium">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>Coimbatore</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <!-- Phone -->
+          <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>72009 20929</span>
+            <span class="text-orange-300 text-xs ml-0.5">✦</span>
+          </a>
+        </div>
+
+        <!-- Right: Tagline, Sparkles & Open Today Badge -->
+        <div class="flex items-center gap-4">
+          <!-- Cursive Slogan -->
+          <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+            Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <!-- Open Today Pill Badge with pulsing green light -->
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+            <span>Open Today</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+        <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+          <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+          <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+                        <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+                    <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+                    <a href="doctors.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Doctors</a>
+                    <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-8 border-b pb-4">
+                <span class="font-heading font-bold text-navy text-xl">Menu</span>
+                <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+                <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+                <a href="doctors.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Doctors</a>
+                <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+                <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+            </nav>
+            <div class="mt-auto pt-8">
+                <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BREADCRUMB -->
+    <div class="bg-gray-50 py-3 border-b border-gray-200 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center gap-2 text-gray-500">
+            <a href="index.html" class="hover:text-orange transition-colors"><i data-lucide="home" class="w-4 h-4"></i></a>
+            <span>/</span>
+            <span class="text-navy font-medium">Doctors</span>
+        </div>
+    </div>
+
+    <!-- 4. HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-cream via-white to-light-blue pt-16 pb-20 overflow-hidden" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 opacity-40" style="background-image: radial-gradient(#1e3a5f 1px, transparent 1px); background-size: 32px 32px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <!-- Text Content -->
+                <div class="flex-1 text-center lg:text-left">
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6">
+                        Expert Hands. <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange to-[#ff945e]">Personalised Care.</span>
+                    </h1>
+                    
+                    <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Meet the doctors guiding your smile, skin and facial-aesthetics journey.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 lg:gap-4">
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
+                            Skilled Professionals
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
+                            Compassionate Care
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
+                            Healthier Smiles Happier You
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="flex-1 relative w-full max-w-lg lg:max-w-none mx-auto mt-10 lg:mt-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="assets/images/doctor-team.jpg" alt="Dr.GR Doctors Team" class="w-full h-auto object-cover aspect-[4/3]" onerror="this.src='https://placehold.co/800x600/e8f4fd/1e3a5f?text=Doctors+Team'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-6 -right-6 lg:-right-10 bg-white p-4 rounded-xl shadow-xl transform -rotate-6 animate-bounce" style="animation-duration: 3s;">
+                        <p class="font-cursive text-2xl text-orange pr-2">A Team That Cares For You</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DR. GOWSEKA RAGUNATHAN (OUR FOUNDER) -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <!-- Leaf watermarks -->
+        <div class="absolute top-0 right-0 opacity-5 w-64 h-64 text-navy">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM15.5 14L12 17.5L8.5 14H11V8H13V14H15.5Z" fill="currentColor"/></svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                <!-- Left: Photo -->
+                <div class="w-full lg:w-5/12 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/5]">
+                        <img src="assets/images/dr-gowseka.jpg" alt="Dr. Gowseka Ragunathan" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x800/fdf8f0/f26b2a?text=Dr.+Gowseka+Ragunathan'">
+                    </div>
+                    <!-- Badge -->
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white whitespace-nowrap">
+                        OUR FOUNDER
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="w-full lg:w-7/12 mt-8 lg:mt-0">
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-2">Dr. Gowseka Ragunathan</h2>
+                    <h3 class="text-lg md:text-xl text-orange font-medium mb-6">Founder & Chief Dental Surgeon | Consultant – Facial Aesthetics | PMU Specialist</h3>
+                    
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="inline-flex items-center gap-1.5 bg-light-blue text-navy px-3 py-1 rounded text-sm font-medium">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> BDS, PGCFI
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-light-blue text-navy px-3 py-1 rounded text-sm font-medium">
+                            <i data-lucide="award" class="w-4 h-4"></i> TN DCI Reg. No. 30306
+                        </span>
+                    </div>
+                    
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                        With a passion for creating healthy smiles and confident lives, Dr. Gowseka Ragunathan combines clinical expertise with a compassionate, patient-first approach. Her focus is on personalised care that enhances both oral health and facial aesthetics, helping you look and feel your best.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-center">
+                        <a href="contact.html#book" class="w-full sm:w-auto text-center bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-md font-medium transition-colors shadow-lg shadow-orange/30 group">
+                            Book Consultation <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                        <a href="treatments.html" class="w-full sm:w-auto text-center border-2 border-navy text-navy hover:bg-navy hover:text-white px-8 py-3.5 rounded-md font-medium transition-colors group">
+                            View Treatments <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 text-right pr-4">
+                        <p class="font-cursive text-3xl text-gray-400">Smiles Transform Lives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DR. KIRUBASHANKAR (OUR CONSULTANT) -->
+    <section class="py-20 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
+                <!-- Right (Visuals): Photo -->
+                <div class="w-full lg:w-5/12 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/5]">
+                        <img src="assets/images/dr-kirubashankar.jpg" alt="Dr. Kirubashankar" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x800/e8f4fd/1e3a5f?text=Dr.+Kirubashankar'">
+                    </div>
+                    <!-- Badge -->
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white whitespace-nowrap">
+                        OUR CONSULTANT
+                    </div>
+                </div>
+
+                <!-- Left (Content) -->
+                <div class="w-full lg:w-7/12 mt-8 lg:mt-0 lg:pr-10">
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-2">Dr. Kirubashankar</h2>
+                    <h3 class="text-lg md:text-xl text-orange font-medium mb-6">Consultant – Oral & Maxillofacial Surgeon</h3>
+                    
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-3 py-1 rounded shadow-sm border border-gray-100 text-sm font-medium">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> BDS, MDS
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-3 py-1 rounded shadow-sm border border-gray-100 text-sm font-medium">
+                            <i data-lucide="award" class="w-4 h-4"></i> DCI Registration No. 20321
+                        </span>
+                    </div>
+                    
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                        Dr. Kirubashankar provides advanced surgical care with a focus on precision, safety and patient comfort. His expertise in oral and maxillofacial surgery helps restore function, health and confidence through comprehensive, personalised treatment.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-center">
+                        <a href="contact.html#book" class="w-full sm:w-auto text-center bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-md font-medium transition-colors shadow-lg shadow-orange/30 group">
+                            Book Consultation <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                        <a href="treatments.html" class="w-full sm:w-auto text-center border-2 border-navy text-navy hover:bg-navy hover:text-white px-8 py-3.5 rounded-md font-medium transition-colors group">
+                            View Treatments <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 text-left pl-4">
+                        <p class="font-cursive text-3xl text-gray-400">Precision Care Stronger Smiles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 9+ VISITING CONSULTING DOCTORS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-orange font-bold tracking-wider uppercase text-sm mb-2 block">OUR EXPERTISE</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">9+ Visiting Consulting Doctors Across Specialities</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    A multi-disciplinary team working together for comprehensive care.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 justify-center">
+                
+                <!-- Speciality Cards -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Orthodontics</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Endodontics</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Periodontics</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="git-merge" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Prosthodontics</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="baby" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Pediatric Dentistry</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="scissors" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Oral Surgery</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Facial Aesthetics</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="pipette" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Plastic Surgery</h4>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-orange hover:shadow-md transition-all group lg:col-span-2">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy group-hover:bg-orange group-hover:text-white shadow-sm transition-colors">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-medium text-navy text-sm">Head & Neck Surgery</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. COORDINATED EXPERTISE UNDER ONE ROOF -->
+    <section class="py-20 bg-gradient-to-b from-light-blue/40 to-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-orange font-bold uppercase tracking-wider text-xs mb-2 inline-block">Integrated Healthcare</span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-4">Coordinated Expertise Under One Roof</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
+                    Different specialities. A shared vision — your complete comfort, health, and radiant smile.
+                </p>
+            </div>
+
+            <!-- 3-Column Coordinated Hub Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-center max-w-6xl mx-auto">
+                
+                <!-- Left Column (3 Pillars) -->
+                <div class="space-y-4 md:space-y-5 order-2 lg:order-1">
+                    <!-- Pillar 1: Lead Doctor -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange/10 text-orange flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Lead Doctor</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Treatment Planning</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Comprehensive doctor-led evaluations ensuring your care is safe, precise, and bespoke.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Visiting Specialists -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Visiting Specialists</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Across Specialities</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Top orthodontists, endodontists, and surgeons collaborating seamlessly under one roof.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Advanced Diagnostics -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange/10 text-orange flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="microscope" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Advanced Diagnostics</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Accurate Treatment</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Digital 3D intraoral imaging and laser diagnostics for exact, gentle procedures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Hub: You At The Centre -->
+                <div class="order-1 lg:order-2 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center text-center py-6 px-4">
+                    <div class="relative mb-6">
+                        <!-- Concentric pulse rings -->
+                        <div class="absolute -inset-4 rounded-full bg-orange/10 animate-ping opacity-75" style="animation-duration: 3s;"></div>
+                        <div class="absolute -inset-2 rounded-full border-2 border-dashed border-orange/40"></div>
+                        
+                        <!-- Doctor Circle -->
+                        <div class="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-navy p-1">
+                            <img src="assets/images/dr-gowseka.jpg" alt="You At The Centre - Dr.GR Care" class="w-full h-full rounded-full object-cover object-center">
+                        </div>
+
+                        <!-- Center Badge -->
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-orange text-white px-5 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg whitespace-nowrap border-2 border-white">
+                            You At The Centre
+                        </div>
+                    </div>
+
+                    <h3 class="font-heading text-xl font-bold text-navy mb-2">Patient-First Care Model</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed max-w-xs mb-4">
+                        Every diagnostic tool, specialist consultation, and treatment step is synchronized entirely around your comfort and health.
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm text-xs font-semibold text-navy">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-orange"></i>
+                        100% Coordinated Team
+                    </div>
+                </div>
+
+                <!-- Right Column (3 Pillars) -->
+                <div class="space-y-4 md:space-y-5 order-3">
+                    <!-- Pillar 4: Nursing Support -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Nursing Support</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Compassionate Care</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Attentive, empathetic chairside assistance dedicated to making every visit stress-free.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 5: Nutrition Guidance -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange/10 text-orange flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="apple" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Nutrition Guidance</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Better Healing</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Custom dietary and recovery advice supporting post-procedure healing and gum health.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 6: Coordinated Care -->
+                    <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 transition-all hover:-translate-y-1 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-base">Coordinated Care</h4>
+                            <p class="text-xs font-semibold text-orange uppercase tracking-wide mb-1">Long-term Health</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Comprehensive follow-up schedules for enduring dental vitality and radiant skin.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MRS. BHUVANA ANANDH (OUR TEAM) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+                <!-- Photo -->
+                <div class="w-full md:w-1/3">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
+                        <img src="assets/images/nurse-bhuvana.jpg" alt="Mrs. Bhuvana Anandh" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/400x400/e8f4fd/1e3a5f?text=Team+Member'">
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="w-full md:w-2/3">
+                    <span class="text-orange font-bold tracking-wider uppercase text-xs mb-2 block">OUR TEAM</span>
+                    <h3 class="font-heading text-2xl lg:text-3xl font-bold text-navy mb-1">Mrs. Bhuvana Anandh</h3>
+                    <p class="text-orange font-medium mb-4">Senior Staff Nurse</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-2.5 py-1 rounded text-xs font-medium border border-gray-200">
+                            Diploma in Nursing Assistant
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-2.5 py-1 rounded text-xs font-medium border border-gray-200">
+                            10+ Years of Experience
+                        </span>
+                    </div>
+                    
+                    <p class="text-gray-600 leading-relaxed italic border-l-4 border-orange pl-4">
+                        "With dedication and a gentle approach, Mrs. Bhuvana Anandh ensures every patient receives comfortable, compassionate care throughout their treatment journey."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CARE THAT MAKES A DIFFERENCE -->
+    <section class="py-16 bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="text-center p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-orange">
+                        <i data-lucide="user-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-2">Doctor-led planning</h4>
+                    <p class="text-gray-300 text-sm">Every treatment is carefully planned by our core experts.</p>
+                </div>
+
+                <div class="text-center p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-orange">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-2">Specialist collaboration</h4>
+                    <p class="text-gray-300 text-sm">Right specialist for the right procedure, always.</p>
+                </div>
+
+                <div class="text-center p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-orange">
+                        <i data-lucide="map" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-2">Clear guidance</h4>
+                    <p class="text-gray-300 text-sm">Transparent communication at every step of your journey.</p>
+                </div>
+
+                <div class="text-center p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-orange">
+                        <i data-lucide="heart" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-2">Comfort-focused</h4>
+                    <p class="text-gray-300 text-sm">Ensuring pain-free, relaxed, and safe treatments.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CTA SECTION -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-6">Meet the Right Specialist for Your Needs</h2>
+            <p class="text-gray-600 mb-8 text-lg">Consult our expert panel and take the first step towards a healthier, more confident you.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html#book" class="inline-flex items-center justify-center px-8 py-4 bg-orange hover:bg-orange-hover text-white rounded-md font-medium text-lg transition-colors shadow-lg shadow-orange/30">
+                    Book an Appointment
+                </a>
+                <a href="https://wa.me/917200920929" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-green-500 text-green-600 hover:bg-green-50 rounded-md font-medium text-lg transition-colors shadow-sm">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Us
+                </a>
+            </div>
+            
+            <div class="mt-8">
+                <span class="font-cursive text-2xl text-navy">We look forward to welcoming you!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- 13. SCROLL TO TOP BUTTON -->
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-orange text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-orange-hover hover:-translate-y-1 z-50 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <!-- Assuming external JS file -->
+    <script src="js/main.js"></script>
+</body>
+</html>
