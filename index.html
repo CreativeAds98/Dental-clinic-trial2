@@ -244,12 +244,12 @@
           </p>
           
           <!-- CTA Buttons -->
-          <div class="flex flex-wrap gap-4 mb-10">
-            <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+          <div class="flex flex-wrap gap-4 mb-10 w-full sm:w-auto">
+            <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group btn-book-appointment w-full sm:w-auto">
               Book Appointment 
               <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
             </button>
-            <a href="treatments.html" class="bg-white hover:bg-slate-50 text-navy border-2 border-navy/15 px-8 py-3.5 rounded-full font-semibold transition-all flex items-center gap-2 group">
+            <a href="treatments.html" class="bg-white hover:bg-slate-50 text-navy border-2 border-navy/15 px-8 py-3.5 rounded-full font-semibold transition-all flex items-center justify-center gap-2 group w-full sm:w-auto">
               View Treatments
               <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
             </a>
@@ -279,63 +279,100 @@
         </div>
 
         <!-- RIGHT COLUMN: Image + Floating Cards -->
-        <div class="lg:w-[45%] relative animate-on-scroll flex items-center justify-center lg:-ml-8">
+        <div class="w-full lg:w-[45%] relative animate-on-scroll flex flex-col items-center justify-center lg:-ml-8">
           
-          <!-- Decorative cursive text (top right of image) -->
-          <div class="absolute -top-2 left-[15%] lg:left-[10%] z-20 hidden md:block">
-            <span class="font-cursive text-navy text-lg lg:text-xl opacity-50 transform -rotate-[30deg] inline-block italic">More Smiles<br>Brighter Lives</span>
+          <!-- Image and Desktop Floating Elements Container -->
+          <div class="relative flex items-center justify-center w-full">
+            <!-- Decorative cursive text (top right of image) -->
+            <div class="absolute -top-2 left-[15%] lg:left-[10%] z-20 hidden md:block">
+              <span class="font-cursive text-navy text-lg lg:text-xl opacity-50 transform -rotate-[30deg] inline-block italic">More Smiles<br>Brighter Lives</span>
+            </div>
+
+            <!-- Vertical cursive text (right side) -->
+            <div class="absolute right-[-30px] top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+              <span class="hero-vertical-text">Healthy Smiles Happier</span>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="hero-image-wrapper w-[280px] h-[340px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[460px] mx-auto relative z-[1]">
+              <img src="assets/images/hero-smile.jpg" alt="Patient with a confident, bright smile" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-100 to-orange-50 flex items-center justify-center text-navy font-medium\'>Smile Image</div>'">
+            </div>
+
+            <!-- Floating Card: 7+ Years (Desktop only) -->
+            <div class="hidden lg:flex hero-float-card absolute top-4 -right-6 bg-white/95 rounded-2xl p-4 items-center gap-3 z-10">
+              <div class="w-11 h-11 rounded-full bg-navy/10 flex items-center justify-center text-navy flex-shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-navy text-lg leading-tight">7+ Years</div>
+                <div class="text-[11px] text-slate-500 leading-tight">Trusted Care.<br>Lasting Smiles.</div>
+              </div>
+            </div>
+
+            <!-- Floating Card: Modern Technology (Desktop only) -->
+            <div class="hidden lg:flex hero-float-card absolute top-[42%] -right-12 bg-white/95 rounded-2xl p-4 items-center gap-3 z-10">
+              <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center text-orange flex-shrink-0">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-navy text-sm leading-tight">Modern Technology</div>
+                <div class="text-[11px] text-slate-500 leading-tight">Precision. Comfort.<br>Better Results.</div>
+              </div>
+            </div>
+
+            <!-- Floating Card: Doctor-led Care (Desktop only) -->
+            <div class="hidden lg:flex hero-float-card absolute bottom-8 -right-8 bg-white/95 rounded-2xl p-4 items-center gap-3 z-10">
+              <div class="w-11 h-11 rounded-full bg-blue-100 flex items-center justify-center text-navy flex-shrink-0">
+                <i data-lucide="stethoscope" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-navy text-sm leading-tight">Doctor-led Care</div>
+                <div class="text-[11px] text-slate-500 leading-tight">Personalised.<br>Compassionate. Always.</div>
+              </div>
+            </div>
+
+            <!-- Big Orange Floating CTA (Desktop only) -->
+            <button onclick="openAppointmentModal()" class="hidden lg:flex hero-big-cta absolute bottom-0 left-[-5%] btn-book-appointment">
+              Book<br>Appointment
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
           </div>
 
-          <!-- Vertical cursive text (right side) -->
-          <div class="absolute right-[-30px] top-1/2 -translate-y-1/2 z-20 hidden lg:block">
-            <span class="hero-vertical-text">Healthy Smiles Happier</span>
-          </div>
-
-
-
-          <!-- Hero Image -->
-          <div class="hero-image-wrapper w-[280px] h-[340px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[460px] mx-auto relative z-[1]">
-            <img src="assets/images/hero-smile.jpg" alt="Patient with a confident, bright smile" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-100 to-orange-50 flex items-center justify-center text-navy font-medium\'>Smile Image</div>'">
-          </div>
-
-          <!-- Floating Card: 7+ Years (top right) -->
-          <div class="hero-float-card absolute top-4 right-0 lg:-right-6 bg-white/95 rounded-2xl p-4 flex items-center gap-3 z-10">
-            <div class="w-11 h-11 rounded-full bg-navy/10 flex items-center justify-center text-navy flex-shrink-0">
-              <i data-lucide="shield-check" class="w-5 h-5"></i>
+          <!-- Feature Cards for Mobile & Tablet (Clean layout below the image) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-sm sm:max-w-2xl mt-6 lg:hidden">
+            <!-- Card 1 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3.5 flex items-center gap-3.5 shadow-sm border border-slate-100/80">
+              <div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center text-navy flex-shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-navy text-base leading-tight">7+ Years</div>
+                <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Trusted Care. Lasting Smiles.</div>
+              </div>
             </div>
-            <div>
-              <div class="font-heading font-bold text-navy text-lg leading-tight">7+ Years</div>
-              <div class="text-[11px] text-slate-500 leading-tight">Trusted Care.<br>Lasting Smiles.</div>
-            </div>
-          </div>
 
-          <!-- Floating Card: Modern Technology (mid right) -->
-          <div class="hero-float-card absolute top-[42%] -right-4 lg:-right-12 bg-white/95 rounded-2xl p-4 flex items-center gap-3 z-10">
-            <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center text-orange flex-shrink-0">
-              <i data-lucide="cpu" class="w-5 h-5"></i>
+            <!-- Card 2 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3.5 flex items-center gap-3.5 shadow-sm border border-slate-100/80">
+              <div class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center text-orange flex-shrink-0">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-navy text-sm leading-tight">Modern Technology</div>
+                <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Precision. Comfort. Better Results.</div>
+              </div>
             </div>
-            <div>
-              <div class="font-bold text-navy text-sm leading-tight">Modern Technology</div>
-              <div class="text-[11px] text-slate-500 leading-tight">Precision. Comfort.<br>Better Results.</div>
-            </div>
-          </div>
 
-          <!-- Floating Card: Doctor-led Care (bottom right) -->
-          <div class="hero-float-card absolute bottom-8 -right-2 lg:-right-8 bg-white/95 rounded-2xl p-4 flex items-center gap-3 z-10">
-            <div class="w-11 h-11 rounded-full bg-blue-100 flex items-center justify-center text-navy flex-shrink-0">
-              <i data-lucide="stethoscope" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="font-bold text-navy text-sm leading-tight">Doctor-led Care</div>
-              <div class="text-[11px] text-slate-500 leading-tight">Personalised.<br>Compassionate. Always.</div>
+            <!-- Card 3 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3.5 flex items-center gap-3.5 shadow-sm border border-slate-100/80">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-navy flex-shrink-0">
+                <i data-lucide="stethoscope" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-navy text-sm leading-tight">Doctor-led Care</div>
+                <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Personalised. Compassionate. Always.</div>
+              </div>
             </div>
           </div>
-
-          <!-- Big Orange Floating CTA -->
-          <button onclick="openAppointmentModal()" class="hero-big-cta absolute bottom-0 left-[5%] sm:left-[10%] lg:left-[-5%] btn-book-appointment">
-            Book<br>Appointment
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-          </button>
 
         </div>
       </div>
