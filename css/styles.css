@@ -19,6 +19,44 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #fdf8f0 50%, #f0f7ff 100%);
 }
 
+/* --- Scrollbar Utilities --- */
+.hide-scrollbar,
+.no-scrollbar,
+#transformations-carousel,
+#treatments-container {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox, Chrome 121+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar,
+#transformations-carousel::-webkit-scrollbar,
+#treatments-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb,
+.no-scrollbar::-webkit-scrollbar-thumb,
+#transformations-carousel::-webkit-scrollbar-thumb,
+#treatments-container::-webkit-scrollbar-thumb,
+.hide-scrollbar::-webkit-scrollbar-track,
+.no-scrollbar::-webkit-scrollbar-track,
+#transformations-carousel::-webkit-scrollbar-track,
+#treatments-container::-webkit-scrollbar-track,
+.hide-scrollbar::-webkit-scrollbar-button,
+.no-scrollbar::-webkit-scrollbar-button,
+#transformations-carousel::-webkit-scrollbar-button,
+#treatments-container::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
 /* --- Typography --- */
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Playfair Display', serif;
@@ -794,3 +832,141 @@ footer {
 .form-input::placeholder {
   color: #94a3b8;
 }
+
+/* --- Before & After Interactive Comparison Slider --- */
+.ba-showcase-container {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(30, 58, 95, 0.2);
+  user-select: none;
+  background: #f1f5f9;
+  touch-action: pan-y;
+}
+
+.ba-slider-img {
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.ba-after-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ba-before-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  will-change: width;
+  border-right: 2.5px solid #f26b2a;
+  z-index: 10;
+}
+
+.ba-before-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+}
+
+.ba-slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #f26b2a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ew-resize;
+  z-index: 30;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+
+.ba-slider-handle:hover,
+.ba-slider-handle:active {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(242, 107, 42, 0.45);
+}
+
+.ba-badge {
+  position: absolute;
+  bottom: 16px;
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.ba-badge-before {
+  left: 16px;
+}
+
+.ba-badge-after {
+  right: 16px;
+}
+
+/* Category Tabs */
+.ba-tab-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  color: #64748b;
+  border: 1.5px solid transparent;
+}
+
+.ba-tab-item:hover {
+  background: rgba(242, 107, 42, 0.05);
+  color: #1e3a5f;
+}
+
+.ba-tab-item.active {
+  color: #f26b2a;
+  background: rgba(242, 107, 42, 0.08);
+  border-color: rgba(242, 107, 42, 0.2);
+}
+
+.ba-tab-number {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 14px;
+  opacity: 0.6;
+}
+
+.ba-tab-item.active .ba-tab-number {
+  opacity: 1;
+  color: #f26b2a;
+}
+

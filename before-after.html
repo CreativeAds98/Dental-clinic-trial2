@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before & After Transformations | Dr.GR Dental & Aesthetics - Coimbatore</title>
+  <meta name="description" content="Explore real patient smile makeovers, teeth whitening, and skin aesthetic transformations at Dr.GR Dental & Aesthetics, Coimbatore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1e3a5f',
+            'navy-light': '#2d5a8a',
+            orange: '#f26b2a',
+            'orange-hover': '#e05a1a',
+            'light-blue': '#e8f4fd',
+            cream: '#fdf8f0',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+            cursive: ['Dancing Script', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Bulletproof scrollbar suppression across all browsers & Windows themes */
+    .hide-scrollbar,
+    .no-scrollbar,
+    #transformations-carousel {
+      -ms-overflow-style: none !important; /* IE and Edge */
+      scrollbar-width: none !important;    /* Firefox, Chrome 121+ */
+    }
+    .hide-scrollbar::-webkit-scrollbar,
+    .no-scrollbar::-webkit-scrollbar,
+    #transformations-carousel::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+      -webkit-appearance: none !important;
+    }
+    .hide-scrollbar::-webkit-scrollbar-thumb,
+    .no-scrollbar::-webkit-scrollbar-thumb,
+    #transformations-carousel::-webkit-scrollbar-thumb,
+    .hide-scrollbar::-webkit-scrollbar-track,
+    .no-scrollbar::-webkit-scrollbar-track,
+    #transformations-carousel::-webkit-scrollbar-track,
+    .hide-scrollbar::-webkit-scrollbar-button,
+    .no-scrollbar::-webkit-scrollbar-button,
+    #transformations-carousel::-webkit-scrollbar-button {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- 1. TOP BAR -->
+  <div class="bg-gradient-to-r from-navy via-[#163255] to-navy text-white text-xs py-2.5 relative z-20 border-b border-navy-light/40 overflow-hidden">
+    <!-- Subtle Background Glow & Waves Overlay -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,107,42,0.15),transparent_50%)] pointer-events-none"></div>
+    
+    <!-- Tooth Watermark (Right) -->
+    <div class="absolute -top-3 right-1/4 opacity-10 pointer-events-none hidden md:block">
+      <svg class="w-12 h-14 text-orange" viewBox="0 0 100 120" fill="currentColor">
+        <path d="M50 0 C20 0 5 25 5 55 C5 80 15 110 30 118 C38 122 45 105 50 90 C55 105 62 122 70 118 C85 110 95 80 95 55 C95 25 80 0 50 0 Z"/>
+      </svg>
+    </div>
+
+    <!-- Content Row -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 relative z-10">
+      
+      <!-- Left: Location & Phone with circular orange badges -->
+      <div class="flex items-center gap-6">
+        <!-- Location -->
+        <div class="flex items-center gap-2 text-slate-200">
+          <div class="w-5 h-5 rounded-full bg-orange/20 border border-orange/40 flex items-center justify-center text-orange shrink-0">
+            <i data-lucide="map-pin" class="w-3 h-3"></i>
+          </div>
+          <span class="font-medium tracking-wide">Trichy Road, Ramanathapuram, Coimbatore</span>
+        </div>
+        
+        <!-- Phone -->
+        <div class="hidden md:flex items-center gap-2 text-slate-200">
+          <div class="w-5 h-5 rounded-full bg-orange/20 border border-orange/40 flex items-center justify-center text-orange shrink-0">
+            <i data-lucide="phone" class="w-3 h-3"></i>
+          </div>
+          <a href="tel:7200920929" class="hover:text-orange transition-colors font-medium">72009 20929</a>
+          <span class="text-white/30">|</span>
+          <a href="tel:8940044644" class="hover:text-orange transition-colors font-medium">89400 44644</a>
+        </div>
+      </div>
+
+      <!-- Right: Tagline, Sparkles & Open Today Badge -->
+      <div class="flex items-center gap-4">
+        <!-- Cursive Slogan -->
+        <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+          Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">&#10022;</span>
+        </span>
+
+        <span class="text-white/20 font-light">|</span>
+
+        <!-- Open Today Pill Badge with pulsing green light -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          <span>Open Today</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wavy Bottom Border -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+      <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+        <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+        <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+          <div class="flex flex-col">
+            <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+            <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+          <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+          <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+          <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+          <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+          <a href="before-after.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Before & After</a>
+          <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden lg:flex items-center">
+          <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+            Book Appointment
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+    <div class="p-6 flex flex-col h-full">
+      <div class="flex justify-between items-center mb-8 border-b pb-4">
+        <span class="font-heading font-bold text-navy text-xl">Menu</span>
+        <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4">
+        <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+        <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+        <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+        <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+        <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+        <a href="before-after.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Before & After</a>
+        <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+      </nav>
+      <div class="mt-auto pt-8">
+        <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. BREADCRUMB -->
+  <div class="bg-light-blue/40 py-3 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center text-sm text-gray-500">
+        <a href="index.html" class="hover:text-navy transition-colors">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4 mx-2"></i>
+        <span class="text-navy font-medium">Before & After</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. BEFORE & AFTER HERO / INTERACTIVE SHOWCASE (MATCHING THE USER DESIGN MOCKUP) -->
+  <section class="py-12 lg:py-16 bg-[#fdfbf7] relative overflow-hidden">
+    <!-- Background Organic Shapes -->
+    <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#fceee1]/50 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#faf0e4] opacity-80 pointer-events-none"></div>
+
+    <!-- Tooth Outline Watermark (Top-Right, exactly as in mockup) -->
+    <div class="absolute top-4 right-10 sm:right-20 w-24 sm:w-32 lg:w-40 pointer-events-none select-none opacity-40">
+      <svg viewBox="0 0 100 120" fill="none" class="w-full h-full text-[#eddcd0]" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M50,8 C22,8 10,32 10,60 C10,85 20,110 32,118 C38,121 44,106 50,92 C56,106 62,121 68,118 C80,110 90,85 90,60 C90,32 78,8 50,8 Z" />
+        <path d="M38,40 C42,48 58,48 62,40" stroke-width="1.8" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Title Block (Center aligned per mockup) -->
+      <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-14 animate-on-scroll">
+        <!-- Tag with decorative side lines: — BEFORE & AFTER — -->
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <span class="w-8 sm:w-12 h-[1.5px] bg-orange/60"></span>
+          <span class="text-orange font-semibold text-xs sm:text-sm tracking-widest uppercase">BEFORE & AFTER</span>
+          <span class="w-8 sm:w-12 h-[1.5px] bg-orange/60"></span>
+        </div>
+
+        <h1 class="font-heading font-bold text-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-3">
+          Every Smile Has a Story
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Explore personalised care and natural-looking change.
+        </p>
+      </div>
+
+      <!-- Main Showcase Grid (Left: Tabs & Story, Right: Comparison Slider) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 lg:mb-20">
+        
+        <!-- LEFT COLUMN: Categories & Story Card (5 cols on lg) -->
+        <div class="lg:col-span-5 flex flex-col justify-between h-full animate-on-scroll">
+          
+          <!-- Category Selector Tabs (01, 02, 03) -->
+          <div class="flex flex-col gap-2.5 mb-8">
+            <!-- Tab 1 -->
+            <button class="ba-tab-item active group" onclick="switchCategory('makeover', this)">
+              <div class="flex items-center">
+                <span class="ba-tab-number">01</span>
+                <span class="text-base sm:text-lg">Smile Makeovers</span>
+              </div>
+              <i data-lucide="chevron-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </button>
+
+            <!-- Tab 2 -->
+            <button class="ba-tab-item group" onclick="switchCategory('whitening', this)">
+              <div class="flex items-center">
+                <span class="ba-tab-number">02</span>
+                <span class="text-base sm:text-lg">Teeth Whitening</span>
+              </div>
+              <i data-lucide="chevron-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </button>
+
+            <!-- Tab 3 -->
+            <button class="ba-tab-item group" onclick="switchCategory('skin', this)">
+              <div class="flex items-center">
+                <span class="ba-tab-number">03</span>
+                <span class="text-base sm:text-lg">Skin & Aesthetics</span>
+              </div>
+              <i data-lucide="chevron-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </button>
+          </div>
+
+          <!-- Active Story Card (with Orange Line, Subtitle, Text, and CTA Button) -->
+          <div class="bg-white/80 backdrop-blur-sm p-6 sm:p-7 rounded-2xl border border-orange/15 shadow-sm">
+            <!-- Orange Accent Line -->
+            <div class="w-12 h-1 bg-orange rounded-full mb-4"></div>
+            
+            <h3 id="story-title" class="font-heading font-bold text-navy text-2xl sm:text-[1.75rem] leading-tight mb-3">
+              A More Confident Smile
+            </h3>
+            <p id="story-desc" class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+              A personalised approach focused on comfort and natural-looking results.
+            </p>
+
+            <button onclick="openAppointmentModal()" class="inline-flex items-center gap-2.5 bg-orange hover:bg-orange-hover text-white px-6 py-3.5 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-lg group btn-book-appointment">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book Appointment</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Interactive Before & After Slider (7 cols on lg) -->
+        <div class="lg:col-span-7 flex flex-col items-center animate-on-scroll">
+          
+          <!-- Slider Component Container -->
+          <div class="ba-showcase-container" id="ba-main-slider">
+            
+            <!-- After Image (Base Layer) -->
+            <div class="ba-after-wrapper">
+              <img id="ba-img-after" 
+                   src="assets/images/makeover-after.jpg" 
+                   alt="Smile Makeover Transformation After" 
+                   class="ba-slider-img">
+              <span class="ba-badge ba-badge-after">AFTER</span>
+            </div>
+
+            <!-- Before Image (Clipped Overlay Layer) -->
+            <div class="ba-before-wrapper" id="ba-before-layer" style="width: 50%;">
+              <img id="ba-img-before" 
+                   src="assets/images/makeover-before.jpg" 
+                   alt="Smile Makeover Transformation Before" 
+                   class="ba-slider-img">
+              <span class="ba-badge ba-badge-before">BEFORE</span>
+            </div>
+
+            <!-- Draggable Center Handle with < > arrows -->
+            <div class="ba-slider-handle" id="ba-handle" style="left: 50%;">
+              <div class="flex items-center justify-center gap-0.5 text-orange font-bold text-sm">
+                <span>&#10216;</span>
+                <span>&#10217;</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Disclaimer Caption -->
+          <p class="text-slate-400 text-xs sm:text-[13px] text-center mt-3 font-normal">
+            Illustrative example. Individual results vary.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- 5. MORE TRANSFORMATIONS CAROUSEL (LOWER HALF OF MOCKUP) -->
+      <div class="pt-8 border-t border-slate-200/80 animate-on-scroll">
+        
+        <!-- Header with Orange Bar and Navigation Arrows -->
+        <div class="flex items-center justify-between mb-6 sm:mb-8">
+          <div>
+            <div class="w-10 h-1 bg-orange rounded-full mb-3"></div>
+            <h2 class="font-heading font-bold text-navy text-2xl sm:text-3xl">
+              More Transformations
+            </h2>
+          </div>
+
+          <!-- Carousel Controls (< and > arrows matching the design) -->
+          <div class="flex items-center gap-2.5">
+            <button id="carousel-prev" class="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 hover:text-navy transition-all shadow-sm" aria-label="Previous transformations">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button id="carousel-next" class="w-10 h-10 rounded-full bg-orange hover:bg-orange-hover text-white flex items-center justify-center transition-all shadow-md hover:shadow-lg" aria-label="Next transformations">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Scrollable Transformation Cards Row (Overflow hidden wrapper ensures any browser/OS scrollbar is clipped) -->
+        <div class="overflow-hidden py-1">
+          <div id="transformations-carousel" class="flex gap-5 overflow-x-auto pb-8 -mb-8 scroll-smooth hide-scrollbar snap-x" style="scrollbar-width: none; -ms-overflow-style: none;">
+          
+          <!-- Card 1 (Smile Makeover) -->
+          <div class="snap-start shrink-0 w-[280px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer group"
+               onclick="loadComparison('makeover', 'assets/images/makeover-before.jpg', 'assets/images/makeover-after.jpg', 'Porcelain Veneer Smile Makeover', 'Closed midline gap and sculpted symmetrical tooth contours with porcelain veneers.')">
+            <div class="relative h-32 sm:h-36 overflow-hidden">
+              <img src="assets/images/ba-thumb-makeover.jpg" alt="Smile Makeover Transformation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-navy/80 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">Smile Makeover</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-navy text-sm sm:text-base mb-1 group-hover:text-orange transition-colors">Veneers &amp; Diastema Closure</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Closed midline gap and restored youthful natural smile contour.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 (Mockup thumb 2) -->
+          <div class="snap-start shrink-0 w-[280px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer group"
+               onclick="loadComparison('whitening', 'assets/images/case-smile-before.jpg', 'assets/images/case-smile-after.jpg', 'In-Clinic Zoom! Whitening', '8 shades lighter in a single 60-minute session with zero tooth sensitivity.')">
+            <div class="relative h-32 sm:h-36 overflow-hidden">
+              <img src="assets/images/ba-thumb-2.png" alt="Teeth Whitening Transformation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-orange/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">Whitening</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-navy text-sm sm:text-base mb-1 group-hover:text-orange transition-colors">Laser Teeth Whitening</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Removed deep tea and coffee stains for a luminous healthy white shine.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Mockup thumb 3) -->
+          <div class="snap-start shrink-0 w-[280px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer group"
+               onclick="loadComparison('makeover', 'assets/images/case-smile-before.jpg', 'assets/images/case-smile-after.jpg', 'Aesthetic Smile Harmonisation', 'Corrected tooth proportions and gum line symmetry.')">
+            <div class="relative h-32 sm:h-36 overflow-hidden">
+              <img src="assets/images/ba-thumb-3.png" alt="Aesthetic Smile Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-navy/80 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">Smile Design</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-navy text-sm sm:text-base mb-1 group-hover:text-orange transition-colors">Diastema Closure &amp; Edge Bonding</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Composite artistry creating balanced, natural tooth aesthetics.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 (Skin & Aesthetics) -->
+          <div class="snap-start shrink-0 w-[280px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer group"
+               onclick="loadComparison('skin', 'assets/images/case-skin-before.jpg', 'assets/images/case-skin-after.jpg', 'Hydrafacial Glass Skin Glow', 'Deep vortex cleansing and antioxidant infusion restoring radiant, smooth skin.')">
+            <div class="relative h-32 sm:h-36 overflow-hidden">
+              <img src="assets/images/case-skin-after.jpg" alt="Hydrafacial Skin Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-emerald-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">Skin Glow</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-navy text-sm sm:text-base mb-1 group-hover:text-orange transition-colors">Hydrafacial &amp; Skin Rejuvenation</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Noticeable improvement in skin hydration, glow, and fine lines.</p>
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. TRANSFORMATION CATEGORY FILTER GALLERY -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 animate-on-scroll">
+        <span class="text-orange font-semibold text-xs uppercase tracking-widest">PATIENT CASE STUDIES</span>
+        <h2 class="font-heading font-bold text-navy text-3xl sm:text-4xl mt-2">
+          Real Results, Real Confidence
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Filter through our clinical outcomes across dental and aesthetic care.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8">
+          <button class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all active bg-navy text-white border-navy" data-filter="all">All Cases</button>
+          <button class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all bg-slate-50 text-slate-600 border-slate-200 hover:border-orange hover:text-orange" data-filter="dental">Smile Makeovers</button>
+          <button class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all bg-slate-50 text-slate-600 border-slate-200 hover:border-orange hover:text-orange" data-filter="whitening">Teeth Whitening</button>
+          <button class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all bg-slate-50 text-slate-600 border-slate-200 hover:border-orange hover:text-orange" data-filter="skin">Aesthetic &amp; Skin</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Case 1 -->
+        <div class="gallery-card bg-cream/40 rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all animate-on-scroll" data-category="dental">
+          <div class="relative h-56 bg-slate-100 overflow-hidden">
+            <img src="assets/images/ba-thumb-makeover.jpg" alt="Smile Makeover Case" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-xs font-semibold px-3 py-1 rounded-full">
+              Full Arch Veneers
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Duration: 2 Visits</span>
+              <span class="text-emerald-600 font-semibold">&#10003; Completed</span>
+            </div>
+            <h3 class="font-heading font-bold text-navy text-xl mb-2">Comprehensive Smile Makeover</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Corrected irregular incisal wear and yellowing, achieving harmonious facial aesthetic proportions.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200/60">
+              <span class="text-xs font-medium text-slate-500">Lead: Dr. Kirubashankar</span>
+              <button onclick="openAppointmentModal()" class="text-orange text-xs font-bold hover:underline flex items-center gap-1">
+                Consult Similar &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="gallery-card bg-cream/40 rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all animate-on-scroll" data-category="whitening" style="animation-delay: 100ms;">
+          <div class="relative h-56 bg-slate-100 overflow-hidden">
+            <img src="assets/images/ba-thumb-2.png" alt="Teeth Whitening Case" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-orange text-xs font-semibold px-3 py-1 rounded-full">
+              Philips Zoom! Laser
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Duration: 60 Minutes</span>
+              <span class="text-emerald-600 font-semibold">&#10003; 8 Shades Lighter</span>
+            </div>
+            <h3 class="font-heading font-bold text-navy text-xl mb-2">Instant In-Clinic Whitening</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Advanced laser activation safely lifted deep stubborn enamel stains caused by tea, coffee, and fluorosis.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200/60">
+              <span class="text-xs font-medium text-slate-500">Lead: Dental Specialist</span>
+              <button onclick="openAppointmentModal()" class="text-orange text-xs font-bold hover:underline flex items-center gap-1">
+                Consult Similar &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="gallery-card bg-cream/40 rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all animate-on-scroll" data-category="skin" style="animation-delay: 200ms;">
+          <div class="relative h-56 bg-slate-100 overflow-hidden">
+            <img src="assets/images/case-skin-after.jpg" alt="Hydrafacial Skin Care Case" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-xs font-semibold px-3 py-1 rounded-full">
+              Hydrafacial Elite
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Duration: 45 Minutes</span>
+              <span class="text-emerald-600 font-semibold">&#10003; Instant Glow</span>
+            </div>
+            <h3 class="font-heading font-bold text-navy text-xl mb-2">Skin Rejuvenation &amp; De-pigment</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Pore extraction and peptide infusion cleared congestions and restored luminous skin texture.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200/60">
+              <span class="text-xs font-medium text-slate-500">Lead: Dr. Gowseka</span>
+              <button onclick="openAppointmentModal()" class="text-orange text-xs font-bold hover:underline flex items-center gap-1">
+                Consult Similar &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. THE 3-STEP TRANSFORMATION PROCESS -->
+  <section class="py-16 lg:py-20 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 animate-on-scroll">
+        <span class="text-orange font-semibold text-xs uppercase tracking-widest">HOW IT WORKS</span>
+        <h2 class="font-heading font-bold text-navy text-3xl sm:text-4xl mt-2">
+          Your Journey to a Transformed Smile
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          From the first consultation to your final reveal, we design every detail around your comfort.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-start relative animate-on-scroll">
+          <div class="w-14 h-14 rounded-2xl bg-orange/10 text-orange flex items-center justify-center font-heading font-bold text-xl mb-6">
+            01
+          </div>
+          <h3 class="font-heading font-bold text-navy text-xl mb-3">Smile &amp; Skin Assessment</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            High-resolution digital photography and 3D intraoral scans map out your current tooth structure, bite, and facial profile.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-start relative animate-on-scroll" style="animation-delay: 100ms;">
+          <div class="w-14 h-14 rounded-2xl bg-navy/10 text-navy flex items-center justify-center font-heading font-bold text-xl mb-6">
+            02
+          </div>
+          <h3 class="font-heading font-bold text-navy text-xl mb-3">Custom Aesthetic Blueprint</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Our specialists preview your predicted outcome with Digital Smile Design before any procedure begins, guaranteeing satisfaction.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-start relative animate-on-scroll" style="animation-delay: 200ms;">
+          <div class="w-14 h-14 rounded-2xl bg-orange/10 text-orange flex items-center justify-center font-heading font-bold text-xl mb-6">
+            03
+          </div>
+          <h3 class="font-heading font-bold text-navy text-xl mb-3">Gentle Care &amp; Natural Reveal</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Precision treatment using modern minimally invasive techniques, giving you long-lasting, radiant results you'll love sharing.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. PATIENT TESTIMONIAL QUOTE -->
+  <section class="py-16 lg:py-20 bg-cream relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <div class="w-12 h-12 rounded-full bg-orange/10 text-orange flex items-center justify-center mx-auto mb-6">
+        <i data-lucide="quote" class="w-6 h-6"></i>
+      </div>
+      <p class="font-heading italic text-navy text-xl sm:text-2xl lg:text-3xl leading-relaxed mb-6">
+        &ldquo;I used to hide my smile in every photograph. The smile makeover by Dr. Kirubashankar and Dr. Gowseka didn't just change my teeth—it completely changed how I feel about myself every day.&rdquo;
+      </p>
+      <div class="flex flex-col items-center">
+        <span class="font-bold text-navy text-base">Priya S.</span>
+        <span class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">Smile Makeover &amp; Aesthetics Patient, Coimbatore</span>
+        <div class="flex text-orange text-sm gap-1 mt-2">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CTA BANNER -->
+  <section class="py-16 bg-navy text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(242,107,42,0.2),transparent_50%)] pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-on-scroll">
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">
+        Ready for Your Own Smile Transformation?
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+        Schedule a one-on-one consultation with our dental and aesthetic doctors in Coimbatore. We'll design a treatment plan crafted exclusively for you.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+          Book Your Consultation
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+        <a href="tel:7200920929" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-semibold transition-all flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+          <span>Call 72009 20929</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer class="text-white relative overflow-hidden">
+    <!-- Wavy Orange Top Border SVG -->
+    <div class="footer-wave">
+      <svg class="w-full h-full" viewBox="0 0 1440 50" preserveAspectRatio="none">
+        <path d="M0,25 Q360,50 720,25 T1440,25 L1440,0 L0,0 Z" fill="#1e3a5f" opacity="0.3"></path>
+        <path d="M0,15 Q360,40 720,15 T1440,15" fill="none" stroke="#f26b2a" stroke-width="3"></path>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="before-after.html" class="text-slate-400 hover:text-white transition-colors">Before &amp; After</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center shadow-lg hover:bg-orange-hover hover:scale-110 transition-all z-40 opacity-0 pointer-events-none transform translate-y-4" aria-label="Scroll to top">
+    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+  </button>
+
+  <!-- Lucide & Main JS -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Interactive Before & After Slider Script -->
+  <script>
+    // Tab data mapping
+    const categoriesData = {
+      makeover: {
+        title: "A More Confident Smile",
+        desc: "Custom porcelain veneers and diastema closure restoring balanced tooth proportions and a radiant, natural contour.",
+        beforeImg: "assets/images/makeover-before.jpg",
+        afterImg: "assets/images/makeover-after.jpg"
+      },
+      whitening: {
+        title: "Radiant & Natural Brightness",
+        desc: "Safe, pain-free clinical whitening lifting deep tea, coffee and age stains in a single session.",
+        beforeImg: "assets/images/case-smile-before.jpg",
+        afterImg: "assets/images/case-smile-after.jpg"
+      },
+      skin: {
+        title: "Luminous Glass Skin Glow",
+        desc: "Targeted clinical aesthetic treatments restoring natural hydration, smooth texture, and youthfulness.",
+        beforeImg: "assets/images/case-skin-before.jpg",
+        afterImg: "assets/images/case-skin-after.jpg"
+      }
+    };
+
+    function switchCategory(catKey, tabElement) {
+      // Update tabs UI
+      document.querySelectorAll('.ba-tab-item').forEach(el => el.classList.remove('active'));
+      if (tabElement) {
+        tabElement.classList.add('active');
+      }
+
+      const data = categoriesData[catKey];
+      if (!data) return;
+
+      // Update story text
+      const titleEl = document.getElementById('story-title');
+      const descEl = document.getElementById('story-desc');
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
+
+      // Update slider images
+      const imgBefore = document.getElementById('ba-img-before');
+      const imgAfter = document.getElementById('ba-img-after');
+      if (imgBefore) imgBefore.src = data.beforeImg;
+      if (imgAfter) imgAfter.src = data.afterImg;
+
+      // Reset slider to 50%
+      setSliderPosition(50);
+    }
+
+    function loadComparison(catKey, beforeUrl, afterUrl, title, desc) {
+      const imgBefore = document.getElementById('ba-img-before');
+      const imgAfter = document.getElementById('ba-img-after');
+      if (imgBefore) imgBefore.src = beforeUrl;
+      if (imgAfter) imgAfter.src = afterUrl;
+
+      const titleEl = document.getElementById('story-title');
+      const descEl = document.getElementById('story-desc');
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      // Scroll to slider on mobile/tablet smoothly
+      const slider = document.getElementById('ba-main-slider');
+      if (slider && window.innerWidth < 1024) {
+        slider.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      setSliderPosition(50);
+    }
+
+    // Interactive Slider Logic
+    const sliderContainer = document.getElementById('ba-main-slider');
+    const beforeLayer = document.getElementById('ba-before-layer');
+    const handle = document.getElementById('ba-handle');
+    let isDragging = false;
+
+    function setSliderPosition(percent) {
+      if (!beforeLayer || !handle) return;
+      const clamped = Math.max(0, Math.min(100, percent));
+      beforeLayer.style.width = clamped + '%';
+      handle.style.left = clamped + '%';
+    }
+
+    function updateSliderFromEvent(e) {
+      if (!sliderContainer) return;
+      const rect = sliderContainer.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const offsetX = clientX - rect.left;
+      const percent = (offsetX / rect.width) * 100;
+      setSliderPosition(percent);
+    }
+
+    if (sliderContainer) {
+      // Mouse events
+      sliderContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        updateSliderFromEvent(e);
+      });
+      window.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        updateSliderFromEvent(e);
+      });
+
+      // Touch events (mobile / tablet)
+      sliderContainer.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        updateSliderFromEvent(e);
+      }, { passive: true });
+      window.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+      window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        updateSliderFromEvent(e);
+      }, { passive: true });
+    }
+
+    // Carousel buttons
+    const carousel = document.getElementById('transformations-carousel');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    if (carousel && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -320, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 320, behavior: 'smooth' });
+      });
+    }
+
+    // Gallery Filter Logic
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-navy', 'text-white', 'border-navy', 'active');
+          b.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
+        });
+        btn.classList.add('bg-navy', 'text-white', 'border-navy', 'active');
+        btn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200');
+
+        const filter = btn.dataset.filter;
+        galleryCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

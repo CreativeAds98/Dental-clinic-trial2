@@ -32,13 +32,35 @@
     }
   </script>
   <style>
-    /* Custom Scrollbar for the horizontal scroll section */
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none;
+    /* Comprehensive Scrollbar Suppression */
+    .hide-scrollbar,
+    .no-scrollbar,
+    #treatments-container {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
     }
-    .hide-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    .hide-scrollbar::-webkit-scrollbar,
+    .no-scrollbar::-webkit-scrollbar,
+    #treatments-container::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+      -webkit-appearance: none !important;
+    }
+    .hide-scrollbar::-webkit-scrollbar-thumb,
+    .no-scrollbar::-webkit-scrollbar-thumb,
+    #treatments-container::-webkit-scrollbar-thumb,
+    .hide-scrollbar::-webkit-scrollbar-track,
+    .no-scrollbar::-webkit-scrollbar-track,
+    #treatments-container::-webkit-scrollbar-track,
+    .hide-scrollbar::-webkit-scrollbar-button,
+    .no-scrollbar::-webkit-scrollbar-button,
+    #treatments-container::-webkit-scrollbar-button {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
     }
     
     .hero-gradient {
@@ -164,12 +186,13 @@
         </a>
 
         <!-- Desktop Menu -->
-        <nav class="hidden lg:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-7">
           <a href="index.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Home</a>
           <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
           <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
           <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
           <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+          <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Before &amp; After</a>
           <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
         </nav>
 
@@ -204,6 +227,7 @@
         <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
         <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
         <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+        <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Before &amp; After</a>
         <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
       </nav>
       <div class="mt-auto pt-8">
@@ -622,8 +646,9 @@
         </div>
       </div>
 
-      <!-- Scrollable Container -->
-      <div id="treatments-container" class="flex gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8 pt-4 -mx-4 px-4 sm:mx-0 sm:px-0 animate-on-scroll">
+      <!-- Scrollable Container (Overflow-hidden wrapper to clip any OS scrollbar) -->
+      <div class="overflow-hidden">
+        <div id="treatments-container" class="flex gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-10 -mb-6 pt-4 -mx-4 px-4 sm:mx-0 sm:px-0 animate-on-scroll" style="scrollbar-width: none; -ms-overflow-style: none;">
         
         <!-- Item 1 -->
         <div class="snap-start shrink-0 w-72 sm:w-80 group cursor-pointer">
@@ -703,6 +728,7 @@
           </a>
         </div>
 
+        </div>
       </div>
     </div>
   </section>
@@ -944,6 +970,7 @@
         <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
         <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
         <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="before-after.html" class="text-slate-400 hover:text-white transition-colors">Before &amp; After</a>
         <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
       </div>
 
