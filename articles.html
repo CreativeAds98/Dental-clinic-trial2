@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles & Guides | Dr.GR Dental & Aesthetics - Coimbatore</title>
+    <meta name="description" content="Helpful dental and aesthetic reads from Dr.GR Dental & Aesthetics care team in Coimbatore. Tips, guides, and habits for a healthier, brighter smile.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a5f',
+                        'navy-light': '#2d5a8a',
+                        orange: '#f26b2a',
+                        'orange-hover': '#e05a1a',
+                        'light-blue': '#e8f4fd',
+                        cream: '#fdf8f0',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-gray-800 antialiased bg-[#fbfdfa]">
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+      
+      <!-- Subtle Background Glow & Waves Overlay -->
+      <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+      <!-- Background Wave Lines -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+        <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+      </svg>
+
+      <!-- Tooth Watermarks -->
+      <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Content Row -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+        
+        <!-- Left: Location & Phone -->
+        <div class="flex items-center gap-3 lg:gap-4">
+          <span class="flex items-center gap-2 font-medium">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>Coimbatore</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            </span>
+            <span>72009 20929</span>
+            <span class="text-orange-300 text-xs ml-0.5">✦</span>
+          </a>
+        </div>
+
+        <!-- Right: Tagline & Open Today Badge -->
+        <div class="flex items-center gap-4">
+          <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
+            Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
+          </span>
+
+          <span class="text-white/20 font-light">|</span>
+
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+            <span>Open Today</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wavy Bottom Border -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
+        <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
+          <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
+          <path d="M0,8 Q400,20 800,17 T1440,8" fill="none" stroke="#f26b2a" stroke-width="3.5"></path>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+                        <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-5 xl:gap-6 ml-auto mr-4 lg:mr-6">
+                    <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
+                    <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
+                    <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
+                    <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
+                    <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Before &amp; After</a>
+                    <a href="articles.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Articles</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button (Tiny & Moved to far right) -->
+                <div class="hidden lg:flex items-center flex-shrink-0">
+                    <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+                        <span>Book Appointment</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy hover:text-orange transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-2xl overflow-y-auto hidden">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-8 border-b pb-4">
+                <span class="font-heading font-bold text-navy text-xl">Menu</span>
+                <button id="close-menu-btn" class="p-2 text-slate-500 hover:text-orange rounded-full bg-slate-100" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
+                <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
+                <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
+                <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
+                <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Before &amp; After</a>
+                <a href="articles.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Articles</a>
+                <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
+            </nav>
+            <div class="mt-auto pt-8">
+                <button onclick="openAppointmentModal()" class="block w-full bg-orange hover:bg-orange-hover text-white text-center px-6 py-3 rounded-full font-medium transition-colors shadow-md btn-book-appointment">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. HERO SECTION (MATCHING DESIGN MOCKUP) -->
+    <section class="relative bg-gradient-to-r from-[#fbfdfa] via-[#f4f8fb] to-[#ebf3f9] pt-10 pb-12 sm:pt-14 sm:pb-16 overflow-hidden border-b border-slate-100">
+        <!-- Sweeping Light-Blue Arc Graphic Overlay -->
+        <div class="absolute right-0 top-0 w-full md:w-3/5 h-full pointer-events-none opacity-40">
+            <svg class="w-full h-full" viewBox="0 0 600 300" preserveAspectRatio="none" fill="none">
+                <path d="M 600 0 C 450 60, 320 180, 260 300 L 600 300 Z" fill="url(#hero-soft-blue)"/>
+                <defs>
+                    <linearGradient id="hero-soft-blue" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#bfe0f7" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.2"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
+                
+                <!-- Left: Headline & Breadcrumb -->
+                <div class="lg:col-span-6 text-left">
+                    <!-- Top Tag -->
+                    <div class="flex items-center gap-2 mb-3.5">
+                        <span class="text-orange text-xs sm:text-sm font-bold uppercase tracking-widest">ARTICLES &amp; GUIDES</span>
+                        <span class="w-8 sm:w-10 h-0.5 bg-orange"></span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-[52px] font-bold text-navy leading-[1.15] mb-4">
+                        Insights for a <br>
+                        <span class="text-navy">Healthier Smile</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg">
+                        Helpful reads from our dental and aesthetic care team.
+                    </p>
+                </div>
+
+                <!-- Right: Tooth Sculpture, Plant & Books Shelf Display -->
+                <div class="lg:col-span-6 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 bg-white">
+                        <img src="assets/images/article-hero.jpg" alt="Insights for a Healthier Smile - Dr.GR Dental Care" class="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs drop-shadow-md">
+                            <span class="font-medium bg-black/30 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">Dr.GR Wellness Journal</span>
+                            <span class="font-cursive text-lg text-cream/95">Confidence in Every Word</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. FEATURED ARTICLE BANNER (MATCHING DESIGN MOCKUP) -->
+    <section class="py-8 sm:py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="relative bg-gradient-to-r from-[#dcedfa] via-[#e5f0f9] to-[#edf5fc] rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 transition-all hover:shadow-md group">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                    
+                    <!-- Left: Featured Article Image -->
+                    <div class="lg:col-span-7 relative h-[260px] sm:h-[320px] lg:h-[380px] overflow-hidden">
+                        <img src="assets/images/article-habits.jpg" alt="Everyday Habits for a Healthy Smile" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/20 via-transparent to-transparent pointer-events-none"></div>
+                        <!-- Featured Badge -->
+                        <div class="absolute top-4 left-4 bg-orange text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                            Featured Guide
+                        </div>
+                    </div>
+
+                    <!-- Right: Content Info -->
+                    <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 text-left">
+                        <!-- Category Tag -->
+                        <span class="text-orange text-xs sm:text-sm font-bold uppercase tracking-wider block mb-2">
+                            DENTAL CARE
+                        </span>
+
+                        <!-- Title -->
+                        <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight mb-3 group-hover:text-navy-light transition-colors">
+                            Everyday Habits for a Healthy Smile
+                        </h2>
+
+                        <!-- Description -->
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Simple ways to care for your teeth between regular dental visits.
+                        </p>
+
+                        <!-- Read Article Link -->
+                        <button type="button" onclick="openArticleModal('habits')" class="inline-flex items-center gap-2 text-orange hover:text-orange-hover font-semibold text-base transition-colors group/link cursor-pointer">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. EXPLORE MORE ARTICLES (MATCHING DESIGN MOCKUP GRID) -->
+    <section class="py-8 sm:py-16 bg-[#fbfdfa]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header & Filter Tabs -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 pb-4 border-b border-slate-200">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">
+                    Explore More Articles
+                </h2>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm font-medium" id="article-filters">
+                    <button type="button" onclick="filterArticles('all', this)" class="filter-tab-btn active px-4 py-1.5 rounded-full bg-[#d9ebfa] text-navy font-semibold transition-all">
+                        All
+                    </button>
+                    <span class="text-slate-300 hidden sm:inline">|</span>
+                    <button type="button" onclick="filterArticles('dental-care', this)" class="filter-tab-btn px-3 py-1.5 rounded-full text-slate-600 hover:text-navy hover:bg-slate-100 transition-all">
+                        Dental Care
+                    </button>
+                    <span class="text-slate-300 hidden sm:inline">|</span>
+                    <button type="button" onclick="filterArticles('aesthetics', this)" class="filter-tab-btn px-3 py-1.5 rounded-full text-slate-600 hover:text-navy hover:bg-slate-100 transition-all">
+                        Aesthetics
+                    </button>
+                    <span class="text-slate-300 hidden sm:inline">|</span>
+                    <button type="button" onclick="filterArticles('patient-guides', this)" class="filter-tab-btn px-3 py-1.5 rounded-full text-slate-600 hover:text-navy hover:bg-slate-100 transition-all">
+                        Patient Guides
+                    </button>
+                </div>
+            </div>
+
+            <!-- Articles Cards Grid (3 Columns) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" id="articles-grid">
+                
+                <!-- CARD 1: Understanding Your First Dental Visit -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="patient-guides">
+                    <!-- Thumbnail -->
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/article-first-visit.jpg" alt="Understanding Your First Dental Visit" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Patient Guides
+                        </span>
+                    </div>
+                    <!-- Body -->
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                Understanding Your First Dental Visit
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                What to expect, how to prepare, and how it helps you maintain a healthy smile.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('first-visit')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD 2: A Simple Guide to Teeth Cleaning -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="dental-care">
+                    <!-- Thumbnail -->
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/article-teeth-cleaning.jpg" alt="A Simple Guide to Teeth Cleaning" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Dental Care
+                        </span>
+                    </div>
+                    <!-- Body -->
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                A Simple Guide to Teeth Cleaning
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                What happens during a professional cleaning and why it matters for your oral health.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('teeth-cleaning')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Questions to Ask at Your Consultation -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="aesthetics">
+                    <!-- Thumbnail -->
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/article-consultation.jpg" alt="Questions to Ask at Your Consultation" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Aesthetics
+                        </span>
+                    </div>
+                    <!-- Body -->
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                Questions to Ask at Your Consultation
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Helpful questions to make the most of your dental or aesthetic consultation.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('consultation')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD 4: Smile Makeovers & Facial Aesthetics (Aesthetics) -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="aesthetics">
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/hero-smile.jpg" alt="Smile Makeovers & Facial Aesthetics" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Aesthetics
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                Modern Smile Design: Aesthetics Meets Health
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                How digital smile planning enhances your natural dental proportions and facial harmony.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('smile-design')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD 5: Root Canal Treatment Without Fear (Dental Care) -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="dental-care">
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/clinic-interior.jpg" alt="Modern Gentle Root Canal Treatment" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Dental Care
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                Gentle Endodontics: Saving Your Natural Teeth
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Exploring pain-free rotary root canal procedures that preserve your natural bite for life.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('endodontics')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD 6: Patient Guide: Preparing for Braces & Aligners (Patient Guides) -->
+                <article class="article-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="patient-guides">
+                    <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="assets/images/ba-slider-after.png" alt="Clear Aligners vs Traditional Braces" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-navy text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                            Patient Guides
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between text-left">
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-[22px] font-bold text-navy leading-snug mb-2.5 group-hover:text-orange transition-colors">
+                                Clear Aligners vs Braces: Which Fits You?
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                A comprehensive comparison of comfort, visibility, treatment duration, and daily maintenance.
+                            </p>
+                        </div>
+                        <button type="button" onclick="openArticleModal('aligners')" class="inline-flex items-center gap-1.5 text-orange hover:text-orange-hover font-semibold text-sm transition-colors group/link cursor-pointer pt-2">
+                            <span>Read Article</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. NEWSLETTER / ADVISORY CTA BANNER -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-navy via-[#1b3456] to-navy rounded-3xl p-8 sm:p-12 text-white text-center relative overflow-hidden shadow-xl">
+                <div class="absolute -right-12 -top-12 w-48 h-48 bg-orange/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <span class="text-orange text-xs sm:text-sm font-bold uppercase tracking-wider mb-2 block">PERSONALIZED ADVICE</span>
+                    <h3 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Have Questions About Your Dental Health?</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                        Our specialist doctors are here to guide you with clear, transparent advice tailored to your smile.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-8 py-3 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-orange/40 hover:scale-105 btn-book-appointment">
+                            Book a Consultation
+                        </button>
+                        <a href="tel:7200920929" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-7 py-3 rounded-full font-medium text-sm transition-all flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+                            Call 72009 20929
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ARTICLE READER MODAL (FULL MODAL EXPERIENCE) -->
+    <div id="article-reader-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="fixed inset-0 bg-navy/80 backdrop-blur-sm transition-opacity" onclick="closeArticleModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl z-10 transform scale-95 transition-all text-left">
+            <!-- Close Button -->
+            <button onclick="closeArticleModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 text-navy hover:text-orange hover:bg-white shadow-md flex items-center justify-center transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Header Image -->
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-100 rounded-t-3xl">
+                <img id="modal-article-img" src="assets/images/article-habits.jpg" alt="Article Cover" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-5 left-6 right-6 text-white">
+                    <span id="modal-article-tag" class="bg-orange text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-2 shadow-sm">
+                        Dental Care
+                    </span>
+                    <h2 id="modal-article-title" class="font-heading text-2xl sm:text-3xl font-bold leading-tight drop-shadow-md">
+                        Everyday Habits for a Healthy Smile
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Modal Body Content -->
+            <div class="p-6 sm:p-10 space-y-6 text-slate-700">
+                <div class="flex items-center gap-4 text-xs text-slate-400 border-b pb-4">
+                    <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-orange"></i> 4 min read</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Doctor Reviewed</span>
+                    <span>•</span>
+                    <span>Dr.GR Dental Care Team</span>
+                </div>
+
+                <div id="modal-article-body" class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
+                    <!-- Dynamic Body Content -->
+                </div>
+
+                <div class="bg-[#f4f9fd] border border-blue-100 rounded-2xl p-6 mt-8">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <h4 class="font-heading font-bold text-navy text-lg">Have a personal dental question?</h4>
+                            <p class="text-slate-600 text-sm">Schedule a checkup with our specialist doctors in Coimbatore.</p>
+                        </div>
+                        <button onclick="closeArticleModal(); openAppointmentModal();" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md shrink-0">
+                            Book Appointment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. FOOTER (SAME AS ALL PAGES) -->
+    <footer class="text-slate-300 pt-20 pb-8 relative">
+    <!-- Wavy Orange Top Border SVG -->
+    <svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 25C240 50 480 0 720 25C960 50 1200 0 1440 25V0H0V25Z" fill="#1a3355"/>
+      <path d="M0 22C240 47 480 -3 720 22C960 47 1200 -3 1440 22" stroke="#f26b2a" stroke-width="3" fill="none"/>
+    </svg>
+
+    <!-- Decorative Vertical Text -->
+    <span class="footer-vertical-text left">Smile Care Confidence</span>
+    <span class="footer-vertical-text right">Brighter Healthier Happier</span>
+
+    <!-- Decorative Tooth Outlines -->
+    <svg class="footer-tooth-decor" style="bottom: 20px; right: 60px; width: 80px; height: 90px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+    <svg class="footer-tooth-decor" style="bottom: 40px; left: 40px; width: 60px; height: 70px;" viewBox="0 0 80 90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+      <path d="M40 5C25 5 15 15 15 30C15 45 20 55 25 70C28 80 32 85 40 85C48 85 52 80 55 70C60 55 65 45 65 30C65 15 55 5 40 5Z"/>
+      <path d="M35 30C35 30 38 45 40 45C42 45 45 30 45 30"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5 group">
+            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-heading font-bold text-white text-xl leading-tight">Dr.GR Dental &amp;<br>Aesthetics</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Expert dental and aesthetic care in Coimbatore. Personalised treatments for your smile, skin and confidence.
+          </p>
+          <button onclick="openAppointmentModal()" class="bg-orange hover:bg-orange-hover text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group btn-book-appointment">
+            Book Appointment
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          <div class="footer-tagline-bar mt-5">Your Smile. Our Care. A Brighter You.</div>
+        </div>
+
+        <!-- Col 2: Visit Us -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="map-pin" class="w-4 h-4"></i></span>
+            Visit Us
+          </h4>
+          <div class="flex items-start gap-3 text-sm text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange shrink-0 mt-1"></i>
+            <p class="leading-relaxed">
+              No.86/3/1 (1st Floor),<br>
+              Trichy Road, Ramanathapuram,<br>
+              Coimbatore - 641045
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Hours -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="phone" class="w-4 h-4"></i></span>
+            Contact &amp; Hours
+          </h4>
+          <div class="flex flex-col gap-4 text-sm">
+            <a href="tel:7200920929" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
+              72009 20929, 89400 44644
+            </a>
+            <a href="mailto:drgrdentalaesthetic@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-orange transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-orange"></i>
+              drgrdentalaesthetic@gmail.com
+            </a>
+            <div class="flex items-start gap-3 text-slate-400 mt-1">
+              <i data-lucide="clock" class="w-4 h-4 text-orange shrink-0 mt-0.5"></i>
+              <div>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 2 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div>
+          <h4 class="footer-heading">
+            <span class="footer-heading-icon"><i data-lucide="share-2" class="w-4 h-4"></i></span>
+            Stay Connected
+          </h4>
+          <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
+          <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-wrap justify-center gap-8 text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="treatments.html" class="text-slate-400 hover:text-white transition-colors">Treatments</a>
+        <a href="doctors.html" class="text-slate-400 hover:text-white transition-colors">Doctors</a>
+        <a href="technology.html" class="text-slate-400 hover:text-white transition-colors">Technology</a>
+        <a href="before-after.html" class="text-slate-400 hover:text-white transition-colors">Before &amp; After</a>
+        <a href="articles.html" class="text-white font-semibold transition-colors">Articles</a>
+        <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p class="text-slate-500">&copy; 2024 Dr.GR Dental &amp; Aesthetics, Coimbatore. All rights reserved.</p>
+        <span class="font-cursive text-xl text-slate-400 italic">Healthy Smiles Brighter Tomorrows</span>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- 9. SCROLL TO TOP BUTTON -->
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-orange text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-orange-hover hover:-translate-y-1 z-50 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Appointment Booking Modal Container (standard across site) -->
+    <div id="appointment-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="fixed inset-0 bg-navy/80 backdrop-blur-sm transition-opacity" onclick="closeAppointmentModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl z-10 transform scale-95 transition-all text-left">
+            <button onclick="closeAppointmentModal()" class="absolute top-5 right-5 text-slate-400 hover:text-navy">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="mb-6">
+                <span class="text-orange text-xs font-bold uppercase tracking-wider block mb-1">DR.GR DENTAL &amp; AESTHETICS</span>
+                <h3 class="font-heading text-2xl font-bold text-navy">Book Your Appointment</h3>
+                <p class="text-slate-600 text-sm mt-1">Fill out the quick form below and our team will confirm your slot.</p>
+            </div>
+            <form onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Full Name</label>
+                    <input type="text" required placeholder="Your full name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-orange focus:outline-none text-sm">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Phone Number</label>
+                        <input type="tel" required placeholder="Your 10-digit number" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-orange focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Preferred Date</label>
+                        <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-orange focus:outline-none text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Treatment / Concern</label>
+                    <select class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-orange focus:outline-none text-sm text-slate-700">
+                        <option>General Dental Consultation</option>
+                        <option>Teeth Cleaning &amp; Polishing</option>
+                        <option>Root Canal Treatment</option>
+                        <option>Smile Designing &amp; Veneers</option>
+                        <option>Clear Aligners / Braces</option>
+                        <option>Dental Implants</option>
+                        <option>Facial Aesthetics / PMU</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-orange hover:bg-orange-hover text-white font-semibold py-3 rounded-xl shadow-md transition-all mt-2">
+                    Confirm Appointment Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll to Top
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Drawer
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-menu-overlay');
+
+        function toggleMobileMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('hidden');
+                mobileOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileOverlay.classList.add('opacity-100');
+                    mobileMenu.classList.add('translate-x-0');
+                }, 10);
+            } else {
+                mobileOverlay.classList.remove('opacity-100');
+                mobileMenu.classList.remove('translate-x-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileOverlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', () => toggleMobileMenu(false));
+        if (mobileOverlay) mobileOverlay.addEventListener('click', () => toggleMobileMenu(false));
+
+        // Category Filter
+        function filterArticles(category, btn) {
+            // Update button styles
+            const buttons = document.querySelectorAll('#article-filters button');
+            buttons.forEach(b => {
+                b.classList.remove('active', 'bg-[#d9ebfa]', 'text-navy', 'font-semibold');
+                b.classList.add('text-slate-600');
+            });
+            btn.classList.add('active', 'bg-[#d9ebfa]', 'text-navy', 'font-semibold');
+            btn.classList.remove('text-slate-600');
+
+            // Filter cards
+            const cards = document.querySelectorAll('.article-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Articles Content Database
+        const ARTICLES_DATA = {
+            'habits': {
+                title: 'Everyday Habits for a Healthy Smile',
+                tag: 'DENTAL CARE',
+                image: 'assets/images/article-habits.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">A luminous, confident smile isn’t just built in the dental chair—it’s nurtured every single day at home. Simple micro-habits compound into lifelong oral health, keeping your enamel strong and gums disease-free.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">1. Master the 2-Minute Gentle Brush</h4>
+                    <p>Brushing twice daily is standard, but technique is everything. Use soft bristles at a 45-degree angle to the gumline. Heavy scrubbing wears down enamel; gentle circular strokes sweep away plaque effectively without causing gum recession.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">2. Floss Daily or Use an Interdental Brush</h4>
+                    <p>Over 35% of tooth surface area lies between teeth where standard brush bristles cannot reach. Flossing once each night prevents interproximal cavities and chronic gingivitis.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">3. Rinse with Water After Acidic Foods</h4>
+                    <p>After enjoying citrus fruits, coffee, or tomatoes, rinse with plain water rather than brushing immediately. Brushing immediately after acidic exposure can abrade softened enamel.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">4. Stay Hydrated for Natural Saliva Defense</h4>
+                    <p>Saliva is your mouth’s natural superhero—it neutralizes harmful acids and delivers calcium and phosphate to remineralize enamel throughout the day.</p>
+                `
+            },
+            'first-visit': {
+                title: 'Understanding Your First Dental Visit',
+                tag: 'PATIENT GUIDES',
+                image: 'assets/images/article-first-visit.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">Walking into a dental clinic should never evoke anxiety. At Dr.GR Dental & Aesthetics, our first consultation is designed around your comfort, complete transparency, and mutual understanding.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">What to Expect on Day One</h4>
+                    <p>Your first visit begins with a relaxed conversation about your dental history, any current sensitivities or aesthetic goals. We then perform a thorough oral examination using high-definition digital radiography and intraoral scanning.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Transparent Digital Smile Walkthrough</h4>
+                    <p>We believe in co-diagnosis. You’ll sit comfortably and see your teeth in crisp 3D on our chairside screen. We explain any findings in simple, plain language with zero pressure.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Personalised Care Blueprint</h4>
+                    <p>You’ll receive a clear roadmap outlining preventive steps, timeline, and investment—so you always feel completely in control of your dental health.</p>
+                `
+            },
+            'teeth-cleaning': {
+                title: 'A Simple Guide to Teeth Cleaning',
+                tag: 'DENTAL CARE',
+                image: 'assets/images/article-teeth-cleaning.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">Even with diligent home brushing, minerals in saliva harden plaque into stubborn calculus (tartar) over time. Professional dental cleaning (scaling and polishing) is the gold standard for maintaining gum vitality.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Why Home Brushing Isn’t Enough</h4>
+                    <p>Once calculus forms, it bonds chemically to enamel and root surfaces. Only specialized ultrasonic instruments can safely dislodge it without damaging your tooth structure.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Ultrasonic Precision vs Pain</h4>
+                    <p>Modern dental cleanings are gentle and virtually painless. Advanced ultrasonic scalers use micro-vibrations and a soothing cooling water spray to lift tartar away effortlessly.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Recommended Frequency</h4>
+                    <p>For most patients, a professional cleaning every 6 months prevents gingivitis from progressing into irreversible periodontitis, keeping your breath fresh and your smile bright.</p>
+                `
+            },
+            'consultation': {
+                title: 'Questions to Ask at Your Consultation',
+                tag: 'AESTHETICS',
+                image: 'assets/images/article-consultation.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">An empowered patient gets the best aesthetic and clinical results. Preparing a few thoughtful questions helps you align closely with your specialist during your visit.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Key Questions to Consider:</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>"What are my treatment alternatives?"</strong> Ask whether conservative options (like bonding or aligners) can achieve your goals before considering extensive restorations.</li>
+                        <li><strong>"Can I see a 3D digital simulation of my result?"</strong> Modern digital dentistry lets you preview your new smile before any treatment begins.</li>
+                        <li><strong>"What is the expected lifespan and maintenance?"</strong> Understand aftercare requirements, checkup intervals, and warranty on restorations.</li>
+                        <li><strong>"What will the recovery timeline feel like?"</strong> Knowing what to expect in the first 48 hours ensures smooth planning.</li>
+                    </ul>
+                `
+            },
+            'smile-design': {
+                title: 'Modern Smile Design: Aesthetics Meets Health',
+                tag: 'AESTHETICS',
+                image: 'assets/images/hero-smile.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">Cosmetic dentistry is no longer about artificial, cookie-cutter "Hollywood" veneers. Modern smile design balances facial aesthetics, lip dynamics, and biomechanical function to create a naturally radiant smile uniquely tailored to your face.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">The Facial Harmony Principle</h4>
+                    <p>We analyze your midline, canine guidance, incisal edges, and smile curve against your facial contours and eye line, ensuring your restored teeth look effortlessly natural.</p>
+                `
+            },
+            'endodontics': {
+                title: 'Gentle Endodontics: Saving Your Natural Teeth',
+                tag: 'DENTAL CARE',
+                image: 'assets/images/clinic-interior.jpg',
+                body: `
+                    <p class="text-base leading-relaxed">Nothing feels, chews, or looks as good as your natural tooth. When deep decay or trauma threatens the dental pulp, advanced root canal treatment relieves pain instantly and preserves your tooth for decades.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Painless Technology</h4>
+                    <p>With computer-controlled apex locators, flexible nickel-titanium rotary files, and effective local anesthesia, today’s root canal is as comfortable as getting a routine filling.</p>
+                `
+            },
+            'aligners': {
+                title: 'Clear Aligners vs Braces: Which Fits You?',
+                tag: 'PATIENT GUIDES',
+                image: 'assets/images/ba-slider-after.png',
+                body: `
+                    <p class="text-base leading-relaxed">Straightening your teeth enhances both confidence and bite function. Whether you choose discreet custom clear aligners or precision ceramic braces, both options deliver transformative results.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Clear Aligners</h4>
+                    <p>Virtually invisible, removable for dining and brushing, with zero dietary restrictions. Ideal for busy professionals, college students, and adults.</p>
+                    <h4 class="font-heading font-bold text-navy text-lg mt-4">Precision Braces</h4>
+                    <p>Exceptional for complex bite realignments, severe rotations, or growing teenagers. Works 24/7 without relying on compliance.</p>
+                `
+            }
+        };
+
+        // Article Modal Functions
+        function openArticleModal(articleId) {
+            const article = ARTICLES_DATA[articleId] || ARTICLES_DATA['habits'];
+            const modal = document.getElementById('article-reader-modal');
+            const titleEl = document.getElementById('modal-article-title');
+            const tagEl = document.getElementById('modal-article-tag');
+            const imgEl = document.getElementById('modal-article-img');
+            const bodyEl = document.getElementById('modal-article-body');
+
+            titleEl.textContent = article.title;
+            tagEl.textContent = article.tag;
+            imgEl.src = article.image;
+            bodyEl.innerHTML = article.body;
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            modal.querySelector('.transform').classList.remove('scale-95');
+            modal.querySelector('.transform').classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeArticleModal() {
+            const modal = document.getElementById('article-reader-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            modal.querySelector('.transform').classList.add('scale-95');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Appointment Modal
+        function openAppointmentModal() {
+            const modal = document.getElementById('appointment-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            modal.querySelector('.transform').classList.remove('scale-95');
+            modal.querySelector('.transform').classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeAppointmentModal() {
+            const modal = document.getElementById('appointment-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            modal.querySelector('.transform').classList.add('scale-95');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleAppointmentSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Your appointment request has been received. Our patient coordinator will contact you shortly to confirm your preferred slot.');
+            closeAppointmentModal();
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeArticleModal();
+                closeAppointmentModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -564,6 +564,25 @@ footer {
   box-shadow: 0 6px 20px rgba(242, 107, 42, 0.4);
 }
 
+/* Header Navbar Appointment Button - Tiny, sleek pill moved to far right */
+header .btn-book-appointment,
+.navbar-appointment-btn {
+  padding: 7px 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 9999px !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap !important;
+  gap: 5px !important;
+  box-shadow: 0 4px 12px rgba(242, 107, 42, 0.25) !important;
+}
+
+header .btn-book-appointment:hover,
+.navbar-appointment-btn:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+  box-shadow: 0 6px 18px rgba(242, 107, 42, 0.35) !important;
+}
+
 .btn-outline {
   background: white;
   color: #1e3a5f !important;
