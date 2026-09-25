@@ -1120,4 +1120,52 @@ header .btn-book-appointment:hover,
   transform: scale(1) !important;
 }
 
+/* Promotions Page Styles */
+.promo-hero-wrapper {
+  background: linear-gradient(135deg, #faf7f2 0%, #f7f3ec 60%, #eef5fc 100%);
+}
+
+.promo-hero-curved-frame {
+  border-radius: 54% 46% 48% 52% / 46% 54% 46% 54%;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 40px -15px rgba(12, 35, 64, 0.12);
+}
+
+.promo-hero-curved-frame:hover {
+  border-radius: 48% 52% 54% 46% / 52% 48% 52% 48%;
+  transform: translateY(-4px) scale(1.01);
+}
+
+.promo-shape-1 {
+  border-radius: 46% 54% 58% 42% / 50% 48% 52% 50%;
+  transition: all 0.4s ease;
+}
+
+.promo-shape-2 {
+  border-radius: 58% 42% 46% 54% / 54% 58% 42% 46%;
+  transition: all 0.4s ease;
+}
+
+.promo-shape-3 {
+  border-radius: 48% 52% 40% 60% / 60% 48% 52% 40%;
+  transition: all 0.4s ease;
+}
+
+.promo-highlight-card:hover .promo-shape-1,
+.promo-highlight-card:hover .promo-shape-2,
+.promo-highlight-card:hover .promo-shape-3 {
+  transform: scale(1.03);
+  box-shadow: 0 16px 30px -10px rgba(12, 35, 64, 0.18);
+}
+
+.promo-smile-arc {
+  animation: promoSmileFloat 4s ease-in-out infinite;
+}
+
+@keyframes promoSmileFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+
 
