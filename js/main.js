@@ -431,3 +431,248 @@ function initSocialIcons() {
     `;
   });
 }
+
+/* --- DOCTOR PROFILE MODAL SYSTEM --- */
+const DOCTORS_PROFILE_DATA = {
+  gowseka: {
+    name: "Dr. Gowseka Ragunathan",
+    role: "Founder & Chief Dental Surgeon | Consultant – Facial Aesthetics | PMU Specialist",
+    degrees: "BDS, PGCFI",
+    regNo: "TN DCI Reg. No: 30306 | BH-12500/19029-10401",
+    image: "assets/images/dr-gowseka.jpg",
+    fallback: "assets/images/dr-gowseka.jpg",
+    quote: "Leadership in every smile",
+    bio: "With a passion for creating healthy smiles and confident lives, Dr. Gowseka Ragunathan combines clinical expertise with a compassionate, patient-first approach. Her focus is on personalised care that enhances both oral health and facial aesthetics, helping you look and feel your absolute best.",
+    specialities: ["Smile Designing & Makeovers", "Facial Aesthetics & Anti-Aging", "Permanent Makeup (PMU)", "Laser Dentistry", "Comprehensive Dental Surgery"],
+    timings: "Monday - Saturday: 10:00 AM - 7:30 PM",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
+  kirubashankar: {
+    name: "Dr. Kirubashankar",
+    role: "Consultant – Oral & Maxillofacial Surgeon",
+    degrees: "BDS, MDS",
+    regNo: "DCI Registration No: 20321",
+    image: "assets/images/dr-kirubashankar.jpg",
+    fallback: "assets/images/dr-kirubashankar.jpg",
+    quote: "Precision for a better tomorrow",
+    bio: "Dr. Kirubashankar provides advanced surgical care with a focus on surgical precision, patient safety, and optimal post-operative comfort. His extensive expertise spans complex impacted tooth extractions, jaw reconstructive procedures, dental implantology, and facial trauma rehabilitation.",
+    specialities: ["Oral & Maxillofacial Surgery", "Surgical Tooth Extractions", "Advanced Dental Implants", "Facial Trauma Rehabilitation", "Orthognathic Jaw Correction"],
+    timings: "By Prior Consultation & Appointment",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
+  bharath: {
+    name: "Dr. T. Bharath",
+    role: "Root Canal Specialist",
+    degrees: "BDS, PGD (Endo)",
+    regNo: "Reg No: 26404",
+    image: "assets/images/dr-bharath.jpg",
+    fallback: "assets/images/doctor-male.jpg",
+    quote: "Saving natural smiles",
+    bio: "Dr. T. Bharath specializes in advanced microscopic endodontics and single-visit root canal treatments. Dedicated to preserving natural tooth structure, he combines painless rotary techniques with modern 3D imaging for high-precision, enduring treatments.",
+    specialities: ["Single-Sitting Root Canal", "Microscopic Endodontics", "Root Canal Retreatment", "Pain-Free Dental Care", "Post & Core Restorations"],
+    timings: "Consultation on Scheduled Days",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
+  sindhuja: {
+    name: "Dr. Sindhuja",
+    role: "Prosthodontist",
+    degrees: "BDS, MDS (Prosthodontics)",
+    regNo: "Reg No: 32805",
+    image: "assets/images/dr-sindhuja.jpg",
+    fallback: "assets/images/doctor-female.jpg",
+    quote: "Restoring confidence",
+    bio: "Dr. Sindhuja is an expert in restoring missing teeth, creating lifelike ceramic veneers, and executing complex full-mouth rehabilitations. Her meticulous attention to aesthetic proportion and dental bite function brings newfound confidence to every patient.",
+    specialities: ["Zirconia Crowns & Bridges", "Porcelain Aesthetic Veneers", "Full Mouth Rehabilitation", "Complete & Partial Dentures", "Implant-Supported Dentures"],
+    timings: "Consultation on Scheduled Days",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
+  akshaya: {
+    name: "Dr. Akshaya Murugan",
+    role: "Oral Medicine & Radiologist",
+    degrees: "BDS, MDS (Oral Medicine)",
+    regNo: "Reg No: 64179A",
+    image: "assets/images/dr-akshaya.jpg",
+    fallback: "assets/images/doctor-female.jpg",
+    quote: "Diagnosis deeper insights brighter outcomes",
+    bio: "Dr. Akshaya Murugan specializes in clinical oral medicine, early detection of oral mucosal conditions, and advanced 3D CBCT/radiographic diagnosis. Her comprehensive evaluations ensure clear insights before initiating specialized treatments.",
+    specialities: ["Advanced Radiographic & CBCT Analysis", "Oral Mucosal Disease Management", "TMJ Disorder Diagnosis & Non-Surgical Care", "Oral Pre-Cancer & Cancer Screening"],
+    timings: "Consultation on Scheduled Days",
+    serviceValue: "General Consultation"
+  },
+  nandhini: {
+    name: "Dr. Nandhini",
+    role: "Root Canal Specialist",
+    degrees: "BDS, MDS",
+    regNo: "Reg No: 33402",
+    image: "assets/images/dr-nandhini.jpg",
+    fallback: "assets/images/doctor-female.jpg",
+    quote: "Gentle care lasting smiles",
+    bio: "Known for her soothing chairside manner, Dr. Nandhini provides gentle, precision-driven root canal and restorative treatments. She specializes in creating relaxed experiences for anxious patients while delivering long-lasting oral health.",
+    specialities: ["Gentle Root Canal Therapy", "Conservative Restorations", "Pediatric Endodontics", "Aesthetic Tooth Fillings"],
+    timings: "Consultation on Scheduled Days",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
+  bhuvana: {
+    name: "Mrs. Bhuvana Anandh",
+    role: "Senior Staff Nurse & CRM",
+    degrees: "Diploma in Nursing Assistant",
+    regNo: "10+ Years of Patient Care Experience",
+    image: "assets/images/nurse-bhuvana.jpg",
+    fallback: "assets/images/nurse-bhuvana.jpg",
+    quote: "Compassion in every visit",
+    bio: "A warm and dedicated presence, Mrs. Bhuvana Anandh ensures every patient feels comfortable, supported, and valued from consultation through follow-up. With over a decade in chairside assistance and customer relationship management, she guarantees a reassuring clinical environment.",
+    specialities: ["Chairside Patient Comfort", "Pre & Post-Operative Patient Care", "Sterilization Protocols & Clinic Hygiene", "Patient Consultation Scheduling"],
+    timings: "Monday - Saturday: 10:00 AM - 8:00 PM",
+    serviceValue: "General Consultation"
+  }
+};
+
+function openDoctorModal(docId) {
+  const doc = DOCTORS_PROFILE_DATA[docId];
+  if (!doc) return;
+
+  let modal = document.getElementById('doctor-profile-modal');
+  if (!modal) {
+    const modalMarkup = `
+      <div id="doctor-profile-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/75 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden transform scale-95 transition-all duration-300 border border-slate-100 relative max-h-[92vh] flex flex-col">
+          
+          <!-- Header Bar with gradient and close btn -->
+          <div class="bg-gradient-to-r from-navy via-[#1e3a5f] to-navy p-6 text-white relative flex-shrink-0">
+            <button type="button" onclick="closeDoctorModal()" class="absolute top-4 right-4 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition cursor-pointer z-10" aria-label="Close Modal">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-orange/80 shadow-md flex-shrink-0 bg-slate-100">
+                <img id="doc-modal-img" src="" alt="Doctor" class="w-full h-full object-cover">
+              </div>
+              <div class="pr-8">
+                <span class="text-orange text-xs font-bold uppercase tracking-wider block">Specialist Profile</span>
+                <h3 id="doc-modal-name" class="text-xl sm:text-2xl font-heading font-bold text-white leading-tight"></h3>
+                <p id="doc-modal-role" class="text-xs sm:text-sm text-blue-100 mt-0.5 line-clamp-2"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable Body Content -->
+          <div class="p-6 overflow-y-auto space-y-6 flex-1 text-slate-700">
+            <!-- Credentials Badges -->
+            <div class="flex flex-wrap gap-2.5 pb-2 border-b border-slate-100">
+              <span id="doc-modal-degrees" class="inline-flex items-center gap-1.5 bg-orange/10 text-orange font-semibold text-xs px-3 py-1.5 rounded-full border border-orange/20"></span>
+              <span id="doc-modal-reg" class="inline-flex items-center gap-1.5 bg-slate-100 text-navy font-medium text-xs px-3 py-1.5 rounded-full border border-slate-200"></span>
+            </div>
+
+            <!-- Quote -->
+            <div class="bg-amber-50/60 border-l-4 border-orange p-3.5 rounded-r-xl">
+              <p id="doc-modal-quote" class="font-cursive text-xl sm:text-2xl text-navy/90 italic"></p>
+            </div>
+
+            <!-- About / Bio -->
+            <div>
+              <h4 class="text-xs font-bold text-navy uppercase tracking-wider mb-2">About the Specialist</h4>
+              <p id="doc-modal-bio" class="text-sm leading-relaxed text-slate-600"></p>
+            </div>
+
+            <!-- Specialities -->
+            <div>
+              <h4 class="text-xs font-bold text-navy uppercase tracking-wider mb-2.5">Key Specializations &amp; Clinical Focus</h4>
+              <div id="doc-modal-specs" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Consultation Hours -->
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-navy/10 text-navy flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div class="text-xs">
+                <p class="font-semibold text-navy">Consultation Hours</p>
+                <p id="doc-modal-timings" class="text-slate-500"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Actions -->
+          <div class="p-4 sm:p-5 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row gap-3 items-center justify-between flex-shrink-0">
+            <button type="button" onclick="closeDoctorModal()" class="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold text-slate-600 hover:text-navy transition cursor-pointer">
+              Close Profile
+            </button>
+            <button id="doc-modal-book-btn" type="button" class="w-full sm:w-auto btn-primary justify-center text-sm py-2.5 px-6 shadow-md hover:shadow-orange/30">
+              Book Consultation With Specialist →
+            </button>
+          </div>
+
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalMarkup);
+    modal = document.getElementById('doctor-profile-modal');
+    
+    // Close on background click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeDoctorModal();
+    });
+  }
+
+  // Populate data
+  const imgEl = document.getElementById('doc-modal-img');
+  imgEl.src = doc.image;
+  imgEl.onerror = () => { imgEl.src = doc.fallback || 'assets/images/doctor-male.jpg'; };
+  document.getElementById('doc-modal-name').textContent = doc.name;
+  document.getElementById('doc-modal-role').textContent = doc.role;
+  document.getElementById('doc-modal-degrees').textContent = '🎓 ' + doc.degrees;
+  document.getElementById('doc-modal-reg').textContent = '📋 ' + doc.regNo;
+  document.getElementById('doc-modal-quote').textContent = `"${doc.quote}"`;
+  document.getElementById('doc-modal-bio').textContent = doc.bio;
+  document.getElementById('doc-modal-timings').textContent = doc.timings;
+
+  const specsContainer = document.getElementById('doc-modal-specs');
+  specsContainer.innerHTML = '';
+  doc.specialities.forEach(spec => {
+    const pill = document.createElement('span');
+    pill.className = 'inline-flex items-center gap-1.5 bg-white text-navy px-3 py-1 rounded-lg text-xs font-medium border border-slate-200 shadow-2xs';
+    pill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-orange"></span>${spec}`;
+    specsContainer.appendChild(pill);
+  });
+
+  const bookBtn = document.getElementById('doc-modal-book-btn');
+  bookBtn.onclick = () => {
+    closeDoctorModal();
+    setTimeout(() => {
+      if (typeof openAppointmentModal === 'function') {
+        openAppointmentModal();
+        const serviceSelect = document.getElementById('modal-service');
+        if (serviceSelect && doc.serviceValue) {
+          serviceSelect.value = doc.serviceValue;
+        }
+        const messageInput = document.getElementById('modal-message');
+        if (messageInput) {
+          messageInput.value = `Consultation request for ${doc.name}`;
+        }
+      }
+    }, 250);
+  };
+
+  // Open modal
+  modal.classList.add('open');
+  modal.classList.remove('opacity-0', 'pointer-events-none');
+  const card = modal.querySelector('div');
+  if (card) {
+    card.classList.remove('scale-95');
+    card.classList.add('scale-100');
+  }
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDoctorModal() {
+  const modal = document.getElementById('doctor-profile-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.classList.add('opacity-0', 'pointer-events-none');
+  const card = modal.querySelector('div');
+  if (card) {
+    card.classList.remove('scale-100');
+    card.classList.add('scale-95');
+  }
+  document.body.style.overflow = '';
+}
+

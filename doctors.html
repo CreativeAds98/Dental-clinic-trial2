@@ -194,168 +194,458 @@
         </div>
     </div>
 
-    <!-- 3. HERO SECTION (With merged breadcrumbs floating seamlessly over hero background) -->
-    <section class="relative bg-gradient-to-br from-cream via-white to-light-blue pt-6 pb-20 overflow-hidden" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: top center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 opacity-40" style="background-image: radial-gradient(#1e3a5f 1px, transparent 1px); background-size: 32px 32px;"></div>
-        
-        <!-- Merged Breadcrumb -->
-        <div class="max-w-7xl mx-auto px-4 mb-6 md:mb-8 relative z-10">
-            <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-medium">
+    <!-- 3. HERO BANNER (WITH 6-DOCTORS TEAM BACKGROUND - 50% TRANSPARENCY) -->
+    <section class="relative bg-[#0b2038] text-white pt-8 pb-16 md:py-20 overflow-hidden select-none">
+        <!-- Doctor Team Background Image with 50% Opacity -->
+        <div class="absolute inset-0 bg-cover bg-center md:bg-right pointer-events-none opacity-50" style="background-image: url('assets/images/doctors-team-banner.png');"></div>
+        <!-- Balanced Dark Navy Gradient to ensure text readability while highlighting the team photo -->
+        <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(90deg, rgba(9, 26, 46, 0.92) 0%, rgba(9, 26, 46, 0.72) 50%, rgba(9, 26, 46, 0.4) 100%);"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-300 font-medium mb-6">
                 <a href="index.html" class="hover:text-orange transition-colors"><i data-lucide="home" class="w-4 h-4"></i></a>
-                <span>/</span>
-                <span class="text-navy font-semibold">Doctors</span>
+                <span class="text-white/40">/</span>
+                <span class="text-orange font-semibold">Our Doctors</span>
             </div>
-        </div>
 
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                <!-- Text Content -->
-                <div class="flex-1 text-center lg:text-left">
-                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6">
-                        Expert Hands. <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange to-[#ff945e]">Personalised Care.</span>
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14">
+                <!-- Left: Headline & Features -->
+                <div class="max-w-2xl text-left">
+                    <!-- Top Tag -->
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <span class="text-orange text-xs sm:text-sm font-bold uppercase tracking-widest">OUR DOCTORS</span>
+                        <span class="w-10 h-0.5 bg-orange"></span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+                        The faces of <br>thoughtful care
                     </h1>
-                    
-                    <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0">
-                        Meet the doctors guiding your smile, skin and facial-aesthetics journey.
+
+                    <!-- Subtitle -->
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl">
+                        A team of experienced dental specialists committed to personalised care, advanced treatment and healthier, brighter smiles for every stage of life.
                     </p>
-                    
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 lg:gap-4">
-                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
-                            Skilled Professionals
-                        </span>
-                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
-                            Compassionate Care
-                        </span>
-                        <span class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm font-medium text-navy shadow-sm border border-gray-100">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-orange"></i>
-                            Healthier Smiles Happier You
-                        </span>
+
+                    <!-- Feature Badges -->
+                    <div class="flex flex-wrap gap-3 sm:gap-4">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-xs sm:text-sm font-medium text-white shadow-sm hover:border-orange/60 transition-colors">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-orange"></i>
+                            <span>Multi-Speciality Dental Care</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-xs sm:text-sm font-medium text-white shadow-sm hover:border-orange/60 transition-colors">
+                            <i data-lucide="users" class="w-4 h-4 text-orange"></i>
+                            <span>Experienced &amp; Caring Team</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-xs sm:text-sm font-medium text-white shadow-sm hover:border-orange/60 transition-colors">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-orange"></i>
+                            <span>Patient-Centred Approach</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Image -->
-                <div class="flex-1 relative w-full max-w-lg lg:max-w-none mx-auto mt-10 lg:mt-0">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <img src="assets/images/doctor-team.jpg" alt="Dr.GR Doctors Team" class="w-full h-auto object-cover aspect-[4/3]" onerror="this.src='https://placehold.co/800x600/e8f4fd/1e3a5f?text=Doctors+Team'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
-                    </div>
-                    
-                    <!-- Decorative Element -->
-                    <div class="absolute -bottom-6 -right-6 lg:-right-10 bg-white p-4 rounded-xl shadow-xl transform -rotate-6 animate-bounce" style="animation-duration: 3s;">
-                        <p class="font-cursive text-2xl text-orange pr-2">A Team That Cares For You</p>
+                <!-- Right: Reception 3D Sign & Slogan Accent -->
+                <div class="w-full lg:w-auto flex justify-center lg:justify-end">
+                    <div class="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 max-w-md shadow-2xl overflow-hidden group hover:border-orange/40 transition-all">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-orange/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="assets/images/logo.jpg" alt="Dr.GR Logo" class="w-14 h-14 rounded-full border-2 border-orange object-cover shadow-md bg-white">
+                            <div>
+                                <h3 class="font-heading font-bold text-white text-lg sm:text-xl leading-tight">Dr.GR Dental &amp; Aesthetics</h3>
+                                <p class="text-orange text-xs font-semibold uppercase tracking-wider">Center for Advanced Smiles</p>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-white/15 flex items-center justify-between">
+                            <span class="font-cursive text-xl sm:text-2xl text-cream/95 italic">Healthy Smiles. Happier Lives.</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. DR. GOWSEKA RAGUNATHAN (OUR FOUNDER) -->
-    <section class="py-20 bg-white relative overflow-hidden">
-        <!-- Leaf watermarks -->
-        <div class="absolute top-0 right-0 opacity-5 w-64 h-64 text-navy">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM15.5 14L12 17.5L8.5 14H11V8H13V14H15.5Z" fill="currentColor"/></svg>
+    <!-- 4. DOCTORS SHOWCASE (SERPENTINE ORGANIC ALTERNATING ROWS) -->
+    <section class="py-14 md:py-20 bg-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24">
+
+            <!-- DOCTOR 1: DR. GOWSEKA RAGUNATHAN (LEFT PHOTO) -->
+            <div class="doctor-row group" data-doctor="gowseka">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Left: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-left"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-left relative z-10">
+                                <img src="assets/images/dr-gowseka.jpg" alt="Dr. Gowseka Ragunathan" class="doctor-photo-img doctor-photo-img-gowseka" onerror="this.src='assets/images/doctor-female.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. Gowseka Ragunathan
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Founder &amp; Chief Dental Surgeon | Consultant – Facial Aesthetics | PMU Specialist
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>BDS, PGCFI</span>
+                            </span>
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>TN DCI Reg. No: 30306 | BH-12500/19029-10401.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button & Cursive Watermark -->
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <button type="button" onclick="openDoctorModal('gowseka')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                            <span class="doctor-script-quote hidden sm:inline-block -rotate-3">
+                                Leadership in every smile
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOCTOR 2: DR. KIRUBASHANKAR (RIGHT PHOTO) -->
+            <div class="doctor-row group" data-doctor="kirubashankar">
+                <div class="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Right: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-right"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-right relative z-10">
+                                <img src="assets/images/dr-kirubashankar.jpg" alt="Dr. Kirubashankar" class="doctor-photo-img" onerror="this.src='assets/images/doctor-male.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <!-- Script Watermark on Left -->
+                        <span class="doctor-script-quote hidden sm:inline-block mb-2 -rotate-3">
+                            Precision for a better tomorrow
+                        </span>
+
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. Kirubashankar
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Consultant – Oral &amp; Maxillofacial Surgeon
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>BDS, MDS</span>
+                            </span>
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>DCI Registration No: 20321.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div>
+                            <button type="button" onclick="openDoctorModal('kirubashankar')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOCTOR 3: DR. T. BHARATH (LEFT PHOTO) -->
+            <div class="doctor-row group" data-doctor="bharath">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Left: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-left"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-left relative z-10">
+                                <img src="assets/images/dr-bharath.jpg" alt="Dr. T. Bharath" class="doctor-photo-img" onerror="this.src='assets/images/doctor-male.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. T. Bharath
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Root Canal Specialist
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>BDS, PGD (Endo)</span>
+                            </span>
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>Reg No: 26404.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button & Cursive Watermark -->
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <button type="button" onclick="openDoctorModal('bharath')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                            <span class="doctor-script-quote hidden sm:inline-block -rotate-3">
+                                Saving natural smiles
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOCTOR 4: DR. SINDHUJA (RIGHT PHOTO) -->
+            <div class="doctor-row group" data-doctor="sindhuja">
+                <div class="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Right: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-right"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-right relative z-10">
+                                <img src="assets/images/dr-sindhuja.jpg" alt="Dr. Sindhuja" class="doctor-photo-img" onerror="this.src='assets/images/doctor-female.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <!-- Script Watermark on Left -->
+                        <span class="doctor-script-quote hidden sm:inline-block mb-2 -rotate-3">
+                            Restoring confidence
+                        </span>
+
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. Sindhuja
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Prosthodontist
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>Reg No: 32805.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div>
+                            <button type="button" onclick="openDoctorModal('sindhuja')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOCTOR 5: DR. AKSHAYA MURUGAN (LEFT PHOTO) -->
+            <div class="doctor-row group" data-doctor="akshaya">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Left: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-left"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-left relative z-10">
+                                <img src="assets/images/dr-akshaya.jpg" alt="Dr. Akshaya Murugan" class="doctor-photo-img" onerror="this.src='assets/images/doctor-female.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. Akshaya Murugan
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Oral Medicine &amp; Radiologist
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>Reg No: 64179A.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button & Cursive Watermark -->
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <button type="button" onclick="openDoctorModal('akshaya')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                            <span class="doctor-script-quote hidden sm:inline-block -rotate-3">
+                                Diagnosis deeper insights brighter outcomes
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOCTOR 6: DR. NANDHINI (RIGHT PHOTO) -->
+            <div class="doctor-row group" data-doctor="nandhini">
+                <div class="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-14">
+                    
+                    <!-- Right: Doctor Photo with Organic Frame & Contour Arc -->
+                    <div class="w-full sm:w-auto flex justify-center flex-shrink-0">
+                        <div class="relative w-[280px] sm:w-[320px] lg:w-[340px]">
+                            <!-- Orange Accent Contour Arc -->
+                            <div class="doctor-contour-arc-right"></div>
+                            <!-- Organic Photo Container -->
+                            <div class="doctor-photo-frame-right relative z-10">
+                                <img src="assets/images/dr-nandhini.jpg" alt="Dr. Nandhini" class="doctor-photo-img" onerror="this.src='assets/images/doctor-female.jpg'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left: Content & Credentials -->
+                    <div class="w-full lg:w-[460px] max-w-lg text-left flex-shrink-0">
+                        <!-- Script Watermark on Left -->
+                        <span class="doctor-script-quote hidden sm:inline-block mb-2 -rotate-3">
+                            Gentle care lasting smiles
+                        </span>
+
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-bold text-navy leading-tight mb-2 group-hover:text-navy-light transition-colors">
+                            Dr. Nandhini
+                        </h2>
+                        <p class="text-orange font-semibold text-sm sm:text-base lg:text-lg mb-4 leading-snug">
+                            Root Canal Specialist
+                        </p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-y-2.5 gap-x-5 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>BDS, MDS</span>
+                            </span>
+                            <span class="inline-flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-navy flex-shrink-0"></i>
+                                <span>Reg No: 33402.</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div>
+                            <button type="button" onclick="openDoctorModal('nandhini')" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange to-orange-hover text-white px-7 py-3 rounded-lg text-sm font-semibold shadow-md hover:shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn cursor-pointer">
+                                <span>View Profile</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-                <!-- Left: Photo -->
-                <div class="w-full lg:w-5/12 relative">
-                    <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/5]">
-                        <img src="assets/images/dr-gowseka.jpg" alt="Dr. Gowseka Ragunathan" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x800/fdf8f0/f26b2a?text=Dr.+Gowseka+Ragunathan'">
+    </section>
+
+    <!-- 5. PATIENT CARE TEAM - MRS. BHUVANA ANANDH (MATCHING SCREENSHOT BANNER) -->
+    <section class="py-6 md:py-12 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative bg-gradient-to-r from-[#d9e7f5] via-[#e4eef7] to-[#ecf3f9] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-slate-200/90 border-b-4 border-b-orange">
+                
+                <!-- Clinic Interior Background with Soft Blur & Blending -->
+                <div class="absolute inset-0 bg-cover bg-right opacity-25 pointer-events-none mix-blend-multiply" style="background-image: url('assets/images/clinic-interior.jpg');"></div>
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 items-center min-h-[220px]">
+                    
+                    <!-- Left: Content Info -->
+                    <div class="md:col-span-7 p-6 sm:p-10 lg:p-12 text-left">
+                        <!-- Top Tag -->
+                        <div class="flex items-center gap-2.5 mb-2.5">
+                            <span class="text-orange text-xs sm:text-sm font-bold uppercase tracking-wider">PATIENT CARE TEAM</span>
+                            <span class="w-8 sm:w-10 h-0.5 bg-orange"></span>
+                        </div>
+
+                        <!-- Nurse Name -->
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-navy leading-tight mb-1.5">
+                            Mrs. Bhuvana Anandh
+                        </h2>
+
+                        <!-- Subtitle -->
+                        <p class="text-orange font-semibold text-base sm:text-lg mb-3 leading-snug">
+                            Senior Staff Nurse &amp; CRM
+                        </p>
+
+                        <!-- Description -->
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed max-w-xl">
+                            A caring presence who ensures every patient feels comfortable, supported and valued throughout their dental journey.
+                        </p>
                     </div>
-                    <!-- Badge -->
-                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white whitespace-nowrap">
-                        OUR FOUNDER
+
+                    <!-- Right: Nurse Photo with Sweeping Contour Arc & White Cursive Text -->
+                    <div class="md:col-span-5 relative flex justify-center md:justify-end items-end self-stretch min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] overflow-hidden">
+                        
+                        <!-- Floating White Cursive Quote: Compassion in every visit -->
+                        <div class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 pointer-events-none text-left select-none">
+                            <p class="font-cursive text-2xl sm:text-3xl lg:text-[34px] text-white drop-shadow-[0_2px_4px_rgba(15,35,60,0.4)] leading-snug -rotate-6">
+                                Compassion<br>
+                                <span class="pl-4 sm:pl-6 block">in every visit</span>
+                            </p>
+                        </div>
+
+                        <!-- Sweeping Terracotta/Orange Outline Arc -->
+                        <svg class="absolute -right-2 -top-2 w-32 h-32 sm:w-44 sm:h-44 lg:w-52 lg:h-52 pointer-events-none z-20" viewBox="0 0 200 200" fill="none">
+                            <path d="M 195 200 C 192 80, 130 15, 0 8" stroke="#f26b2a" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+
+                        <!-- Nurse Photo Container -->
+                        <div class="relative w-full h-full flex justify-center md:justify-end items-end">
+                            <img src="assets/images/nurse-bhuvana.jpg" alt="Mrs. Bhuvana Anandh" class="max-h-[270px] sm:max-h-[310px] lg:max-h-[350px] w-auto object-cover object-top select-none" onerror="this.src='assets/images/doctor-female.jpg'">
+                        </div>
+
                     </div>
+
                 </div>
 
-                <!-- Right: Content -->
-                <div class="w-full lg:w-7/12 mt-8 lg:mt-0">
-                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-2">Dr. Gowseka Ragunathan</h2>
-                    <h3 class="text-lg md:text-xl text-orange font-medium mb-6">Founder & Chief Dental Surgeon | Consultant – Facial Aesthetics | PMU Specialist</h3>
-                    
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="inline-flex items-center gap-1.5 bg-light-blue text-navy px-3 py-1 rounded text-sm font-medium">
-                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> BDS, PGCFI
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-light-blue text-navy px-3 py-1 rounded text-sm font-medium">
-                            <i data-lucide="award" class="w-4 h-4"></i> TN DCI Reg. No. 30306
-                        </span>
-                    </div>
-                    
-                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
-                        With a passion for creating healthy smiles and confident lives, Dr. Gowseka Ragunathan combines clinical expertise with a compassionate, patient-first approach. Her focus is on personalised care that enhances both oral health and facial aesthetics, helping you look and feel your best.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 items-center">
-                        <a href="contact.html#book" class="w-full sm:w-auto text-center bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-md font-medium transition-colors shadow-lg shadow-orange/30 group">
-                            Book Consultation <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-                        </a>
-                        <a href="treatments.html" class="w-full sm:w-auto text-center border-2 border-navy text-navy hover:bg-navy hover:text-white px-8 py-3.5 rounded-md font-medium transition-colors group">
-                            View Treatments <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-                        </a>
-                    </div>
-                    
-                    <div class="mt-10 text-right pr-4">
-                        <p class="font-cursive text-3xl text-gray-400">Smiles Transform Lives</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. DR. KIRUBASHANKAR (OUR CONSULTANT) -->
-    <section class="py-20 bg-cream relative">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
-                <!-- Right (Visuals): Photo -->
-                <div class="w-full lg:w-5/12 relative">
-                    <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/5]">
-                        <img src="assets/images/dr-kirubashankar.jpg" alt="Dr. Kirubashankar" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x800/e8f4fd/1e3a5f?text=Dr.+Kirubashankar'">
-                    </div>
-                    <!-- Badge -->
-                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white whitespace-nowrap">
-                        OUR CONSULTANT
-                    </div>
-                </div>
-
-                <!-- Left (Content) -->
-                <div class="w-full lg:w-7/12 mt-8 lg:mt-0 lg:pr-10">
-                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-2">Dr. Kirubashankar</h2>
-                    <h3 class="text-lg md:text-xl text-orange font-medium mb-6">Consultant – Oral & Maxillofacial Surgeon</h3>
-                    
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-3 py-1 rounded shadow-sm border border-gray-100 text-sm font-medium">
-                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> BDS, MDS
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-3 py-1 rounded shadow-sm border border-gray-100 text-sm font-medium">
-                            <i data-lucide="award" class="w-4 h-4"></i> DCI Registration No. 20321
-                        </span>
-                    </div>
-                    
-                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
-                        Dr. Kirubashankar provides advanced surgical care with a focus on precision, safety and patient comfort. His expertise in oral and maxillofacial surgery helps restore function, health and confidence through comprehensive, personalised treatment.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 items-center">
-                        <a href="contact.html#book" class="w-full sm:w-auto text-center bg-orange hover:bg-orange-hover text-white px-8 py-3.5 rounded-md font-medium transition-colors shadow-lg shadow-orange/30 group">
-                            Book Consultation <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-                        </a>
-                        <a href="treatments.html" class="w-full sm:w-auto text-center border-2 border-navy text-navy hover:bg-navy hover:text-white px-8 py-3.5 rounded-md font-medium transition-colors group">
-                            View Treatments <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-                        </a>
-                    </div>
-                    
-                    <div class="mt-10 text-left pl-4">
-                        <p class="font-cursive text-3xl text-gray-400">Precision Care Stronger Smiles</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 7. 9+ VISITING CONSULTING DOCTORS -->
     <section class="py-20 bg-white">
@@ -562,38 +852,6 @@
         </div>
     </section>
 
-    <!-- 9. MRS. BHUVANA ANANDH (OUR TEAM) -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
-                <!-- Photo -->
-                <div class="w-full md:w-1/3">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
-                        <img src="assets/images/nurse-bhuvana.jpg" alt="Mrs. Bhuvana Anandh" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/400x400/e8f4fd/1e3a5f?text=Team+Member'">
-                    </div>
-                </div>
-                <!-- Content -->
-                <div class="w-full md:w-2/3">
-                    <span class="text-orange font-bold tracking-wider uppercase text-xs mb-2 block">OUR TEAM</span>
-                    <h3 class="font-heading text-2xl lg:text-3xl font-bold text-navy mb-1">Mrs. Bhuvana Anandh</h3>
-                    <p class="text-orange font-medium mb-4">Senior Staff Nurse</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-2.5 py-1 rounded text-xs font-medium border border-gray-200">
-                            Diploma in Nursing Assistant
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-white text-navy px-2.5 py-1 rounded text-xs font-medium border border-gray-200">
-                            10+ Years of Experience
-                        </span>
-                    </div>
-                    
-                    <p class="text-gray-600 leading-relaxed italic border-l-4 border-orange pl-4">
-                        "With dedication and a gentle approach, Mrs. Bhuvana Anandh ensures every patient receives comfortable, compassionate care throughout their treatment journey."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 10. CARE THAT MAKES A DIFFERENCE -->
     <section class="py-16 bg-navy text-white">
