@@ -57,24 +57,43 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="font-sans text-slate-700 bg-[#fdfbf7] antialiased overflow-x-hidden">
+<body class="font-sans text-slate-700 bg-white antialiased overflow-x-hidden selection:bg-orange selection:text-white">
 
-    <!-- 1. TOP ANNOUNCEMENT BAR (MATCHES ALL PAGES) -->
-    <div class="relative bg-navy text-white text-xs sm:text-sm py-2 px-4 select-none z-50">
+    <!-- 1. TOP BAR (Signature Wavy Design Matching Technology Page) -->
+    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
       
-      <!-- Left & Right decorative faded tooth watermarks -->
-      <div class="absolute left-2 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden md:block">
-        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C8.5 2 6 4.5 6 7.5C6 9.5 6.8 11.2 7.8 13C8.8 14.8 9.5 17 10 20C10.3 21.2 11.2 22 12 22C12.8 22 13.7 21.2 14 20C14.5 17 15.2 14.8 16.2 13C17.2 11.2 18 9.5 18 7.5C18 4.5 15.5 2 12 2Z"/>
-        </svg>
-      </div>
-      <div class="absolute right-2 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden md:block">
-        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C8.5 2 6 4.5 6 7.5C6 9.5 6.8 11.2 7.8 13C8.8 14.8 9.5 17 10 20C10.3 21.2 11.2 22 12 22C12.8 22 13.7 21.2 14 20C14.5 17 15.2 14.8 16.2 13C17.2 11.2 18 9.5 18 7.5C18 4.5 15.5 2 12 2Z"/>
+      <!-- Subtle Background Glow & Waves Overlay -->
+      <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
+
+      <!-- Background Wave Lines -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
+        <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
+      </svg>
+
+      <!-- Tooth Watermark (Left) -->
+      <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
         </svg>
       </div>
 
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2 px-2 sm:px-6">
+      <!-- Tooth Watermark (Center-Right) -->
+      <div class="absolute right-[28%] -top-2 w-12 h-12 pointer-events-none opacity-15 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Tooth Watermark (Far-Right) -->
+      <div class="absolute -right-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+        </svg>
+      </div>
+
+      <!-- Content Row -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
         
         <!-- Left: Location & Phone with circular orange badges -->
         <div class="flex items-center gap-3 lg:gap-4">
@@ -100,12 +119,14 @@
 
         <!-- Right: Tagline, Sparkles & Open Today Badge -->
         <div class="flex items-center gap-4">
+          <!-- Cursive Slogan -->
           <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
             Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
           </span>
 
           <span class="text-white/20 font-light">|</span>
 
+          <!-- Open Today Pill Badge with pulsing green light -->
           <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white shadow-sm">
             <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
             <span>Open Today</span>
@@ -114,7 +135,7 @@
 
       </div>
 
-      <!-- Wavy Bottom Border -->
+      <!-- Wavy Bottom Border (Orange Wave line curving over white navbar) -->
       <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none h-3.5">
         <svg class="w-full h-full text-white" viewBox="0 0 1440 20" preserveAspectRatio="none">
           <path d="M0,8 Q400,20 800,17 T1440,8 L1440,20 L0,20 Z" fill="currentColor"></path>
@@ -187,7 +208,7 @@
                     <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
                 </nav>
 
-                <!-- CTA Button (Tiny & Moved to far right) -->
+                <!-- CTA Button -->
                 <div class="hidden lg:flex items-center flex-shrink-0">
                     <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
                         <span>Book Appointment</span>
@@ -249,76 +270,70 @@
         </div>
     </div>
 
-    <!-- 3. HERO SECTION (MATCHING USER MOCKUP EXACTLY) -->
-    <section class="relative bg-gradient-to-r from-[#fdfbf7] via-[#faf7f2] to-[#edf6fc] overflow-hidden py-12 lg:py-20">
-        <!-- Background decorative wave shape for smooth transition to image backdrop -->
-        <div class="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 bg-[#dceefa]/40 pointer-events-none rounded-l-[120px] hidden lg:block"></div>
+    <!-- ================= HERO SECTION (Matching Technology page style with merged breadcrumbs) ================= -->
+    <section class="hero-gradient pt-6 pb-16 lg:pt-8 lg:pb-24 relative overflow-hidden leaf-bg-left leaf-bg-right" style="background-image: url('assets/images/hero-bg-waves.png'); background-size: cover; background-position: top center; background-repeat: no-repeat;">
+        <!-- Merged Breadcrumb -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 md:mb-8">
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-medium">
+                <a href="index.html" class="hover:text-orange transition-colors">Home</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span class="text-navy font-semibold">Promotions &amp; Current Offers</span>
+            </div>
+        </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Breadcrumbs -->
-            <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-400 font-medium mb-8">
-                <a href="index.html" class="hover:text-orange transition-colors"><i data-lucide="home" class="w-4 h-4"></i></a>
-                <span class="text-slate-300">/</span>
-                <span class="text-orange font-semibold">Promotions &amp; Current Offers</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-                <!-- Left Column: Typography & Orange Smile Arc -->
-                <div class="lg:col-span-6 xl:col-span-5 text-left">
-                    <span class="text-orange text-xs sm:text-sm font-bold tracking-[0.25em] uppercase block mb-3">
-                        PROMOTIONS
-                    </span>
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.12] mb-6">
-                        Care Worth<br>Smiling About
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Typography, Badges & CTA -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="section-label">SPECIAL OFFERS &amp; PACKAGES</span>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight font-heading">
+                        Care Worth <span class="gradient-text">Smiling About.</span>
                     </h1>
-                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-md mb-4">
-                        Explore the latest opportunities to begin your care journey.
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Explore our curated smile care packages, aesthetic treatment bundles, and seasonal offers designed to give you world-class clinical care at exceptional value in Coimbatore.
                     </p>
 
-                    <!-- Decorative Orange Smile Arc SVG (Directly from Mockup) -->
-                    <div class="my-6">
-                        <svg class="w-48 sm:w-60 h-8 promo-smile-arc" viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 6 C60 32, 180 32, 236 6" stroke="#f26b2a" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
+                    <!-- Feature Badges (Matching Technology Page Badges) -->
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> Transparent Pricing
+                        </span>
+                        <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-orange"></i> No Hidden Costs
+                        </span>
+                        <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-xs sm:text-sm font-medium text-navy border border-slate-200 shadow-sm flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-orange"></i> Limited Period Specials
+                        </span>
                     </div>
 
-                    <!-- Quick Action Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 mt-6">
-                        <a href="#campaigns-section" class="bg-orange hover:bg-orange-hover text-white px-6 py-3 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-lg flex items-center gap-2">
-                            <span>Explore Offers Below</span>
-                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
-                        </a>
-                        <a href="tel:7200920929" class="border border-slate-300 hover:border-orange text-navy hover:text-orange px-5 py-3 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 bg-white/80 backdrop-blur-sm">
-                            <i data-lucide="phone" class="w-4 h-4 text-orange"></i>
-                            <span>72009 20929</span>
+                    <!-- Action Buttons -->
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <button onclick="openAppointmentModal()" class="btn-primary btn-book-appointment">
+                            Claim an Offer <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <a href="tel:7200920929" class="btn-outline">
+                            <i data-lucide="phone" class="w-4 h-4"></i> Speak with Specialist
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column: Organic Curved Image with Sky Blue Aura -->
-                <div class="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-end">
-                    <div class="relative w-full max-w-xl">
-                        <!-- Sky Blue Halo Accent Backdrop -->
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-[#dbeafe] via-[#e0f2fe] to-white/60 rounded-[60px] blur-xl opacity-70 pointer-events-none"></div>
-
-                        <!-- Hero Portrait Image Frame matching the Mockup -->
-                        <div class="relative overflow-hidden rounded-[40px] sm:rounded-[60px] shadow-2xl border-4 border-white bg-[#edf5fc] aspect-[16/11]">
-                            <img src="assets/images/promo-hero-smile.jpg" alt="Care Worth Smiling About - Dr.GR Dental Clinic" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700">
-                            
-                            <!-- Subtle Ambient Lighting Vignette -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent pointer-events-none"></div>
-
-                            <!-- Floating Badge -->
-                            <div class="absolute bottom-5 right-5 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-2.5">
-                                <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
-                                <div>
-                                    <p class="text-[11px] font-bold text-navy uppercase tracking-wider">Active Campaigns</p>
-                                    <p class="text-xs font-medium text-slate-500">Coimbatore Center</p>
-                                </div>
+                <!-- Right Column: Card Image with Floating Feature Badge -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <img src="assets/images/promo-hero-smile.jpg" alt="Care Worth Smiling About - Dr.GR Dental Clinic" class="rounded-2xl shadow-2xl border-4 border-white object-cover w-full h-[380px]">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 max-w-xs">
+                            <div class="w-12 h-12 rounded-full bg-light-blue text-navy flex items-center justify-center shrink-0 font-bold">
+                                <i data-lucide="tag" class="w-6 h-6 text-orange"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-navy text-sm">Special Packages</span>
+                                <span class="block text-xs text-slate-500">Curated Smile &amp; Skin Offers</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
