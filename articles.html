@@ -9,63 +9,76 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (CDN) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a5f',
-                        'navy-light': '#2d5a8a',
+                        navy: '#0c2340',
+                        'navy-dark': '#061220',
+                        'navy-light': '#16365c',
                         orange: '#f26b2a',
-                        'orange-hover': '#e05a1a',
-                        'light-blue': '#e8f4fd',
-                        cream: '#fdf8f0',
+                        'orange-hover': '#d95514',
+                        'orange-light': '#fff3ed',
+                        cream: '#fdfbf7',
+                        'cream-dark': '#f4ede2',
+                        teal: '#0d9488',
+                        'teal-light': '#f0fdfa',
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
                     },
                     fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                         heading: ['Playfair Display', 'serif'],
-                        body: ['Inter', 'sans-serif'],
-                        cursive: ['Dancing Script', 'cursive'],
+                        cursive: ['Dancing Script', 'cursive']
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="font-body text-gray-800 antialiased bg-[#fbfdfa]">
+<body class="font-sans text-slate-700 bg-[#fdfbf7] antialiased overflow-x-hidden">
 
-    <!-- 1. TOP BAR -->
-    <div class="top-bar-wavy relative bg-[#0b2038] text-white text-xs lg:text-sm hidden md:block overflow-hidden pt-2.5 pb-4 select-none">
+    <!-- 1. TOP ANNOUNCEMENT BAR (MATCHES ALL PAGES) -->
+    <div class="relative bg-navy text-white text-xs sm:text-sm py-2 px-4 select-none z-50">
       
-      <!-- Subtle Background Glow & Waves Overlay -->
-      <div class="absolute inset-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 65% 40%, rgba(242, 107, 42, 0.18) 0%, transparent 60%), linear-gradient(90deg, #091a2e 0%, #123254 50%, #0a1d33 100%);"></div>
-
-      <!-- Background Wave Lines -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M-50,25 C300,50 750,-5 1500,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"></path>
-        <path d="M-50,38 C350,15 850,48 1500,20" fill="none" stroke="rgba(242,107,42,0.45)" stroke-width="1"></path>
-      </svg>
-
-      <!-- Tooth Watermarks -->
-      <div class="absolute -left-2 -top-1 w-14 h-14 pointer-events-none opacity-20 text-white">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
-          <path d="M12 2C9 2 7 3.5 7 6.5C7 8.5 8 9.5 8 11.5C8 14.5 6.5 17 6.5 20C6.5 21.5 7.5 22 8.5 22C10 22 10.5 20 12 20C13.5 20 14 22 15.5 22C16.5 22 17.5 21.5 17.5 20C17.5 17 16 14.5 16 11.5C16 9.5 17 8.5 17 6.5C17 3.5 15 2 12 2Z"></path>
+      <!-- Left & Right decorative faded tooth watermarks -->
+      <div class="absolute left-2 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden md:block">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C8.5 2 6 4.5 6 7.5C6 9.5 6.8 11.2 7.8 13C8.8 14.8 9.5 17 10 20C10.3 21.2 11.2 22 12 22C12.8 22 13.7 21.2 14 20C14.5 17 15.2 14.8 16.2 13C17.2 11.2 18 9.5 18 7.5C18 4.5 15.5 2 12 2Z"/>
+        </svg>
+      </div>
+      <div class="absolute right-2 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden md:block">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C8.5 2 6 4.5 6 7.5C6 9.5 6.8 11.2 7.8 13C8.8 14.8 9.5 17 10 20C10.3 21.2 11.2 22 12 22C12.8 22 13.7 21.2 14 20C14.5 17 15.2 14.8 16.2 13C17.2 11.2 18 9.5 18 7.5C18 4.5 15.5 2 12 2Z"/>
         </svg>
       </div>
 
-      <!-- Content Row -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10 pb-1">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2 px-2 sm:px-6">
         
-        <!-- Left: Location & Phone -->
+        <!-- Left: Location & Phone with circular orange badges -->
         <div class="flex items-center gap-3 lg:gap-4">
+          <!-- Location -->
           <span class="flex items-center gap-2 font-medium">
             <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0">
               <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
@@ -75,6 +88,7 @@
 
           <span class="text-white/20 font-light">|</span>
 
+          <!-- Phone -->
           <a href="tel:7200920929" class="flex items-center gap-2 font-medium hover:text-orange transition-colors group">
             <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#f26b2a] to-[#d95514] flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
               <i data-lucide="phone" class="w-3.5 h-3.5"></i>
@@ -84,7 +98,7 @@
           </a>
         </div>
 
-        <!-- Right: Tagline & Open Today Badge -->
+        <!-- Right: Tagline, Sparkles & Open Today Badge -->
         <div class="flex items-center gap-4">
           <span class="font-cursive text-base lg:text-lg text-cream/95 tracking-wide flex items-center gap-1.5">
             Healthy Smiles. Brighter Tomorrows<span class="text-orange text-sm">✦</span>
@@ -118,21 +132,58 @@
                 <a href="index.html" class="flex items-center gap-3 group">
                     <img src="assets/images/logo.jpg" alt="Dr.GR Dental & Aesthetics Logo" class="w-12 h-12 rounded-full object-cover border-2 border-orange shadow-md group-hover:scale-105 transition-transform">
                     <div class="flex flex-col">
-                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental & Aesthetics</span>
+                        <span class="font-heading font-bold text-navy text-xl leading-tight">Dr.GR Dental &amp; Aesthetics</span>
                         <span class="text-orange text-xs font-semibold tracking-wider uppercase">Coimbatore</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden lg:flex items-center gap-5 xl:gap-6 ml-auto mr-4 lg:mr-6">
+                <nav class="hidden lg:flex items-center gap-5 xl:gap-7 ml-auto mr-4 lg:mr-6">
                     <a href="index.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Home</a>
                     <a href="about.html" class="text-slate-600 hover:text-navy font-medium transition-colors">About</a>
                     <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Treatments</a>
                     <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Doctors</a>
-                    <a href="technology.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Technology</a>
                     <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Before &amp; After</a>
-                    <a href="promotions.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Promotions</a>
-                    <a href="articles.html" class="text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors">Articles</a>
+                    
+                    <!-- Explore Dropdown (Active: Articles) -->
+                    <div class="relative group/dropdown py-2">
+                        <button class="flex items-center gap-1.5 text-navy font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-orange transition-colors focus:outline-none" aria-expanded="false" aria-haspopup="true">
+                            <span>Explore</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-orange transition-transform duration-200 group-hover/dropdown:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
+                            <div class="w-64 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 text-left">
+                                <a href="technology.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-orange/5 group/item transition-colors">
+                                    <div class="w-9 h-9 rounded-lg bg-blue-50 text-navy flex items-center justify-center group-hover/item:bg-orange group-hover/item:text-white transition-colors shrink-0">
+                                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-navy group-hover/item:text-orange transition-colors">Technology</div>
+                                        <div class="text-[11px] text-slate-400">3D scanner &amp; digital precision</div>
+                                    </div>
+                                </a>
+                                <a href="promotions.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-orange/5 group/item transition-colors">
+                                    <div class="w-9 h-9 rounded-lg bg-orange/10 text-orange flex items-center justify-center group-hover/item:bg-orange group-hover/item:text-white transition-colors shrink-0">
+                                        <i data-lucide="tag" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-navy group-hover/item:text-orange transition-colors">Promotions</div>
+                                        <div class="text-[11px] text-slate-400">Current offers &amp; clinic campaigns</div>
+                                    </div>
+                                </a>
+                                <a href="articles.html" class="flex items-center gap-3 p-2.5 rounded-xl bg-orange/5 font-semibold text-orange group/item transition-colors">
+                                    <div class="w-9 h-9 rounded-lg bg-orange text-white flex items-center justify-center transition-colors shrink-0">
+                                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-orange">Articles</div>
+                                        <div class="text-[11px] text-slate-400">Dental care guides &amp; tips</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <a href="contact.html" class="text-slate-600 hover:text-navy font-medium transition-colors">Contact</a>
                 </nav>
 
@@ -162,15 +213,32 @@
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-            <nav class="flex flex-col gap-4">
+            <nav class="flex flex-col gap-3">
                 <a href="index.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Home</a>
                 <a href="about.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">About</a>
                 <a href="treatments.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Treatments</a>
                 <a href="doctors.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Doctors</a>
-                <a href="technology.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Technology</a>
                 <a href="before-after.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Before &amp; After</a>
-                <a href="promotions.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Promotions</a>
-                <a href="articles.html" class="text-navy font-semibold text-lg py-2 border-b border-slate-100">Articles</a>
+                
+                <!-- Mobile Explore Group (Active: Articles) -->
+                <div class="py-2 border-b border-slate-100">
+                    <div class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Explore</div>
+                    <div class="pl-2 flex flex-col gap-2">
+                        <a href="technology.html" class="flex items-center gap-3 text-slate-600 hover:text-navy font-medium text-base py-1">
+                            <i data-lucide="cpu" class="w-4 h-4 text-orange"></i>
+                            <span>Technology</span>
+                        </a>
+                        <a href="promotions.html" class="flex items-center gap-3 text-slate-600 hover:text-navy font-medium text-base py-1">
+                            <i data-lucide="tag" class="w-4 h-4 text-orange"></i>
+                            <span>Promotions &amp; Offers</span>
+                        </a>
+                        <a href="articles.html" class="flex items-center gap-3 text-orange font-semibold text-base py-1">
+                            <i data-lucide="book-open" class="w-4 h-4 text-orange"></i>
+                            <span>Articles</span>
+                        </a>
+                    </div>
+                </div>
+
                 <a href="contact.html" class="text-slate-600 hover:text-navy font-medium text-lg py-2 border-b border-slate-100">Contact</a>
             </nav>
             <div class="mt-auto pt-8">

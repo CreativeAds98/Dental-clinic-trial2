@@ -1167,5 +1167,18 @@ header .btn-book-appointment:hover,
   50% { transform: translateY(-3px); }
 }
 
+/* Explore Navigation Dropdown */
+.group\/dropdown > div {
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.group\/dropdown:hover > div {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+
 
 
