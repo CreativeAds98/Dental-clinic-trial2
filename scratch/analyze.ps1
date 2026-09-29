@@ -1,0 +1,13 @@
+Add-Type -AssemblyName System.Drawing
+$bmp = [System.Drawing.Bitmap]::FromFile('e:\Production-Trial\Dental-Clinic-trial2\assets\images\founder-doctor-visual.png')
+$c1 = $bmp.GetPixel(0, 0)
+$c2 = $bmp.GetPixel(0, 50)
+$c3 = $bmp.GetPixel(0, 100)
+$c4 = $bmp.GetPixel(0, $bmp.Height - 1)
+$c5 = $bmp.GetPixel(0, $bmp.Height - 50)
+Write-Output ("(0,0): R=$($c1.R) G=$($c1.G) B=$($c1.B)")
+Write-Output ("(0,50): R=$($c2.R) G=$($c2.G) B=$($c2.B)")
+Write-Output ("(0,100): R=$($c3.R) G=$($c3.G) B=$($c3.B)")
+Write-Output ("(0,end): R=$($c4.R) G=$($c4.G) B=$($c4.B)")
+Write-Output ("(0,end-50): R=$($c5.R) G=$($c5.G) B=$($c5.B)")
+$bmp.Dispose()
