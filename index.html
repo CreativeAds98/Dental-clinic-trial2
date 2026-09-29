@@ -940,52 +940,199 @@
     </div>
   </section>
 
-  <!-- 9. MODERN TECHNOLOGY -->
-  <section id="technology" class="py-20 bg-light-blue">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate-on-scroll">
-        <span class="text-orange font-semibold text-sm uppercase tracking-wider">Our Technology</span>
-        <h2 class="font-heading font-bold text-navy text-3xl sm:text-4xl mt-2 mb-4">Modern Technology for Better Care</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">We invest in the latest medical equipment to ensure your treatments are precise, minimally invasive, and yielded with superior results.</p>
+  <!-- 9. MODERN TECHNOLOGY (PURE HTML & CSS STRUCTURE MATCHING REFERENCE MOCKUP) -->
+  <section id="technology" class="py-16 sm:py-20 lg:py-24 bg-[#f8fbfe] relative overflow-hidden">
+    <!-- Ambient background soft glows -->
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -z-0"></div>
+    <div class="absolute -bottom-24 right-1/4 w-96 h-96 bg-orange/5 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Elevated Technology Card with Split Structure & Curved Divider -->
+      <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden relative flex flex-col lg:flex-row min-h-[520px] animate-on-scroll">
+        
+        <!-- LEFT COLUMN: Typography & Messaging -->
+        <div class="relative z-20 w-full lg:w-[38%] p-8 sm:p-10 lg:p-12 flex flex-col justify-center bg-white">
+          
+          <!-- Category Label with Horizontal Accent Line -->
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-orange font-bold text-xs uppercase tracking-[0.2em]">OUR TECHNOLOGY</span>
+            <span class="w-8 h-[2px] bg-orange/70 rounded-full"></span>
+          </div>
+
+          <!-- Main Heading -->
+          <h2 class="font-heading font-bold text-navy text-3xl sm:text-4xl lg:text-[42px] leading-[1.14] tracking-tight mb-5">
+            Modern Technology<br>for Better Care
+          </h2>
+
+          <!-- Description -->
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+            We invest in the latest medical equipment to ensure your treatments are precise, minimally invasive, and yielded with superior results.
+          </p>
+
+          <!-- Direct Link to Technology Page -->
+          <div class="pt-1">
+            <a href="technology.html" class="inline-flex items-center gap-2 text-sm font-semibold text-orange hover:text-orange-hover transition-colors group">
+              <span>Explore All Technology</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ORGANIC WAVE DIVIDER (Desktop Only) -->
+        <div class="hidden lg:block absolute left-[38%] top-0 bottom-0 w-24 z-20 -ml-4 pointer-events-none">
+          <svg class="w-full h-full text-white fill-current filter drop-shadow-[5px_0_15px_rgba(186,230,253,0.45)]" viewBox="0 0 100 520" preserveAspectRatio="none">
+            <path d="M0,0 C65,110 10,230 65,360 C90,420 20,480 0,520 Z"></path>
+          </svg>
+        </div>
+
+        <!-- RIGHT AREA: Modern Operatory Room + Interactive Callout Badges -->
+        <div class="relative w-full lg:w-[62%] h-[360px] sm:h-[440px] lg:h-auto min-h-[460px] lg:min-h-[520px] overflow-hidden">
+          
+          <!-- Operatory Room Clean Photo Background -->
+          <img src="assets/images/tech-operatory-clean.jpg" 
+               alt="Dr.GR Dental & Aesthetics Clinical Operatory Room" 
+               class="absolute inset-0 w-full h-full object-cover select-none">
+
+          <!-- Desktop SVG Pointer Lines with Glowing Dots -->
+          <svg class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 700 520">
+            <defs>
+              <filter id="pointer-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f26b2a" flood-opacity="0.35"/>
+              </filter>
+            </defs>
+
+            <!-- 1. iTero Pointer Line & Dot -->
+            <polyline points="105,100 125,145 155,195" fill="none" stroke="#f26b2a" stroke-width="2" filter="url(#pointer-shadow)" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="155" cy="195" r="4.5" fill="#f26b2a" stroke="#ffffff" stroke-width="2"/>
+            <circle cx="155" cy="195" r="8" fill="none" stroke="#f26b2a" stroke-width="1.2" opacity="0.6" class="animate-ping"/>
+
+            <!-- 2. RVG Pointer Line & Dot -->
+            <polyline points="475,85 435,120 410,165" fill="none" stroke="#f26b2a" stroke-width="2" filter="url(#pointer-shadow)" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="410" cy="165" r="4.5" fill="#f26b2a" stroke="#ffffff" stroke-width="2"/>
+            <circle cx="410" cy="165" r="8" fill="none" stroke="#f26b2a" stroke-width="1.2" opacity="0.6" class="animate-ping"/>
+
+            <!-- 3. Diode Laser Pointer Line & Dot -->
+            <polyline points="485,245 465,265 450,285" fill="none" stroke="#f26b2a" stroke-width="2" filter="url(#pointer-shadow)" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="450" cy="285" r="4.5" fill="#f26b2a" stroke="#ffffff" stroke-width="2"/>
+            <circle cx="450" cy="285" r="8" fill="none" stroke="#f26b2a" stroke-width="1.2" opacity="0.6" class="animate-ping"/>
+
+            <!-- 4. Sterilization Autoclave Pointer Line & Dot -->
+            <polyline points="495,430 520,385 540,345" fill="none" stroke="#f26b2a" stroke-width="2" filter="url(#pointer-shadow)" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="540" cy="345" r="4.5" fill="#f26b2a" stroke="#ffffff" stroke-width="2"/>
+            <circle cx="540" cy="345" r="8" fill="none" stroke="#f26b2a" stroke-width="1.2" opacity="0.6" class="animate-ping"/>
+          </svg>
+
+          <!-- DESKTOP INTERACTIVE CALLOUT BADGES (Floating with Glassmorphism) -->
+          <div class="hidden lg:block">
+            
+            <!-- Callout 1: iTero Digital Scanner -->
+            <div class="absolute top-[32px] left-[30px] z-20 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/90 shadow-lg shadow-slate-900/5 flex items-center gap-3 max-w-[260px] hover:scale-105 transition-transform cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-[#e8f4fc] border border-sky-100 flex items-center justify-center text-[#0284c7] shrink-0 shadow-sm">
+                <i data-lucide="scan" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-navy text-sm leading-tight">iTero Digital Scanner</h4>
+                <p class="text-slate-600 text-[11px] mt-0.5 leading-snug">Accurate 3D scans without messy impressions.</p>
+              </div>
+            </div>
+
+            <!-- Callout 2: RVG Imaging -->
+            <div class="absolute top-[35px] right-[28px] z-20 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/90 shadow-lg shadow-slate-900/5 flex items-center gap-3 max-w-[260px] hover:scale-105 transition-transform cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-[#e8f4fc] border border-sky-100 flex items-center justify-center text-[#0284c7] shrink-0 shadow-sm">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-navy text-sm leading-tight">RVG Imaging</h4>
+                <p class="text-slate-600 text-[11px] mt-0.5 leading-snug">Clear digital X-rays with reduced radiation.</p>
+              </div>
+            </div>
+
+            <!-- Callout 3: Diode & Piezolaser -->
+            <div class="absolute top-[200px] right-[28px] z-20 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/90 shadow-lg shadow-slate-900/5 flex items-center gap-3 max-w-[260px] hover:scale-105 transition-transform cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-[#e8f4fc] border border-sky-100 flex items-center justify-center text-[#0284c7] shrink-0 shadow-sm">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-navy text-sm leading-tight">Diode &amp; Piezolaser</h4>
+                <p class="text-slate-600 text-[11px] mt-0.5 leading-snug">Gentle treatment and faster healing.</p>
+              </div>
+            </div>
+
+            <!-- Callout 4: Dedicated Sterilization -->
+            <div class="absolute bottom-[35px] right-[28px] z-20 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/90 shadow-lg shadow-slate-900/5 flex items-center gap-3 max-w-[260px] hover:scale-105 transition-transform cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-[#e8f4fc] border border-sky-100 flex items-center justify-center text-[#0284c7] shrink-0 shadow-sm">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-navy text-sm leading-tight">Dedicated Sterilization</h4>
+                <p class="text-slate-600 text-[11px] mt-0.5 leading-snug">Class-B autoclave protocols.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Tech 1 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center group hover:-translate-y-1 transition-transform animate-on-scroll">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-navy mx-auto mb-4 group-hover:bg-navy group-hover:text-white transition-colors">
-            <i data-lucide="scan" class="w-8 h-8"></i>
-          </div>
-          <h3 class="font-semibold text-navy text-lg mb-2">iTero Digital Scanner</h3>
-          <p class="text-slate-500 text-sm">No more messy impressions. Get accurate 3D models of your teeth in minutes.</p>
-        </div>
+      <!-- MOBILE & TABLET CALLOUT GRID (Below image on small screens) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 lg:hidden">
         
-        <!-- Tech 2 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center group hover:-translate-y-1 transition-transform animate-on-scroll" style="animation-delay: 100ms;">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-navy mx-auto mb-4 group-hover:bg-navy group-hover:text-white transition-colors">
-            <i data-lucide="camera" class="w-8 h-8"></i>
+        <!-- Tech 1 -->
+        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#e8f4fc] text-[#0284c7] flex items-center justify-center shrink-0">
+            <i data-lucide="scan" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-semibold text-navy text-lg mb-2">RVG Imaging</h3>
-          <p class="text-slate-500 text-sm">Digital X-rays with significantly reduced radiation and instant, clear results.</p>
+          <div>
+            <h4 class="font-heading font-bold text-navy text-sm">iTero Digital Scanner</h4>
+            <p class="text-slate-500 text-xs mt-0.5">Accurate 3D scans without messy impressions.</p>
+          </div>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#e8f4fc] text-[#0284c7] flex items-center justify-center shrink-0">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-navy text-sm">RVG Imaging</h4>
+            <p class="text-slate-500 text-xs mt-0.5">Clear digital X-rays with reduced radiation.</p>
+          </div>
         </div>
 
         <!-- Tech 3 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center group hover:-translate-y-1 transition-transform animate-on-scroll" style="animation-delay: 200ms;">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-navy mx-auto mb-4 group-hover:bg-navy group-hover:text-white transition-colors">
-            <i data-lucide="zap" class="w-8 h-8"></i>
+        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#e8f4fc] text-[#0284c7] flex items-center justify-center shrink-0">
+            <i data-lucide="zap" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-semibold text-navy text-lg mb-2">Diode & Piezolaser</h3>
-          <p class="text-slate-500 text-sm">Advanced laser tech for painless gum treatments and faster healing.</p>
+          <div>
+            <h4 class="font-heading font-bold text-navy text-sm">Diode &amp; Piezolaser</h4>
+            <p class="text-slate-500 text-xs mt-0.5">Gentle treatment and faster healing.</p>
+          </div>
         </div>
 
         <!-- Tech 4 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center group hover:-translate-y-1 transition-transform animate-on-scroll" style="animation-delay: 300ms;">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-navy mx-auto mb-4 group-hover:bg-navy group-hover:text-white transition-colors">
-            <i data-lucide="shield-check" class="w-8 h-8"></i>
+        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#e8f4fc] text-[#0284c7] flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-semibold text-navy text-lg mb-2">Dedicated Sterilization</h3>
-          <p class="text-slate-500 text-sm">Class-B autoclaves ensuring 100% infection control protocols.</p>
+          <div>
+            <h4 class="font-heading font-bold text-navy text-sm">Dedicated Sterilization</h4>
+            <p class="text-slate-500 text-xs mt-0.5">Class-B autoclave protocols.</p>
+          </div>
         </div>
+
       </div>
+
+      <!-- Supporting Feature Highlights Footnote -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-slate-500 pt-4 border-t border-slate-200/60">
+        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> 100% Digital 3D Precision</span>
+        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> Up to 90% Less Radiation</span>
+        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> Minimally Invasive Comfort</span>
+        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-orange"></i> Strict Class-B Sterilization</span>
+      </div>
+
     </div>
   </section>
 
