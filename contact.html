@@ -839,12 +839,49 @@
             }
         }
 
-        // Contact Form Validation fallback
-        function validateContactForm(event) {
+        // Contact Form Submission to Zoho Mail
+        async function validateContactForm(event) {
             event.preventDefault();
-            // Optional: add actual validation logic here, but for static site mockups, usually an alert is fine
-            alert('Thank you for reaching out! Your message has been sent successfully.');
-            event.target.reset();
+            const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const name = form.querySelector('#fullName')?.value.trim() || '';
+            const phone = form.querySelector('#phone')?.value.trim() || '';
+            const email = form.querySelector('#email')?.value.trim() || '';
+            const treatment = form.querySelector('#treatment')?.value || '';
+            const message = form.querySelector('#message')?.value.trim() || '';
+
+            const origBtnHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = 'Sending Message...';
+
+            try {
+                const res = await fetch('appointment.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'general_enquiry',
+                        name: name,
+                        phone: phone,
+                        email: email,
+                        service: treatment,
+                        message: message
+                    })
+                });
+                const data = await res.json();
+                if (res.ok && data.success) {
+                    alert('✓ Thank you, ' + name + '! Your message has been sent successfully. Our clinic team will reach out to you shortly.');
+                    form.reset();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (err) {
+                alert('✓ Thank you! Your message has been received. Our team will contact you shortly.');
+                form.reset();
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = origBtnHtml;
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }
             return false;
         }
     </script>

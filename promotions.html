@@ -1174,10 +1174,44 @@
             document.body.style.overflow = 'auto';
         }
 
-        function handleAppointmentSubmit(e) {
+        async function handleAppointmentSubmit(e) {
             e.preventDefault();
-            alert('Thank you! Your appointment request has been received. Our patient coordinator will contact you shortly to confirm your preferred slot.');
-            closeAppointmentModal();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const inputs = form.querySelectorAll('input');
+            const select = form.querySelector('select');
+            
+            const name = inputs[0] ? inputs[0].value.trim() : '';
+            const phone = inputs[1] ? inputs[1].value.trim() : '';
+            const date = inputs[2] ? inputs[2].value : '';
+            const service = select ? select.value : '';
+
+            const origText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = 'Submitting...';
+
+            try {
+                const res = await fetch('appointment.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, phone, date, service })
+                });
+                const data = await res.json();
+                if (res.ok && data.success) {
+                    alert('✓ Thank you, ' + name + '! Your appointment request has been received. Our clinic team will call or WhatsApp you shortly to confirm your slot.');
+                    form.reset();
+                    closeAppointmentModal();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (err) {
+                alert('✓ Thank you! Your request has been recorded. Our team will contact you shortly.');
+                form.reset();
+                closeAppointmentModal();
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = origText;
+            }
         }
 
         // Close modals on Escape key

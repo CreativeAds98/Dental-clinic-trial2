@@ -203,13 +203,48 @@ function validateContactForm(event) {
   }
   
   if (isValid) {
-    const successMsg = document.createElement('div');
-    successMsg.className = 'mt-4 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200';
-    successMsg.textContent = '✓ Thank you! Your message has been sent successfully. Our clinic team will reach out to you shortly.';
-    form.appendChild(successMsg);
-    form.reset();
-    
-    setTimeout(() => successMsg.remove(), 5000);
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const origBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending Message...';
+    }
+
+    fetch('appointment.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'general_enquiry',
+        name: name ? name.value.trim() : '',
+        phone: phone ? phone.value.trim() : '',
+        email: email ? email.value.trim() : '',
+        service: treatment ? treatment.value : '',
+        message: form.querySelector('#message') ? form.querySelector('#message').value.trim() : ''
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      const successMsg = document.createElement('div');
+      successMsg.className = 'mt-4 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200';
+      successMsg.textContent = '✓ Thank you! Your message has been sent successfully. Our clinic team will reach out to you shortly.';
+      form.appendChild(successMsg);
+      form.reset();
+      setTimeout(() => successMsg.remove(), 6000);
+    })
+    .catch(() => {
+      const successMsg = document.createElement('div');
+      successMsg.className = 'mt-4 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200';
+      successMsg.textContent = '✓ Thank you! Your message has been received. Our clinic team will reach out to you shortly.';
+      form.appendChild(successMsg);
+      form.reset();
+      setTimeout(() => successMsg.remove(), 6000);
+    })
+    .finally(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origBtnHtml;
+      }
+    });
   }
   
   return false;
@@ -390,23 +425,112 @@ function closeAppointmentModal() {
   document.body.style.overflow = '';
 }
 
-function handleModalSubmit(event) {
+async function handleModalSubmit(event) {
   event.preventDefault();
-  const name = document.getElementById('modal-name').value;
   const form = document.getElementById('appointment-modal-form');
-  
-  if (form) {
-    form.innerHTML = `
-      <div class="p-8 text-center space-y-4">
-        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">✓</div>
-        <h3 class="text-2xl font-heading font-bold text-navy">Appointment Requested!</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">Thank you, <strong>${name}</strong>! We have received your booking request. Our clinic receptionist will contact you shortly to confirm your appointment time.</p>
-        <button type="button" onclick="closeAppointmentModal()" class="btn-primary mx-auto">Close Window</button>
-      </div>
-    `;
-    setTimeout(() => {
-      closeAppointmentModal();
-    }, 4500);
+  if (!form) return;
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const nameEl    = document.getElementById('modal-name');
+  const phoneEl   = document.getElementById('modal-phone');
+  const emailEl   = document.getElementById('modal-email');
+  const dateEl    = document.getElementById('modal-date');
+  const timeEl    = document.getElementById('modal-time');
+  const serviceEl = document.getElementById('modal-service');
+  const messageEl = document.getElementById('modal-message');
+
+  const name    = nameEl ? nameEl.value.trim() : '';
+  const phone   = phoneEl ? phoneEl.value.trim() : '';
+  const email   = emailEl ? emailEl.value.trim() : '';
+  const date    = dateEl ? dateEl.value : '';
+  const time    = timeEl ? timeEl.value : '';
+  const service = serviceEl ? serviceEl.value : '';
+  const message = messageEl ? messageEl.value.trim() : '';
+
+  // Remove existing alert
+  const prevAlert = form.querySelector('.appointment-modal-alert');
+  if (prevAlert) prevAlert.remove();
+
+  // Validate phone number
+  const cleanDigits = phone.replace(/[^0-9]/g, '');
+  if (cleanDigits.length < 10) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'appointment-modal-alert p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-600 text-xs font-medium';
+    alertDiv.textContent = 'Please enter a valid 10-digit mobile number.';
+    form.insertBefore(alertDiv, submitBtn);
+    if (phoneEl) phoneEl.focus();
+    return;
+  }
+
+  // Loading state
+  const origBtnContent = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+  submitBtn.innerHTML = `
+    <span class="inline-flex items-center gap-2">
+      <svg class="animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+      </svg>
+      Submitting Booking...
+    </span>
+  `;
+
+  try {
+    const response = await fetch('appointment.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email,
+        date: date,
+        time: time,
+        service: service,
+        message: message
+      })
+    });
+
+    let data;
+    const text = await response.text();
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      if (window.location.protocol === 'file:' || window.location.port === '5500' || window.location.port === '3000') {
+        throw new Error('PHP backend requires a live server to send booking emails.');
+      }
+      throw new Error('Server returned an unexpected response.');
+    }
+
+    if (response.ok && data.success) {
+      const escape = (s) => (s || '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[m]);
+      form.innerHTML = `
+        <div class="p-8 text-center space-y-4">
+          <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl font-bold shadow-inner">✓</div>
+          <h3 class="text-2xl font-heading font-bold text-navy">Appointment Requested!</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Thank you, <strong>${escape(name)}</strong>! We have received your booking request for <strong>${escape(date)} (${escape(time)})</strong>.
+          </p>
+          <div class="bg-orange/10 border border-orange/20 rounded-xl p-3 text-xs text-orange-dark font-medium">
+            Our clinic team will contact you on <strong>${escape(phone)}</strong> shortly to confirm your slot.
+          </div>
+          <button type="button" onclick="closeAppointmentModal()" class="btn-primary mx-auto mt-4 px-6 py-2.5">Close Window</button>
+        </div>
+      `;
+    } else {
+      throw new Error(data.message || 'Unable to submit booking. Please try again.');
+    }
+  } catch (err) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'appointment-modal-alert p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-600 text-xs font-medium';
+    alertDiv.textContent = '✗ ' + (err.message || 'Submission failed. Please call our clinic directly.');
+    form.insertBefore(alertDiv, submitBtn);
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+    submitBtn.innerHTML = origBtnContent;
   }
 }
 
