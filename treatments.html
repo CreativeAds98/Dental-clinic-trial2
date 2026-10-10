@@ -783,10 +783,10 @@
           </h4>
           <div class="follow-us-icons flex items-center gap-3 mb-4"></div>
           <p class="text-slate-500 text-xs mb-3">Get clinic updates, dental tips &amp; special offers.</p>
-          <div class="footer-newsletter">
-            <input type="email" placeholder="Enter your email address">
-            <button aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
-          </div>
+          <form class="footer-newsletter" action="subscribe.php" method="POST">
+            <input type="email" name="email" placeholder="Enter your email address" required autocomplete="email">
+            <button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </form>
         </div>
       </div>
 

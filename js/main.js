@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initAppointmentModal();
   initSocialIcons();
+  initNewsletter();
   
   // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
@@ -673,6 +674,117 @@ function closeDoctorModal() {
     card.classList.remove('scale-100');
     card.classList.add('scale-95');
   }
-  document.body.style.overflow = '';
 }
 
+/* ===== Footer Newsletter Subscription ===== */
+function initNewsletter() {
+  const containers = document.querySelectorAll('.footer-newsletter');
+  containers.forEach(container => {
+    // If it's a form, listen to submit
+    if (container.tagName.toLowerCase() === 'form') {
+      container.addEventListener('submit', handleNewsletterSubmit);
+    } else {
+      // If it's a div, listen to button click and enter key on the input
+      const btn = container.querySelector('button');
+      const input = container.querySelector('input[type="email"]');
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          processNewsletterSubscription(container);
+        });
+      }
+      if (input) {
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            processNewsletterSubscription(container);
+          }
+        });
+      }
+    }
+  });
+}
+
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  processNewsletterSubscription(e.currentTarget);
+}
+
+async function processNewsletterSubscription(container) {
+  const input = container.querySelector('input[type="email"]');
+  const btn = container.querySelector('button');
+  if (!input || !btn) return;
+
+  const email = input.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Find or create feedback status element right below the newsletter box
+  let statusEl = container.nextElementSibling;
+  if (!statusEl || !statusEl.classList.contains('newsletter-status-msg')) {
+    statusEl = document.createElement('div');
+    statusEl.className = 'newsletter-status-msg text-xs mt-2 transition-all duration-300';
+    container.parentNode.insertBefore(statusEl, container.nextSibling);
+  }
+
+  if (!email || !emailRegex.test(email)) {
+    statusEl.className = 'newsletter-status-msg text-xs mt-2 text-rose-400 font-medium';
+    statusEl.textContent = 'Please enter a valid email address.';
+    input.focus();
+    return;
+  }
+
+  // Set loading state
+  const originalBtnHtml = btn.innerHTML;
+  btn.disabled = true;
+  btn.classList.add('opacity-75', 'cursor-not-allowed');
+  btn.innerHTML = `
+    <svg class="animate-spin w-4 h-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+    </svg>
+  `;
+
+  statusEl.className = 'newsletter-status-msg text-xs mt-2 text-slate-400';
+  statusEl.textContent = 'Subscribing...';
+
+  try {
+    const response = await fetch('subscribe.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+    });
+
+    let data;
+    const text = await response.text();
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      // If running on static server like VS Code Live Server without PHP
+      if (window.location.protocol === 'file:' || window.location.port === '5500' || window.location.port === '3000') {
+        throw new Error('PHP requires a live server or Hostinger/cPanel to process emails.');
+      }
+      throw new Error('Server returned an invalid response.');
+    }
+
+    if (response.ok && data.success) {
+      statusEl.className = 'newsletter-status-msg text-xs mt-2 text-emerald-400 font-medium';
+      statusEl.textContent = '✓ ' + (data.message || 'Subscribed successfully!');
+      input.value = '';
+    } else {
+      throw new Error(data.message || 'Unable to subscribe. Please try again.');
+    }
+  } catch (error) {
+    statusEl.className = 'newsletter-status-msg text-xs mt-2 text-rose-400 font-medium';
+    statusEl.textContent = '✗ ' + (error.message || 'Network error. Please try again later.');
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('opacity-75', 'cursor-not-allowed');
+    btn.innerHTML = originalBtnHtml;
+    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+      lucide.createIcons();
+    }
+  }
+}
