@@ -266,7 +266,7 @@ header('Content-Type: text/html; charset=UTF-8');
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 18px;
       padding: 24px 20px;
-      margin-bottom: 36px;
+      margin-bottom: 24px;
     }
     .action-panel-heading {
       font-size: 14px;
@@ -328,61 +328,6 @@ header('Content-Type: text/html; charset=UTF-8');
       transform: translateY(-2px);
     }
 
-    /* Newsletter Notification Box */
-    .notify-form-wrap {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-    .notify-form-wrap p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    .notify-form {
-      display: flex;
-      position: relative;
-    }
-    .notify-form input {
-      flex: 1;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1.5px solid rgba(255, 255, 255, 0.12);
-      border-right: none;
-      border-radius: 10px 0 0 10px;
-      padding: 12px 16px;
-      font-size: 14px;
-      color: #ffffff;
-      outline: none;
-      font-family: inherit;
-    }
-    .notify-form input:focus {
-      border-color: var(--accent-orange);
-    }
-    .notify-form input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
-    }
-    .notify-form button {
-      background: var(--accent-orange);
-      color: #ffffff;
-      border: none;
-      border-radius: 0 10px 10px 0;
-      padding: 0 20px;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .notify-form button:hover {
-      background: var(--accent-orange-hover);
-    }
-    .notify-status {
-      font-size: 12px;
-      margin-top: 8px;
-      display: none;
-    }
 
     /* Footer */
     footer {
@@ -494,18 +439,6 @@ header('Content-Type: text/html; charset=UTF-8');
       </div>
     </div>
 
-    <!-- Get Notified When Back Online -->
-    <div class="notify-form-wrap">
-      <p>Get notified directly in your inbox the moment we are back online:</p>
-      <form class="notify-form" onsubmit="handleNotifySubmit(event)">
-        <input type="email" id="notify-email" placeholder="Enter your email address" required autocomplete="email">
-        <button type="submit" id="notify-btn">
-          Notify Me
-          <i data-lucide="send" style="width: 14px; height: 14px;"></i>
-        </button>
-      </form>
-      <div id="notify-msg" class="notify-status"></div>
-    </div>
 
   </div>
 
@@ -546,55 +479,6 @@ header('Content-Type: text/html; charset=UTF-8');
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Notify Me Form Submission (connected to subscribe.php)
-    async function handleNotifySubmit(e) {
-      e.preventDefault();
-      const input = document.getElementById('notify-email');
-      const btn = document.getElementById('notify-btn');
-      const msg = document.getElementById('notify-msg');
-      const email = input.value.trim();
-
-      if (!email) return;
-
-      const originalBtnText = btn.innerHTML;
-      btn.disabled = true;
-      btn.style.opacity = '0.75';
-      btn.textContent = 'Submitting...';
-
-      try {
-        const response = await fetch('subscribe.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
-        });
-        
-        let data = {};
-        try {
-          data = await response.json();
-        } catch (_) {}
-
-        msg.style.display = 'block';
-        if (response.ok && data.success) {
-          msg.style.color = '#34d399';
-          msg.textContent = '✓ Thank you! We will notify you as soon as we are live.';
-          input.value = '';
-        } else {
-          msg.style.color = '#fb923c';
-          msg.textContent = '✓ Your request has been recorded. Thank you!';
-          input.value = '';
-        }
-      } catch (err) {
-        msg.style.display = 'block';
-        msg.style.color = '#34d399';
-        msg.textContent = '✓ Thank you! We have noted your email.';
-        input.value = '';
-      } finally {
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        btn.innerHTML = originalBtnText;
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      }
-    }
   </script>
 </body>
 </html>
