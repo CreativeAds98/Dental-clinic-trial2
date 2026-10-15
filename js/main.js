@@ -602,7 +602,7 @@ const DOCTORS_PROFILE_DATA = {
     name: "Dr. Sindhuja",
     role: "Prosthodontist",
     degrees: "BDS, MDS (Prosthodontics)",
-    regNo: "Reg No: 32805",
+    regNo: "Reg No: 32605",
     image: "assets/images/dr-sindhuja.jpg",
     fallback: "assets/images/doctor-female.jpg",
     quote: "Restoring confidence",
@@ -624,19 +624,20 @@ const DOCTORS_PROFILE_DATA = {
     timings: "Consultation on Scheduled Days",
     serviceValue: "General Consultation"
   },
-  nandhini: {
-    name: "Dr. Nandhini",
+  nanthini: {
+    name: "Dr. Nanthini",
     role: "Root Canal Specialist",
     degrees: "BDS, MDS",
     regNo: "Reg No: 33402",
     image: "assets/images/dr-nandhini.jpg",
     fallback: "assets/images/doctor-female.jpg",
     quote: "Gentle care lasting smiles",
-    bio: "Known for her soothing chairside manner, Dr. Nandhini provides gentle, precision-driven root canal and restorative treatments. She specializes in creating relaxed experiences for anxious patients while delivering long-lasting oral health.",
-    specialities: ["Gentle Root Canal Therapy", "Conservative Restorations", "Pediatric Endodontics", "Aesthetic Tooth Fillings"],
+    bio: "Known for her soothing chairside manner, Dr. Nanthini provides gentle, precision-driven root canal and restorative treatments. She specializes in creating relaxed experiences for anxious patients while delivering long-lasting oral health.",
+    specialities: ["Gentle Root Canal Therapy", "Conservative Restorations", "Aesthetic Tooth Fillings"],
     timings: "Consultation on Scheduled Days",
     serviceValue: "Dental Care (Braces, Implants, Root Canal)"
   },
+  get nandhini() { return this.nanthini; },
   sangeetha: {
     name: "Dr. Sangeetha K",
     role: "Pedodontist – Child Specialist",
