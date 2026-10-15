@@ -637,6 +637,26 @@ const DOCTORS_PROFILE_DATA = {
     timings: "Consultation on Scheduled Days",
     serviceValue: "Dental Care (Braces, Implants, Root Canal)"
   },
+  sangeetha: {
+    name: "Dr. Sangeetha K",
+    role: "Pedodontist – Child Specialist",
+    degrees: "BDS, MDS (Pedodontics)",
+    regNo: "Reg No: 32844",
+    image: "assets/images/dr-sangeetha.jpg",
+    fallback: "assets/images/doctor-female.jpg",
+    quote: "Gentle smiles for little stars",
+    bio: "Dr. Sangeetha K is a passionate pedodontist dedicated to providing gentle, anxiety-free, and comprehensive dental care for infants, children, and adolescents. With a nurturing touch and kid-friendly approach, she ensures every young patient feels safe, comfortable, and develops healthy dental habits for a lifetime of radiant smiles.",
+    specialities: [
+      "Pediatric Dental Care & Prevention",
+      "Painless Pulpectomy & Root Treatments",
+      "Fluoride Therapies & Dental Sealants",
+      "Child Habit Breaking Appliances",
+      "Early Interceptive Child Orthodontics",
+      "Cavity Restoration & Crowns for Kids"
+    ],
+    timings: "Consultation on Scheduled Days",
+    serviceValue: "Dental Care (Braces, Implants, Root Canal)"
+  },
   bhuvana: {
     name: "Mrs. Bhuvana Anandh",
     role: "Senior Staff Nurse & CRM",
