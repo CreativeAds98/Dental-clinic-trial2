@@ -558,7 +558,8 @@ function initSocialIcons() {
 }
 
 /* --- DOCTOR PROFILE MODAL SYSTEM --- */
-const DOCTORS_PROFILE_DATA = {
+window.DOCTORS_PROFILE_DATA = window.DOCTORS_PROFILE_DATA || {};
+Object.assign(window.DOCTORS_PROFILE_DATA, {
   gowseka: {
     name: "Dr. Gowseka Ragunathan",
     role: "Founder & Chief Dental Surgeon | Consultant – Facial Aesthetics | PMU Specialist",
@@ -637,7 +638,6 @@ const DOCTORS_PROFILE_DATA = {
     timings: "Consultation on Scheduled Days",
     serviceValue: "Dental Care (Braces, Implants, Root Canal)"
   },
-  get nandhini() { return this.nanthini; },
   sangeetha: {
     name: "Dr. Sangeetha K",
     role: "Pedodontist – Child Specialist",
@@ -671,11 +671,26 @@ const DOCTORS_PROFILE_DATA = {
     timings: "Monday - Saturday: 10:00 AM - 8:00 PM",
     serviceValue: "General Consultation"
   }
-};
+});
 
-function openDoctorModal(docId) {
-  const doc = DOCTORS_PROFILE_DATA[docId];
-  if (!doc) return;
+// Explicit aliases for backward/alternate spelling compatibility
+window.DOCTORS_PROFILE_DATA.nandhini = window.DOCTORS_PROFILE_DATA.nanthini;
+const DOCTORS_PROFILE_DATA = window.DOCTORS_PROFILE_DATA;
+
+window.openDoctorModal = function openDoctorModal(docId) {
+  if (!docId) return;
+  const data = window.DOCTORS_PROFILE_DATA || DOCTORS_PROFILE_DATA;
+  const rawKey = String(docId).toLowerCase().trim();
+  const cleanKey = rawKey.replace(/^dr[-_.]?/, '').trim();
+  const doc = data[rawKey] || 
+              data[cleanKey] || 
+              (cleanKey.includes('nan') ? data.nanthini : null) || 
+              (cleanKey.includes('sangee') ? data.sangeetha : null);
+
+  if (!doc) {
+    console.warn(`Doctor profile data not found for ID: "${docId}"`);
+    return;
+  }
 
   let modal = document.getElementById('doctor-profile-modal');
   if (!modal) {
@@ -819,7 +834,9 @@ function closeDoctorModal() {
     card.classList.remove('scale-100');
     card.classList.add('scale-95');
   }
+  document.body.style.overflow = '';
 }
+window.closeDoctorModal = closeDoctorModal;
 
 /* ===== Footer Newsletter Subscription ===== */
 function initNewsletter() {
